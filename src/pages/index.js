@@ -3,42 +3,30 @@ import Link from 'gatsby-link'
 
 const IndexPage = ({ data }) => (
   <div>
-    <div>
-      <h1>My Site's Files</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>relativePath</th>
-            <th>prettySize</th>
-            <th>extension</th>
-            <th>birthTime</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.allFile.edges.map(({ node }, index) => (
-            <tr key={index}>
-              <td>{node.relativePath}</td>
-              <td>{node.prettySize}</td>
-              <td>{node.extension}</td>
-              <td>{node.birthTime}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <Link to="/about/">Go to About me</Link>
+    {data.allMarkdownRemark.edges.map(({ node }) => (
+      <div key={node.id}>
+        <h3 style={{ marginBottom: '1em' }}>
+          {node.frontmatter.title}{' '}
+          <span style={{ color: '#BBB' }}>— {node.frontmatter.date}</span>
+        </h3>
+        <p>{node.excerpt}</p>
+      </div>
+    ))}
   </div>
 )
 
 export const query = graphql`
-  query MyFilesQuery {
-    allFile {
+  query IndexQuery {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      totalCount
       edges {
         node {
-          relativePath
-          prettySize
-          extension
-          birthTime(fromNow: true)
+          id
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+          }
+          excerpt
         }
       }
     }
