@@ -5,7 +5,6 @@ const IndexPage = ({ data }) => {
   return (
     <div>
       {data.allMarkdownRemark.edges.map(({ node }) => {
-        console.log('***Node', node)
         return (
           <div key={node.id}>
             <Link
