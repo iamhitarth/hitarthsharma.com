@@ -10,6 +10,14 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
       name: `slug`,
       value: slug,
     })
+
+    const dateRegex = '(\\d{4}-\\d{2}-\\d{2})--'
+    const postDate = slug.match(dateRegex) ? slug.match(dateRegex)[1] : null
+    createNodeField({
+      node,
+      name: `postDate`,
+      value: postDate,
+    })
   }
 }
 

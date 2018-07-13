@@ -1,6 +1,6 @@
 ---
-title: "What's this about?"
-date: "2018-07-12"
+title: What's this about?
+date: 2018-07-12
 ---
 
 This is where I will be putting my thoughts and lessons learnt.

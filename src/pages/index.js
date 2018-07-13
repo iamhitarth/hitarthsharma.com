@@ -7,11 +7,15 @@ const IndexPage = ({ data }) => (
       <div key={node.id}>
         <Link
           to={node.fields.slug}
-          style={{ textDecoration: `none`, color: `inherit` }}
+          style={{
+            textDecoration: `none`,
+            color: `inherit`,
+            fontWeight: `normal`,
+          }}
         >
           <h3 style={{ marginBottom: '1em' }}>
             {node.frontmatter.title}{' '}
-            <span style={{ color: '#BBB' }}>— {node.frontmatter.date}</span>
+            <span style={{ color: '#BBB' }}>— {node.fields.postDate}</span>
           </h3>
           <p>{node.excerpt}</p>
         </Link>
@@ -22,18 +26,18 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [fields___postDate], order: DESC }) {
       totalCount
       edges {
         node {
           id
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
           }
           excerpt
           fields {
             slug
+            postDate(formatString: "DD MMMM, YYYY")
           }
         }
       }
