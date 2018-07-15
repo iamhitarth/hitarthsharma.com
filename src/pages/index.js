@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
-import Layout from '../components/layout'
+import SidebarLayout from '../components/sidebarLayout'
 
 const IndexPage = ({ data, location }) => {
   return (
-    <Layout location={location}>
+    <SidebarLayout location={location}>
       <div>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           return (
@@ -42,7 +42,7 @@ const IndexPage = ({ data, location }) => {
           )
         })}
       </div>
-    </Layout>
+    </SidebarLayout>
   )
 }
 

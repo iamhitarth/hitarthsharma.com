@@ -3,9 +3,19 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Header from './header'
+/*
+This layout will have no header
+It will have a sidebar
+Sidebar will contain
+- an avatar
+- site title
+- navigation
 
-const Layout = ({ children, location }) => {
+- recent posts
+- categories
+*/
+
+const SidebarLayout = ({ children, location }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -29,7 +39,6 @@ const Layout = ({ children, location }) => {
               },
             ]}
           />
-          <Header siteTitle={data.site.siteMetadata.title} />
           <div
             style={{
               margin: '0 auto',
@@ -46,8 +55,8 @@ const Layout = ({ children, location }) => {
   )
 }
 
-Layout.propTypes = {
+SidebarLayout.propTypes = {
   children: PropTypes.node,
 }
 
-export default Layout
+export default SidebarLayout
