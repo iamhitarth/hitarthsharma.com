@@ -65,7 +65,38 @@ const SidebarLayout = ({ children, location }) => {
                   </Link>
                 </h1>
               </div>
-              <div>{/* Navigation */}</div>
+              <div>
+                {/* Navigation */}
+                <ul>
+                  <li>
+                    <Link to="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link to="/about">About</Link>
+                  </li>
+                  <li>
+                    <Link to="/about">My Book List</Link>
+                  </li>
+                  <li>
+                    <Link to="/about">Productivity</Link>
+                  </li>
+                  <li>
+                    <Link to="/about">Inspiration</Link>
+                  </li>
+                  <li>
+                    <Link to="/about">Tech</Link>
+                  </li>
+                  <li>
+                    <Link to="/about">Quotes</Link>
+                  </li>
+                  <li>
+                    <Link to="/about">Movies</Link>
+                  </li>
+                  <li>
+                    <Link to="/about">TV Series</Link>
+                  </li>
+                </ul>
+              </div>
               <div>{/* Recent Posts */}</div>
               <div>{/* Categories */}</div>
               <div>{/* Copyright */}</div>
