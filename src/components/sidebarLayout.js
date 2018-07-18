@@ -15,6 +15,22 @@ const SidebarLayout = ({ children, location }) => {
               title
             }
           }
+          allMarkdownRemark(
+            limit: 4
+            sort: { fields: [fields___postDate], order: DESC }
+          ) {
+            edges {
+              node {
+                id
+                frontmatter {
+                  title
+                }
+                fields {
+                  slug
+                }
+              }
+            }
+          }
         }
       `}
       render={data => (
@@ -70,7 +86,17 @@ const SidebarLayout = ({ children, location }) => {
                   </li>
                 </ul>
               </div>
-              <div>{/* Recent posts */}</div>
+              <div>
+                {/* Recent posts */}
+                <h3>Recent posts</h3>
+                <ul>
+                  {data.allMarkdownRemark.edges.map(({ node }) => (
+                    <Link to={node.fields.slug}>
+                      <li>{node.frontmatter.title}</li>
+                    </Link>
+                  ))}
+                </ul>
+              </div>
               <div>{/* Categories */}</div>
               <div>
                 <small>
