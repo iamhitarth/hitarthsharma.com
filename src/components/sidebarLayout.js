@@ -94,8 +94,7 @@ const styles = {
   content: {
     margin: '0 auto',
     maxWidth: 960,
-    padding: '0px 1.0875rem 1.45rem',
-    paddingTop: '3rem',
+    padding: '3rem 0',
     display: 'flex',
   },
   sidebar: {
@@ -108,15 +107,20 @@ const styles = {
     height: '11.25rem',
     width: '11.25rem',
     borderRadius: '50%',
+    marginBottom: '1rem',
   },
-  titleLink: { textDecoration: 'none', color: 'hsla(0,0%,0%,1)' },
+  titleLink: {
+    textDecoration: 'none',
+    color: 'hsla(0,0%,0%,1)',
+  },
   nav: {
     listStyleType: 'none',
-    marginLeft: 0,
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
     alignSelf: 'center',
+    marginLeft: 0,
+    marginBottom: '2rem',
   },
   navItem: {
     margin: 5,
