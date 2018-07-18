@@ -30,7 +30,7 @@ const SidebarLayout = ({ children, location }) => {
             ]}
           />
           <div style={styles.content}>
-            <div style={styles.sidebar}>
+            <aside style={styles.sidebar}>
               <div>
                 <img src={Avatar} style={styles.avatar} alt="Hitarth Sharma" />
               </div>
@@ -70,10 +70,15 @@ const SidebarLayout = ({ children, location }) => {
                   </li>
                 </ul>
               </div>
+              <div>{/* Recent posts */}</div>
               <div>{/* Categories */}</div>
-              <div>{/* Copyright */}</div>
-            </div>
-            <div style={styles.main}>{children}</div>
+              <div>
+                <small>
+                  Copyright © {new Date().getFullYear()} Hitarth Sharma
+                </small>
+              </div>
+            </aside>
+            <main style={styles.main}>{children}</main>
           </div>
         </div>
       )}
