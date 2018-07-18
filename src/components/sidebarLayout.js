@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql, Link } from 'gatsby'
 
+import Avatar from '../assets/images/avatar.jpg'
+
 const SidebarLayout = ({ children, location }) => {
   return (
     <StaticQuery
@@ -27,81 +29,51 @@ const SidebarLayout = ({ children, location }) => {
               },
             ]}
           />
-          <div
-            style={{
-              margin: '0 auto',
-              maxWidth: 960,
-              padding: '0px 1.0875rem 1.45rem',
-              paddingTop: '3rem',
-              display: 'flex',
-            }}
-          >
-            <div
-              style={{
-                flex: 1,
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-              }}
-            >
+          <div style={styles.content}>
+            <div style={styles.sidebar}>
               <div>
-                <img
-                  src="http://www.thecodetoawesome.com/wp-content/uploads/2015/04/cropped-208191_4324406504567_1758127073_n1.jpg"
-                  style={{
-                    height: '11.25rem',
-                    width: '11.25rem',
-                    borderRadius: '50%',
-                  }}
-                  alt="Hitarth Sharma"
-                />
+                <img src={Avatar} style={styles.avatar} alt="Hitarth Sharma" />
               </div>
               <div>
                 <h1>
-                  <Link
-                    to="/"
-                    style={{ textDecoration: 'none', color: 'hsla(0,0%,0%,1)' }}
-                  >
+                  <Link to="/" style={styles.titleLink}>
                     {data.site.siteMetadata.title}
                   </Link>
                 </h1>
               </div>
               <div>
                 {/* Navigation */}
-                <ul>
-                  <li>
-                    <Link to="/">Home</Link>
-                  </li>
-                  <li>
+                <ul style={styles.nav}>
+                  <li style={styles.navItem}>
                     <Link to="/about">About</Link>
                   </li>
-                  <li>
-                    <Link to="/about">My Book List</Link>
+                  <li style={styles.navItem}>
+                    <Link to="/">My Book List</Link>
                   </li>
-                  <li>
-                    <Link to="/about">Productivity</Link>
+                  <li style={styles.navItem}>
+                    <Link to="/">Productivity</Link>
                   </li>
-                  <li>
-                    <Link to="/about">Inspiration</Link>
+                  <li style={styles.navItem}>
+                    <Link to="/">Inspiration</Link>
                   </li>
-                  <li>
-                    <Link to="/about">Tech</Link>
+                  <li style={styles.navItem}>
+                    <Link to="/">Tech</Link>
                   </li>
-                  <li>
-                    <Link to="/about">Quotes</Link>
+                  <li style={styles.navItem}>
+                    <Link to="/">Quotes</Link>
                   </li>
-                  <li>
-                    <Link to="/about">Movies</Link>
+                  <li style={styles.navItem}>
+                    <Link to="/">Movies</Link>
                   </li>
-                  <li>
-                    <Link to="/about">TV Series</Link>
+                  <li style={styles.navItem}>
+                    <Link to="/">TV Series</Link>
                   </li>
                 </ul>
               </div>
-              <div>{/* Recent Posts */}</div>
               <div>{/* Categories */}</div>
               <div>{/* Copyright */}</div>
             </div>
-            <div style={{ flex: 2.5, paddingLeft: '2rem' }}>{children}</div>
+            <div style={styles.main}>{children}</div>
           </div>
         </div>
       )}
@@ -111,6 +83,44 @@ const SidebarLayout = ({ children, location }) => {
 
 SidebarLayout.propTypes = {
   children: PropTypes.node,
+}
+
+const styles = {
+  content: {
+    margin: '0 auto',
+    maxWidth: 960,
+    padding: '0px 1.0875rem 1.45rem',
+    paddingTop: '3rem',
+    display: 'flex',
+  },
+  sidebar: {
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  avatar: {
+    height: '11.25rem',
+    width: '11.25rem',
+    borderRadius: '50%',
+  },
+  titleLink: { textDecoration: 'none', color: 'hsla(0,0%,0%,1)' },
+  nav: {
+    listStyleType: 'none',
+    marginLeft: 0,
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignSelf: 'center',
+  },
+  navItem: {
+    margin: 5,
+    border: 'solid 1px blue',
+    borderRadius: 4,
+    padding: 6,
+    coolor: 'hsla(0,0%,0%,1)',
+  },
+  main: { flex: 2.5, paddingLeft: '2rem' },
 }
 
 export default SidebarLayout
