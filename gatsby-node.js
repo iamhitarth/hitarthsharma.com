@@ -23,12 +23,18 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
+  const blogPostTemplate = path.resolve(`./src/templates/blogPost.js`)
+  const tagTemplate = path.resolve(`./src/templates/tags.js`)
+
   return new Promise((resolve, reject) => {
     graphql(`
       {
         allMarkdownRemark {
           edges {
             node {
+              frontmatter {
+                tags
+              }
               fields {
                 slug
               }
@@ -37,13 +43,39 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `).then(result => {
+      let allTags = []
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+        // Create blog post page
         createPage({
           path: node.fields.slug,
-          component: path.resolve(`./src/templates/blogPost.js`),
+          component: blogPostTemplate,
           context: {
             // Data passed to context is available in page queries as GraphQL variables.
             slug: node.fields.slug,
+          },
+        })
+
+        // Collect it's tags
+        const postTags = node.frontmatter.tags
+          ? node.frontmatter.tags.split(',')
+          : []
+        postTags.forEach(postTag => {
+          const trimmedTag = postTag.trim()
+          if (allTags.indexOf(trimmedTag) < 0) {
+            allTags.push(trimmedTag)
+          }
+        })
+      })
+
+      // Create tag pages
+      allTags.forEach(tag => {
+        const urlTag = tag.indexOf(' ') > -1 ? tag.split(' ').join('-') : tag
+        createPage({
+          path: `/tags/${urlTag}/`,
+          component: tagTemplate,
+          context: {
+            // Data passed to context is available in page queries as GraphQL variables.
+            tag,
           },
         })
       })
