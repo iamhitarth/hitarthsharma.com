@@ -1,6 +1,6 @@
 ---
 title: How To Beat The S**t Out Of Stress According To Science
-category: "productivity"
+
 cover: photo-1525680996651-0222228be6f0.jpeg
 ---
 

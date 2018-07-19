@@ -1,6 +1,6 @@
 ---
 title: How To Live Without Regret
-category: "productivity"
+
 cover: photo-1506702315536-dd8b83e2dcf9.jpeg
 ---
 

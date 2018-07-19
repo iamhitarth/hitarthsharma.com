@@ -1,6 +1,6 @@
 ---
 title: How To Work Smarter By Going For The Big Wins
-category: "productivity"
+
 cover: photo-1518859154638-ca29363763d8.jpeg
 ---
 

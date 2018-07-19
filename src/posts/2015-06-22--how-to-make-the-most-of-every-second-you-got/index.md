@@ -1,6 +1,6 @@
 ---
 title: How To Make the Most Of Every Second You Got
-category: "productivity"
+
 cover: photo-1485881697404-78678dbc4639.jpg
 ---
 

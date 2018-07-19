@@ -1,6 +1,6 @@
 ---
 title: Feeling stuck? Here is how to get unstuck!
-category: "productivity"
+
 cover: photo-1520462551646-bf2f6a00423b.jpeg
 ---
 

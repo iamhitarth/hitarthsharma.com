@@ -1,6 +1,6 @@
 ---
 title: The Suitcase of Life
-category: "productivity"
+
 cover: photo-1504884060002-619141ede057.jpeg
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: How To Avoid Fitful Productivity
-category: "productivity"
+
 cover: photo-1516922654979-6833a58a1b83.jpeg
 ---
 
