@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
 const Tags = ({ pageContext, data, location }) => {
-  console.log('In Tags', pageContext, data, location)
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} post${
@@ -37,6 +36,7 @@ const Tags = ({ pageContext, data, location }) => {
 Tags.propTypes = {
   pageContext: PropTypes.shape({
     tag: PropTypes.string.isRequired,
+    tagRegex: PropTypes.string.isRequired,
   }),
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
@@ -60,11 +60,11 @@ Tags.propTypes = {
 export default Tags
 
 export const pageQuery = graphql`
-  query($tag: String) {
+  query($tagRegex: String) {
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [fields___postDate], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      filter: { frontmatter: { tags: { regex: $tagRegex } } }
     ) {
       totalCount
       edges {
