@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
 import { Link, graphql } from 'gatsby'
+
+import SidebarLayout from '../components/sidebarLayout'
+import PostListItem from '../components/postListItem'
 
 const Tags = ({ pageContext, data, location }) => {
   const { tag } = pageContext
@@ -11,25 +13,21 @@ const Tags = ({ pageContext, data, location }) => {
   } tagged with "${tag}"`
 
   return (
-    <div>
-      <h1>{tagHeader}</h1>
-      <ul>
-        {edges.map(({ node }) => {
-          const { title } = node.frontmatter
-          const { slug } = node.fields
-          return (
-            <li key={slug}>
-              <Link to={slug}>{title}</Link>
-            </li>
-          )
-        })}
-      </ul>
-      {/*
+    <SidebarLayout location={location}>
+      <div>
+        <h1>{tagHeader}</h1>
+        <div style={{ paddingBottom: '1.25rem' }}>
+          <Link to="/tags">See all tags</Link>
+        </div>
+        <div>
+          {edges.map(({ node }) => <PostListItem node={node} />)}
+          {/*
               This links to a page that does not yet exist.
               We'll come back to it!
             */}
-      <Link to="/tags">All tags</Link>
-    </div>
+        </div>
+      </div>
+    </SidebarLayout>
   )
 }
 
@@ -44,11 +42,15 @@ Tags.propTypes = {
       edges: PropTypes.arrayOf(
         PropTypes.shape({
           node: PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            timeToRead: PropTypes.number.isRequired,
+            excerpt: PropTypes.string.isRequired,
             frontmatter: PropTypes.shape({
               title: PropTypes.string.isRequired,
             }),
             fields: PropTypes.shape({
               slug: PropTypes.string.isRequired,
+              postDate: PropTypes.string.isRequired,
             }),
           }),
         }).isRequired
@@ -69,11 +71,15 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
+          id
+          timeToRead
+          excerpt
           frontmatter {
             title
           }
           fields {
             slug
+            postDate
           }
         }
       }
