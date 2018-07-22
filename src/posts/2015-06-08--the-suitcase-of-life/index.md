@@ -4,7 +4,7 @@ title: The Suitcase of Life
 cover: photo-1504884060002-619141ede057.jpeg
 ---
 
-<img class="wp-image-795" src="http://www.thecodetoawesome.com/wp-content/uploads/2015/07/india-luggage.jpg" alt="india-luggage" width="384" height="511" />
+<img class="wp-image-795" src="india-luggage.jpg" alt="india-luggage" width="384" height="511" />
 <small style="display:block">Travelling - Indian style - on my last trip!</small>
 
 Travelling - especially Indian style - is never easy.
@@ -31,7 +31,7 @@ While I love the thought of travelling, I hate packing for it!
 
 I hate it because it forces me to show favouritism for my clothes.
 
-<img class="" src="http://holykaw.alltop.com/wp-content/uploads/2011/10/33166956-media_httpfarm7static_zklwg.jpg" alt="" width="498" height="268" />
+<img class="" src="socks.jpg" alt="" width="498" height="268" />
 <small style="display:block">Superman vs Batman vs Wonder Woman socks - now that's a tough one..</small>
 
 That moment, when you have almost got your suitcase packed up.
@@ -102,7 +102,7 @@ Don't believe me?
 
 I didn't believe my alternate self, telling me that I was being stupid and wasting my time without realising it, either.
 
-<img class="wp-image-821" src="http://www.thecodetoawesome.com/wp-content/uploads/2015/07/fight-club-mirror.jpg" alt="Fight club anyone?" width="537" height="392" />
+<img class="wp-image-821" src="fight-club-mirror.jpg" alt="Fight club anyone?" width="537" height="392" />
 <small style="display:block">Fight club anyone?</small>
 
 So I decided to run an experiment. I decided to measure where I was spending my time.
@@ -117,7 +117,7 @@ At first, I was going to keep a time log of everything I did (old school pen and
 
 Fast forward a week or so and below is what I found:
 
-<img class="" src="http://snag.gy/Ry679.jpg" alt="" width="870" height="286" />
+<img class="" src="rescue-time.jpg" alt="" width="870" height="286" />
 <small style="display:block">Someone's been doing a lot of entertaining and social networking..</small>
 
 43% of my time was spent on Entertainment and Social Networking!
@@ -152,6 +152,7 @@ And best of all, once you know what your worst undercover time wasters are, 
 So instead of just nodding along with me (and then secretly laughing at me for owning a pair of Wonder Woman socks), let's go over how you can do this for yourself.
 
 It's actually quite simple.
+
 <ol>
  	<li>Download RescueTime from <a href="https://www.google.com.au/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0CB4QFjAA&amp;url=https%3A%2F%2Fwww.rescuetime.com%2Fdownload&amp;ei=1e2cVYv0OYP58QWNm7roCA&amp;usg=AFQjCNH5qnRLdiitZkPftcLhjPFWfBUKvw&amp;bvm=bv.96952980,d.dGc" target="_blank" rel="noopener">here</a>. It's <strong>free</strong>.</li>
  	<li>Set it up (takes literally 2 minutes).</li>

@@ -10,7 +10,29 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    'gatsby-transformer-remark',
+    // TODO: `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      // TODO: options: {
+      //   plugins: [
+      //     {
+      //       resolve: `gatsby-remark-images`,
+      //       options: {
+      //         // It's important to specify the maxWidth (in pixels) of
+      //         // the content container as this plugin uses this as the
+      //         // base for generating different widths of each image.
+      //         maxWidth: 920,
+      //         linkImagesToOriginal: false,
+      //         showCaptions: true,
+      //         wrapperStyle: {
+      //           alignSelf: 'center',
+      //           margin: '0.5rem, 0',
+      //         },
+      //       },
+      //     },
+      //   ],
+      // },
+    },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
