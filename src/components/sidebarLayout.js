@@ -48,9 +48,11 @@ const SidebarLayout = ({ children, location }) => {
           <div style={styles.content}>
             <aside style={styles.sidebar}>
               <div>
+                {/* Avatar */}
                 <img src={Avatar} style={styles.avatar} alt="Hitarth Sharma" />
               </div>
               <div>
+                {/* Site title */}
                 <h1>
                   <Link to="/" style={styles.titleLink}>
                     {data.site.siteMetadata.title}
@@ -97,8 +99,9 @@ const SidebarLayout = ({ children, location }) => {
                   ))}
                 </ul>
               </div>
-              <div>{/* Categories */}</div>
+              <div>{/* TODO: Categories */}</div>
               <div>
+                {/* Copyright */}
                 <small>
                   Copyright © {new Date().getFullYear()} Hitarth Sharma
                 </small>
