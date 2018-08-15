@@ -16,6 +16,10 @@ export const query = graphql`
 `
 
 export default ({ data, location }) => {
+  /* const images = window.document.getElementsByClassName('gatsby-resp-image-figure')
+  for(let i = 0; i < images.length; i++) {
+    images[i].style.textAlign = 'center';
+  } */
   const post = data.markdownRemark
   return (
     <Layout location={location}>

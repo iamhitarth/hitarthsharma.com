@@ -9,6 +9,7 @@ I watched <a href="http://www.imdb.com/title/tt0338013/" target="_blank" rel="no
 The story. The flawed characters. The dialogue between the characters. Everything.
 
 Take the quote below for example:
+
 <blockquote>Does that make you sad or anxious?
 I mean, I am always anxious thinking that I am not living my life to the fullest. You know, taking advantage of every possibility, making sure I am not wasting one second of the little time I have.
 - Clementine</blockquote>
@@ -45,6 +46,7 @@ But the day I watched the movie, I thought about it.
 I thought about it more than I usually think about it.
 
 I thought about why it is that we feel that way.
+
 <h2 id="because-scarcity">Because of scarcity. That's why.</h2>
 Assuming you and I are average people, we have roughly 50 years or 1.5 billion seconds (Thank you Google!) to make things happen for us.
 
@@ -89,6 +91,7 @@ Yes, there are things we must do to survive. But that doesn't mean we need to sp
 Because while they absolutely need to get done.
 
 They don't have to be done by you.
+
 <h2>Say no to make the most of your time</h2>
 In recent times, saying no as productivity advice has become all the rage (and with good reason).
 
@@ -112,10 +115,12 @@ Short answer - no.
 Long answer - still no BUT there is a rule of thumb that you can follow to deflect majority of the "time drainers" <em>before </em>you even take them on.
 
 <span id="rule-of-thumb"></span>Here is the rule:
+
 <blockquote>Only say yes to things that benefit you (in a relevant way) and that you can make time for. <strong><a href="http://ctt.ec/adOfe" target="_blank" rel="noopener">[Tweet this]</a></strong></blockquote>
 Because as a wise man once said, prevention is better than the cure.
 
 The less "busy work" we take on, the more time we have left to do the things that really count.
+
 <h2 id="job-offer">A job offer from a drunk friend</h2>
 Let me give you an example.
 
@@ -129,7 +134,7 @@ He came in real close and said "Yo.. bro are you looking for a job?"
 
 After saying no to him, only to have him come back and ask me the exact same question two more times, I realised that he wasn't kidding.
 
-<img class="aligncenter" src="http://www.troll.me/images2/skeptical-baby/say-whaaa.jpg" alt="" width="328" height="372" />
+<img src="say-what.jpg" alt="" width="328" height="372" />
 
 Now at this stage, I was happily working for the company that I was interning for and had every intention of going to work full time for them.
 
@@ -156,6 +161,7 @@ All I had to do was to simply message this friend of mine to set up a meeting. T
 It was quite simple. The amount of time I could lose vs the potential gain made this an awesome opportunity.
 
 So I sent that message, met up with the directors of LeapThought and 3 years (plus a lot of lessons learnt) later, here I am thanking my stars for having made that decision.
+
 <h2>Do you want to build an app?</h2>
 I got one more example for you.
 
@@ -196,6 +202,7 @@ Well, I was pretty busy trying to take on bigger and better things at work whil
 So time was a bit short. Which meant the answer was a "probably not".
 
 Based on these two answers (maybe and probably not), I decided to not go for it.
+
 <h2 id="two-phases">The two phases that we all go through (repeatedly)</h2>
 That was pretty straightforward.
 
@@ -220,6 +227,7 @@ In the former scenario, I would have had "No" as my default answer meaning that
 Whereas in the latter scenario, I would have had "Yes" as my default answer and taken up anything as long as the answers to one of the questions wasn't a definitive "No".
 
 Understanding what phase of your life you are in and having a default mode based on that is the most optimum way of handling your day to day tasks (without getting bogged down) while keeping you open for the important things in life.
+
 <h2>Rule of thumb for a reason</h2>
 As a final tip, remember that this is a "rule of thumb" a.k.a. not something set in stone.
 
