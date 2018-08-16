@@ -27,7 +27,7 @@ module.exports = {
               maxWidth: 920,
               linkImagesToOriginal: false,
               showCaptions: true,
-              wrapperStyle: `align-self: center; margin: 0.5rem; text-align: center;`,
+              wrapperStyle: `align-self: center; margin: 0.5rem; text-align: center`,
             },
           },
         ],

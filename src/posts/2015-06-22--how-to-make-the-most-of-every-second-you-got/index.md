@@ -169,7 +169,7 @@ Last year, I had a friend come to me with an app idea that he and his brother we
 
 They had done their research. They spotted a gap in the market and were ready to rumble.
 
-<img class="aligncenter wp-image-743" src="http://www.thecodetoawesome.com/wp-content/uploads/2015/06/To-Infinity-And-Beyond.jpg" alt="To Infinity And Beyond" width="477" height="389" />
+<img src="infinity-and-beyond" alt="To Infinity And Beyond"></img>
 
 Then, they approached me to work on it.
 
