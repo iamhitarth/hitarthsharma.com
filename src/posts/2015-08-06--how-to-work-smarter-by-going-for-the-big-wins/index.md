@@ -35,7 +35,8 @@ When faced with a whole army of tasks/chores/things that <em>need to be</em> don
 
 In those moments, sloooooow things down for<em> just 2 minutes</em> and analyse the situation.
 
-[caption id="" align="aligncenter" width="425"]<img src="http://www.metaltoad.com/sites/default/files/bullet-time.gif" alt="Bullet time" width="425" height="173" /> Just like Neo[/caption]
+<p style="flex-direction: column;align-items: center;display: flex;">
+<img src="bullet-time.gif" alt="Bullet time"></img>Just like Neo</p>
 
 Write down a list of things that you have to get done. This will stop those things from bouncing around in your head and making you super anxious.
 
@@ -53,7 +54,7 @@ Yet, once again it's a matter of going for quality over quantity.
 
 This approach will end up with you accomplishing a whole lot more just because it puts you in control of the situation. Instead of you being controlled by the situation. Plus, more often than not, you <em>will</em> manage to score a big win outta nowhere (just because you were on the look out for it).
 
-<img class="aligncenter" src="http://cdn.meme.am/instances/500x/55979532.jpg" alt="" width="373" height="245" />
+<img src="booyah.jpg" alt="Booyah!"></img>
 
 So, for the key takeaways, we have:
 <ul>

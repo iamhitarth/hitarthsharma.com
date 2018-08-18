@@ -38,7 +38,7 @@ The pounding heart, fast paced breathing, sweaty palms and butterflies in your s
 
 Can stress really make your body "hulk up" to rise to the challenges you are about to encounter?
 
-<p style="flex: 1;justify-content: center;display: flex;">
+<p style="flex-direction: column;align-items: center;display: flex;">
 <img src="hulking-up.gif"></img>
 </p>
 

@@ -8,7 +8,7 @@ Last week I went on a ski trip for my brother's birthday.
 
 I was planning on owning the ski fields and making them my bitch. But turns out skiing is pretty hard...
 
-[caption id="attachment_945" align="aligncenter" width="510"]<img class="wp-image-945" src="http://www.thecodetoawesome.com/wp-content/uploads/2015/08/ski.jpg" alt="Skiing fail" width="510" height="341" /> This is not me (but it's a close representation).[/caption]
+<img src="ski.jpg" alt="Skiing fail" width="510" height="341" title="This is not me (but it's a pretty close representation)."></img>
 
 Especially, skiing in the beginners area full of people and potholes.
 
@@ -22,7 +22,7 @@ In one word, it was <em>fitful</em>.
 <h2 id="why-sucks" style="text-align: center;">Why Fitful Productivity Sucks</h2>
 We are all productive from time to time. Yet, as we have all experienced, being productive every once in a while just doesn't cut the mustard.
 
-[caption id="" align="aligncenter" width="446"]<img class="" src="http://www.chrisronk.net/ham/purewave.JPG" alt="" width="446" height="304" /> It's like skiing up and down these hills.[/caption]
+<img src="wave.jpg" alt="Wave" width="446" height="304" title="It's like skiing up and down these hills."></img>
 
 At best, you manage to scrape through and get a few little bits and pieces done.
 
@@ -30,13 +30,13 @@ But at worst, you can't get anything significant done because as soon as you sta
 
 In skiing terms, it's like picking up speed going down a slope, feeling the wind in your face and feeling like you own the hills. Only to hit a valley that ruins all your momentum and forces you to walk up to the top of the next hill to start alllllll over again.
 
-[caption id="" align="aligncenter" width="337"]<img class="" src="http://img.4plebs.org/boards/tg/image/1398/62/1398629725090.jpg" alt="" width="337" height="250" /> Even Mr. President seems to have experienced that.[/caption]
+<img src="obama.jpg" alt="Obama" width="337" height="250" title="Even Mr. President seems to have experienced that."></img>
 
 In addition to being heartbreaking, annoying and frustrating, this is also a waste of precious energy and time as you keep trying to convince yourself to start again while feeling guilty as hell about having abandoned things just when you seemed to be making progress.
 
 It's like going to your favourite Mexican restaurant only to leave after having just one bite of your favourite food. And then having to convince yourself to go back and finish off the cold nachos with solidified cheese all over them.
 
-<img class="aligncenter" src="http://memecrunch.com/meme/BMOI/eww-yuck/image.jpg?w=400&amp;c=1" alt="" width="328" height="358" />
+<img src="yuck.jpg" alt="Yuck!" width="328" height="358"></img>
 
 So the million dollar question is how can you avoid all this heartbreak and wasting of your super precious time and energy?
 <h2 id="slippery-slope" style="text-align: center;">Taking Advantage Of The Slippery Slope</h2>
@@ -49,7 +49,7 @@ On one hand, a slippery slope works because it puts people in a set of circumsta
 
 Are you thinking what I am thinking..?
 
-[caption id="step-by-step" align="aligncenter" width="371"]<img class="" src="http://www.quickmeme.com/img/0c/0c81cb4eab2202c9d1453353cf36a6b100192d31bd61d3fc08e594acb4f45ca8.jpg" alt="" width="371" height="290" /> It's a match made in heaven![/caption]
+<img src="holy-shit.jpg" alt="Holy shit!" width="371" height="290" title="It's a match made in heaven!"></img>
 
 On a given day, if we can arrange our tasks in a "slippery slope", chances are that we will just keep on sliding down that slope and finish of everything without having to start and stop and start and stop (again) or feel guilty about not having done what we planned to do!
 
@@ -59,7 +59,7 @@ From these, identify the things that you would enjoy doing vs the things that yo
 
 Then identify things that are relatively complex and will require a lot of work vs things that are trivial and can be taken care of quickly.
 
-[caption id="attachment_981" align="aligncenter" width="470"]<img class="wp-image-981 size-full" src="http://www.thecodetoawesome.com/wp-content/uploads/2015/08/task-categories.jpg" alt="Categories of tasks" width="470" height="335" /> This will end up with your tasks in four categories.[/caption]
+<img src="task-categories.jpg" alt="Categories of tasks" width="470" height="335" title=" This will end up with your tasks in four categories."></img>
 
 Now with your tasks divided up in four categories, simply arrange them in a list that has the most complex tasks that need to get done alternating with simpler or more enjoyable tasks.
 
@@ -73,7 +73,9 @@ This approach can work regardless of whether your task list has 2 tasks or 20. T
 
 Taking advantage of this technique will make a world of difference to your productivity and will allow you to smoothly slide through your to-do list instead of having to force yourself through it.
 
-[caption id="attachment_959" align="aligncenter" width="293"]<img class="wp-image-959 size-medium" src="http://www.thecodetoawesome.com/wp-content/uploads/2015/08/sliding-stairs-293x300.gif" alt="Sliding Down The Stairs" width="293" height="300" /> Just like this guy.[/caption]
+<p style="flex-direction: column;align-items: center;display: flex;">
+<img src="sliding-stairs.gif" alt="Sliding Down The Stairs" width="293" height="300"></img> Just like this guy.</p>
+
 <h2 style="text-align: center;">Long Story Short</h2>
 Being productive every once in a while is easy but consistent productivity is the key to getting shit done.
 
