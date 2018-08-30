@@ -5,6 +5,7 @@ cover: photo-1504884060002-619141ede057.jpeg
 ---
 
 <img src="india-luggage.jpg" title="Travelling - Indian style - on my last trip!"></img>
+
 Travelling - especially Indian style - is never easy.
 
 Carrying around half of your house, in bags of various shapes and sizes isn't just the norm.
@@ -40,6 +41,7 @@ Only to realise, you forgot to put in your favourite pair of Wonder Woman socks
 That is when you know, the struggle is real.
 
 <h3 id="over-suitcase">Life = Overcrowded suitcase</h3>
+
 Come to think of it though, our lives are like that suitcase as well.
 
 Just like the suitcase has limited space, you have a limited and finite amount of time (and energy) to give to the business idea that you are thinking of starting or the guitar you are thinking of learning.
@@ -71,6 +73,7 @@ Well well well.. you are in luck.
 Because while <em>I</em> had to turn my suitcase upside down to find space for my favourite socks, a much simpler solution exists for you.
 
 <h3 id="cant-measure">If you can't measure it, you can't improve it</h3>
+
 What would you say someone is doing, if they blindly keep investing their money without giving a single thought to the return on that investment?
 
 They are...

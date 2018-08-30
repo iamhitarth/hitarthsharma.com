@@ -169,7 +169,7 @@ Last year, I had a friend come to me with an app idea that he and his brother we
 
 They had done their research. They spotted a gap in the market and were ready to rumble.
 
-<img src="infinity-and-beyond" alt="To Infinity And Beyond"></img>
+<img src="infinity-and-beyond.jpg" alt="To Infinity And Beyond"></img>
 
 Then, they approached me to work on it.
 
