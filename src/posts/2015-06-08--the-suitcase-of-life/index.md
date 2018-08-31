@@ -40,7 +40,7 @@ Only to realise, you forgot to put in your favourite pair of Wonder Woman socks
 
 That is when you know, the struggle is real.
 
-<h3 id="over-suitcase">Life = Overcrowded suitcase</h3>
+## Life = Overcrowded suitcase
 
 Come to think of it though, our lives are like that suitcase as well.
 
@@ -70,9 +70,9 @@ So what can you do about these "space-takers"?
 
 Well well well.. you are in luck.
 
-Because while <em>I</em> had to turn my suitcase upside down to find space for my favourite socks, a much simpler solution exists for you.
+Because while _I_ had to turn my suitcase upside down to find space for my favourite socks, a much simpler solution exists for you.
 
-<h3 id="cant-measure">If you can't measure it, you can't improve it</h3>
+## If you can't measure it, you can't improve it
 
 What would you say someone is doing, if they blindly keep investing their money without giving a single thought to the return on that investment?
 
@@ -92,7 +92,7 @@ Yet.. if you think about it, this is exactly what most of us do with our time.
 
 How many times have you said to yourself "I don't even know where all my time went today.."?
 
-Keeping track of your time will show you <em>exactly</em> where it went.
+Keeping track of your time will show you _exactly_ where it went.
 
 So that you can then recover it and put it to use on things that make a difference.
 
@@ -108,11 +108,11 @@ So I decided to run an experiment. I decided to measure where I was spending my 
 
 At first, I was going to keep a time log of everything I did (old school pen and paper style) but then luckily, I stumbled upon <a href="https://www.rescuetime.com/" target="_blank" rel="noopener">RescueTime</a>.
 
-<hr />
+---
 
 <em><strong>Note:</strong> I am not affiliated with RescueTime nor am I getting paid/compensated for this in any way (unfortunately).</em>
 
-<hr />
+---
 
 Fast forward a week or so and below is what I found:
 
@@ -120,7 +120,7 @@ Fast forward a week or so and below is what I found:
 
 43% of my time was spent on Entertainment and Social Networking!
 
-This means that on average I spent almost <em>half of my time on a computer</em> reading people's statuses, liking their selfies and watching <a href="https://www.youtube.com/watch?v=9h5mwoTwDBk" target="_blank" rel="noopener">babies taste lemon for the first time</a> on YouTube!
+This means that on average I spent almost _half of my time on a computer_ reading people's statuses, liking their selfies and watching <a href="https://www.youtube.com/watch?v=9h5mwoTwDBk" target="_blank" rel="noopener">babies taste lemon for the first time</a> on YouTube!
 
 I always knew Facebook and YouTube were a time drain, but I also thought that other lesser and weaker minded people were the ones susceptible to the charms of these sites.
 
@@ -132,13 +132,13 @@ And awesome-er.
 
 And more good looking too.
 
-Well, not quite I guess :(
+Well, not quite I guess ☹️
 
 To make things worse, what did I have to show for half of my week that was spent on Facebook and YouTube?
 
 A big fat nothing!
 
-In other words, the Return on Investment was ZERO!
+In other words, the return on investment was ZERO!
 
 Yet, I would have never come to this realisation if I hadn't bothered measuring where I was spending my time.
 
@@ -146,17 +146,17 @@ I know it's not as sexy as suddenly waking up one day and taking a pill to make
 
 And best of all, once you know what your worst undercover time wasters are, you can take steps towards fixing them and actually see a difference when your efforts result in an improvement!
 
-<h3 id="space-for-socks">Make space for your (proverbial) favourite pair of socks</h3>
+## Make space for your (proverbial) favourite pair of socks
+
 So instead of just nodding along with me (and then secretly laughing at me for owning a pair of Wonder Woman socks), let's go over how you can do this for yourself.
 
 It's actually quite simple.
 
-<ol>
- 	<li>Download RescueTime from <a href="https://www.rescuetime.com/download" target="_blank" rel="noopener">here</a>. It's <strong>free</strong>.</li>
- 	<li>Set it up (takes literally 2 minutes).</li>
- 	<li>Let it run in the background for a week (or a couple of weeks).</li>
- 	<li>Receive an email in your inbox at the end of the week, showing you exactly where you spent your time (down to the exact websites/programs that you frequented)!</li>
-</ol>
+1.  Download RescueTime from <a href="https://www.rescuetime.com/download" target="_blank" rel="noopener">here</a>. It's **free**.
+2.  Set it up (takes literally 2 minutes).
+3.  Let it run in the background for a week (or a couple of weeks).
+4.  Receive an email in your inbox at the end of the week, showing you exactly where you spent your time (down to the exact websites/programs that you frequented)!
+
 My worst offenders were YouTube, VLC Media Player and Facebook!
 
 Let me know in the comments below where you ended up spending most of your time! (and also if you have any trouble setting up RescueTime)
