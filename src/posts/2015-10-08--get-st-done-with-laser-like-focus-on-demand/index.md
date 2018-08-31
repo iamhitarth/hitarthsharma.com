@@ -15,7 +15,7 @@ I am one of those overthinking types that get distracted super easily. In fact
 
 Fortunately, over the past few months I have found a solution that works wonders by taking advantage of the "Cocktail Party Effect", allowing me to focus on demand and get s\*\*t done.
 
-<h2 style="text-align: center;">The Cocktail Party Effect</h2>
+## The Cocktail Party Effect
 
 > ...is the phenomenon of being able to focus one's auditory attention on a particular stimulus
 > while filtering out a range of other stimuli, much the same way that a partygoer can focus on a
