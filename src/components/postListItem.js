@@ -15,7 +15,6 @@ const PostListItem = ({ node }) => {
       >
         <div
           style={{
-            marginBottom: '1rem',
             display: 'flex',
             justifyContent: 'space-between',
           }}

@@ -18,7 +18,11 @@
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.13",
     "typography": "^0.16.17",
-    "typography-theme-lawton": "^0.15.10"
+    "typography-theme-alton": "^0.15.10",
+    "typography-theme-fairy-gates": "^0.15.11",
+    "typography-theme-irving": "^0.15.10",
+    "typography-theme-noriega": "^0.15.10",
+    "typography-theme-sutro": "^0.15.10"
   },
   "keywords": [
     "gatsby",
