@@ -4,7 +4,7 @@ title: How To Beat The S**t Out Of Stress According To Science
 cover: photo-1525680996651-0222228be6f0.jpeg
 ---
 
-<span style="line-height: 1.5;"><img class="aligncenter size-full wp-image-834" src="http://www.thecodetoawesome.com/wp-content/uploads/2015/07/stressed.jpg" alt="Stressed" width="500" height="362" /></span>
+<img src="stressed.jpg" alt="Stressed" width="500" height="362"></img>
 
 Stress stress stress stress stress stress stress. <em>Streeeesssssssssssss.</em>
 
@@ -24,7 +24,7 @@ So while no one explicitly tells us that stress is bad, any sane person with a l
 
 Stress is bad. Stress is evil. Stress should go die.
 
-[caption id="attachment_857" align="aligncenter" width="405"]<img id="die-stress" class="wp-image-857" src="http://www.thecodetoawesome.com/wp-content/uploads/2015/07/stress-die-300x169.png" alt="Die stress!" width="405" height="228" /> DIE STRESS DIEEE![/caption]
+<img id="die-stress" src="die.png" alt="Die stress!" title="DIE STRESS DIEEE!" width="405" height="228"></img>
 
 But pause here for a second.
 
@@ -38,22 +38,27 @@ The pounding heart, fast paced breathing, sweaty palms and butterflies in your s
 
 Can stress really make your body "hulk up" to rise to the challenges you are about to encounter?
 
-[caption id="attachment_842" align="aligncenter" width="393"]<img class="wp-image-842 size-full" src="http://www.thecodetoawesome.com/wp-content/uploads/2015/07/hulking-up.gif" alt="Hulking Up" width="393" height="221" /> What if you could "hulk up" like this when stressed?[/caption]
+<p style="flex-direction: column;align-items: center;display: flex;">
+<img src="hulking-up.gif"></img>
+</p>
 
 Are all of those things really possible?
 
 Well, from personal experience <em>and </em>according to science, yes. Yes they are.
+
 <h2 id="new-science" style="text-align: center;">The New Science of Stress</h2>
 Dr. Kelly McGonigal (in addition to being a very pretty lady with beautiful eyes) is a world famous health psychologist and author of the book Upside of Stress. For years, she practiced and preached the mantra that stress is the enemy.
 
-[caption id="attachment_844" align="aligncenter" width="504"]<img id="pretty" class="wp-image-844 size-full" src="http://www.thecodetoawesome.com/wp-content/uploads/2015/07/mcgonigal.jpg" alt="Dr. Kelly McGonigal" width="504" height="321" /> Ladies and gentlemen, Dr. Kelly McGonigal.[/caption]
+<img id="pretty" src="kelly-mcgonigal.jpg" alt="Dr. Kelly McGonigal" title="Ladies and gentlemen, Dr. Kelly McGonigal." width="504" height="321" ></img>
 
 Then one day, her world fell apart.
 
 She came across a very interesting study that suggested what she had believed in and more importantly, what she was teaching her patients all this time, was wrong.
 
 In her own words:
+
 <blockquote><span id="t-74004" class="talk-transcript__fragment" data-time="74004">This study tracked 30,000 adults in the United States for eight years,</span> <span id="t-78663" class="talk-transcript__fragment" data-time="78663">and they started by asking people,</span> <span id="t-81190" class="talk-transcript__fragment" data-time="81190">"How much stress have you experienced in the last year?"</span> <span id="t-85088" class="talk-transcript__fragment" data-time="85088">They also asked,</span> <span id="t-86652" class="talk-transcript__fragment" data-time="86652">"Do you believe that stress is harmful for your health?"</span> <span id="t-92430" class="talk-transcript__fragment" data-time="92430"><em>And then they used public death records to find out who died</em>.</span></blockquote>
+
 Wow. Go science.
 
 Here is the interesting bit though. Results of the study showed that people who experienced a lot of stress, had a 43% chance of dying in the next year. <em>However</em>, that statistic was only true for the people who perceived stress as harmful.
@@ -65,9 +70,11 @@ The results showed, people who experienced severe stress and thought that it wa
 That's totally off the chain, isn't it?
 
 As if that wasn't a clear enough indication of the fact that our traditional demonising of stress is misplaced, McGonigal herself conducted another study.
+
 <blockquote>I went to 121 countries and asked people the same question that I asked you, did you experience a great deal of stress yesterday? And then they computed something called a stress index, and that’s the percentage of people, in any country, that said yes, yesterday was very stressful.</blockquote>
 10 years later, another group of researchers took the same dataset and asked an interesting question with an even more interesting result:
 <blockquote>Does a country’s stress index correlate to other indices of wellbeing, like life expectancy, GDP, the global happiness, or the satisfaction with people’s lives? And it turns out that it does. <em>But in exactly the opposite direction the researchers expected.</em></blockquote>
+
 Whaaaaaaaat?
 
 Turns out,  if stress isn't perceived as harmful, then it's probably not. On top of that, if you actually perceive it as a positive "thing", chances are you will end up better off than most other people with relatively less stress.
@@ -75,11 +82,13 @@ Turns out,  if stress isn't perceived as harmful, then it's probably not. On t
 So, how exactly can we take advantage of these findings?
 
 Well, in Dr. McGonigal's words:
-<blockquote>When you change your mind about stress, you can change your body's response to stress.</blockquote>
-<h2 id="beat-stress" style="text-align: center;">Beating Stress</h2>
-[caption id="attachment_851" align="aligncenter" width="492"]<a href="http://www.thecodetoawesome.com/wp-content/uploads/2015/07/how-to-train-your-dragon.jpg"><img class="wp-image-851" src="http://www.thecodetoawesome.com/wp-content/uploads/2015/07/how-to-train-your-dragon.jpg" alt="How To Train Your Dragon" width="492" height="307" /></a> Beating stress - How To Train Your Dragon style![/caption]
 
-<span style="line-height: 1.5;">Stress is like the dragons from How To Train Your Dragon.</span>
+<blockquote>When you change your mind about stress, you can change your body's response to stress.</blockquote>
+
+<h2 id="beat-stress" style="text-align: center;">Beating Stress</h2>
+<img src="how-to-train-your-dragon.jpg" alt="How To Train Your Dragon" title="Beating stress - How To Train Your Dragon style!" width="492" height="307"></img>
+
+Stress is like the dragons from How To Train Your Dragon.
 
 In that movie, Vikings spend the first half trying to kill them all, only to realise in the second half that HOLY SHIT they need the dragons help to get rid of the super humongous mama dragon hell bent on roasting everyone!
 
@@ -98,6 +107,7 @@ And, the more you do this, the easier it will get. Till you get to a point where
 And that there, is a feeling worth striving for.
 
 So next time you are feeling stressed, take a deep breath. And remember that if you embrace the stress, it won't cause a mess.
+
 <h2 style="text-align: center;">Long Story Short</h2>
 Whether it's due to the media, the people around us or just our own bad experiences, stress has always been thought of as a negative feeling. And while it can be bad for you, here is what you can do to avoid that from happening and use it to propel you forward instead:
 <ul>
@@ -108,4 +118,5 @@ Whether it's due to the media, the people around us or just our own bad experie
 In case you were wondering, this post was inspired by the following awesome 15 minute talk!
 
 [video_player type="youtube" youtube_show_title_bar="Y" width="560" height="315" align="center" margin_top="0" margin_bottom="20"]aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1SY0d5VlRBb1hFVQ==[/video_player]
+
 <p style="text-align: center;"><strong>If you found this to be useful (or entertaining), then please do share it around using the buttons below!</strong></p>

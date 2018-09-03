@@ -21,12 +21,17 @@ Well, while you might be trying to reduce your workload by <a href="http://www.
 The night before your Physics exam with 6 more chapters to go on electricity and magnetism. Or, a couple of hours before an important client presentation with a completed presentation not even in sight.<strong> </strong>Or, a deadline fast approaching with you not even knowing what the deliverables are.
 
 It is in those times that you must ask yourself - W.W.A.D.
+
 <blockquote>What would Achilles do?</blockquote>
+
 Just like Achilles went for the biggest guy in the enemy's army, instead of trying to defeat each and every puny little soldier, you must go for the tasks that offer you the biggest rewards (a.k.a the big wins) instead of stretching yourself thin trying to complete <em>everything</em>.
+
 <h2 style="text-align: center;">The Achilles Mindset - Quality over Quantity</h2>
+
 <em>Theoretically</em>, it makes a lot of sense to go for the big wins. I mean it would be dumb not to.
 
 But in <em>reality</em>, two things stop us from doing so:
+
 <ol>
 	<li>Not being able to identify the big wins.</li>
 	<li>And, the desperation for getting stuff done, when there is a lot to do.</li>
@@ -35,7 +40,8 @@ When faced with a whole army of tasks/chores/things that <em>need to be</em> don
 
 In those moments, sloooooow things down for<em> just 2 minutes</em> and analyse the situation.
 
-[caption id="" align="aligncenter" width="425"]<img src="http://www.metaltoad.com/sites/default/files/bullet-time.gif" alt="Bullet time" width="425" height="173" /> Just like Neo[/caption]
+<p style="flex-direction: column;align-items: center;display: flex;">
+<img src="bullet-time.gif" alt="Bullet time"></img>Just like Neo</p>
 
 Write down a list of things that you have to get done. This will stop those things from bouncing around in your head and making you super anxious.
 
@@ -46,16 +52,19 @@ Which are the things that you can complete comfortably in the available time and
 Next, which things won't make much of a difference <em>even if they are done</em>? Chuck those down at the bottom of your list.
 
 Finally, swing for the fences and unleash your own awesomely badass moves to get those big wins!
+
 <h2 style="text-align: center;">Long Story Short</h2>
+
 I would be the first one to admit that it's not always easy to go for the high reward tasks. Sometimes we don't have enough information, other times the low reward tasks are more urgent. And then there are times when <em>everything</em> is super duper uber urgent!
 
 Yet, once again it's a matter of going for quality over quantity.
 
 This approach will end up with you accomplishing a whole lot more just because it puts you in control of the situation. Instead of you being controlled by the situation. Plus, more often than not, you <em>will</em> manage to score a big win outta nowhere (just because you were on the look out for it).
 
-<img class="aligncenter" src="http://cdn.meme.am/instances/500x/55979532.jpg" alt="" width="373" height="245" />
+<img src="booyah.jpg" alt="Booyah!"></img>
 
 So, for the key takeaways, we have:
+
 <ul>
 	<li>Remember W.W.A.D. - What would Achilles do?</li>
 	<li>Aim for quality over quantity when it comes to getting things done.</li>
