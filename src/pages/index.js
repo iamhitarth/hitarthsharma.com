@@ -5,9 +5,10 @@ import SidebarLayout from '../components/sidebarLayout'
 import PostListItem from '../components/postListItem'
 
 /* TODO:
-[] Pick a few typography themes to choose from
-[] Decide on a typography theme
+[x] Pick a few typography themes to choose from
+[] Decide on a typography theme and remove the others
 [] Fix markdown in the posts - use as little HTML as possible
+[] yarn add gatsby-remark-embed-video for YouTube vids in the posts
 */
 
 const IndexPage = ({ data, location }) => {
