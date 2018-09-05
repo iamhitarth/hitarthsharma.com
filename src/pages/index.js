@@ -6,8 +6,9 @@ import PostListItem from '../components/postListItem'
 
 /* TODO:
 [x] Pick a few typography themes to choose from
-[] Decide on a typography theme and remove the others
+[] Visually check the stress post and ensure that everything looks as expected
 [] Fix markdown in the posts - use as little HTML as possible
+[] Decide on a typography theme and remove the others
 [] yarn add gatsby-remark-embed-video for YouTube vids in the posts
 */
 
