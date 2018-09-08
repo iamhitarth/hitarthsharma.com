@@ -7,7 +7,7 @@ tags: creativity, deadlines, performance, productivity, science, software, syste
 
 Can't focus? Got too much on your mind? Head buzzing with thoughts?
 
-<img src="cant-focus.jpg" alt="Can't focus?"></img>
+<img src="cant-focus.jpg" alt="Can't focus?" />
 
 I know how you feel.
 
@@ -45,4 +45,4 @@ So once again, to reiterate:
 
 ...and before you know it, you will be in "the zone" and focusing like your life depended on it (for hours).
 
-<img src="focus-level.jpg" alt="Focus level over 9000!" title="Kinda like this dude!"></img>
+<img src="focus-level.jpg" alt="Focus level over 9000!" title="Kinda like this dude!" />>
