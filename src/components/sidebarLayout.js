@@ -53,7 +53,7 @@ const SidebarLayout = ({ children, location }) => {
               </div>
               <div>
                 {/* Site title */}
-                <h1>
+                <h1 style={styles.titleWrapper}>
                   <Link to="/" style={styles.titleLink}>
                     {data.site.siteMetadata.title}
                   </Link>
@@ -137,6 +137,9 @@ const styles = {
     width: '11.25rem',
     borderRadius: '50%',
     marginBottom: '1rem',
+  },
+  titleWrapper: {
+    textAlign: 'center',
   },
   titleLink: {
     textDecoration: 'none',
