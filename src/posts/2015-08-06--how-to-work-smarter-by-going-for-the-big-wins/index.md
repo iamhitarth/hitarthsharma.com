@@ -6,7 +6,7 @@ cover: photo-1518859154638-ca29363763d8.jpeg
 
 Let's start off on a high note by checking out the most epic example of working smarter (ever)!
 
-[video_player type="youtube" youtube_show_title_bar="Y" width="560" height="315" align="center" margin_top="0" margin_bottom="20"]aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1TcS11TUlaR0VUcw==[/video_player]
+`video: https://youtu.be/eOy69TPWOgQ?t=35s`
 
 HOLY SHIT! Was that the most awesomely badass move in the history of awesomely badass moves or what?!
 

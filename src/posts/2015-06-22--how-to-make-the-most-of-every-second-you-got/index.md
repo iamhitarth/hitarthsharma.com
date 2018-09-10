@@ -105,7 +105,7 @@ Being bombarded with information, opportunities and things that we must do from 
 Yet, depending on where you are in your life and what you say no to, you could easily end up like Jim Carrey from Yes Man.
 
 <span id="say-no-to-everything"></span>
-https://www.youtube.com/watch?v=d15qaCNGxpY
+`video: https://www.youtube.com/watch?v=d15qaCNGxpY`
 
 And that isn't a very nice place to be at.
 

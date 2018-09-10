@@ -28,9 +28,7 @@ If in those moments you feel like responding with any of the following:
 
 He can be a bit hard-hitting but I *insist* that if there is one thing you do today, then watching this clip should be it.
 
-<p style="flex-direction: column; align-items: center; display: flex;">
-<iframe src="https://www.youtube.com/embed/CPa3E8yis0I" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-</p>
+`video: https://www.youtube.com/embed/CPa3E8yis0I`
 
 Simply put, when stuck, pause, take a deep breath and:
 

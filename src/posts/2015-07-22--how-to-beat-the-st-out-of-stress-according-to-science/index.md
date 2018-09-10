@@ -6,7 +6,7 @@ cover: photo-1525680996651-0222228be6f0.jpeg
 
 <img src="stressed.jpg" alt="Stressed" />
 
-Stress stress stress stress stress stress stress. _Streeeesssssssssssss_.
+Stress stress stress stress stress stress stress. *Streeeesssssssssssss*.
 
 Just saying that word more than once and stressing on it stresses me out!
 
@@ -14,7 +14,7 @@ Growing up, we are taught that stress is the enemy. I mean no one actually says 
 
 As kids when we saw our parents looking worried and anxious, we heard them say "I am so stressed".
 
-Most of us have seen or heard of _someone_ having a full blown meltdown that got attributed to stress too.
+Most of us have seen or heard of *someone* having a full blown meltdown that got attributed to stress too.
 
 When your partner or friend is in an irritable mood, he or she would often say "Sorry, I am just really stressed".
 
@@ -58,7 +58,7 @@ She came across a very interesting study that suggested what she had believed in
 
 In her own words:
 
-> This study tracked 30,000 adults in the United States for eight years, and they started by asking 
+> This study tracked 30,000 adults in the United States for eight years, and they started by asking
 > people, "How much stress have you experienced in the last year?"
 > They also asked, "Do you believe that stress is harmful for your health?"
 > And then they used public death records to find out who died.
@@ -75,8 +75,8 @@ That's totally off the chain, isn't it?
 
 As if that wasn't a clear enough indication of the fact that our traditional demonising of stress is misplaced, McGonigal herself conducted another study.
 
-> I went to 121 countries and asked people the same question that I asked you, did you experience a 
-> great deal of stress yesterday? And then they computed something called a stress index, and 
+> I went to 121 countries and asked people the same question that I asked you, did you experience a
+> great deal of stress yesterday? And then they computed something called a stress index, and
 > that’s the percentage of people, in any country, that said yes, yesterday was very stressful.
 
 10 years later, another group of researchers took the same dataset and asked an interesting question with an even more interesting result:
@@ -129,6 +129,6 @@ Whether it's due to the media, the people around us or just our own bad experie
 
 In case you were wondering, this post was inspired by the following awesome 15 minute talk!
 
-[video_player type="youtube" youtube_show_title_bar="Y" width="560" height="315" align="center" margin_top="0" margin_bottom="20"]aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1SY0d5VlRBb1hFVQ==[/video_player]
+`video: https://www.youtube.com/watch?v=RcGyVTAoXEU`
 
 <p style="text-align: center;"><strong>If you found this to be useful (or entertaining), then please do share it around using the buttons below!</strong></p>
