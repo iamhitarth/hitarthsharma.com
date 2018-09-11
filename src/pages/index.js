@@ -4,6 +4,10 @@ import { graphql } from 'gatsby'
 import SidebarLayout from '../components/sidebarLayout'
 import PostListItem from '../components/postListItem'
 
+/* TODO:
+[] Decide on a typography theme and remove the others
+*/
+
 const IndexPage = ({ data, location }) => {
   return (
     <SidebarLayout location={location}>
