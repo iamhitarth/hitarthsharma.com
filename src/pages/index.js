@@ -5,6 +5,9 @@ import SidebarLayout from '../components/sidebarLayout'
 import PostListItem from '../components/postListItem'
 
 /* TODO:
+[] Add cover image for post list item on the home page
+[] Experiment with turniing on showing whole post vs showing excerpt of post
+[] Mobile view where sidebar disappears
 [] Decide on a typography theme and remove the others
 */
 
