@@ -4,14 +4,6 @@ import { graphql } from 'gatsby'
 import SidebarLayout from '../components/sidebarLayout'
 import PostListItem from '../components/postListItem'
 
-/* TODO:
-[x] Pick a few typography themes to choose from
-[] Visually check the stress post and ensure that everything looks as expected
-[] Fix markdown in the posts - use as little HTML as possible
-[] Decide on a typography theme and remove the others
-[] yarn add gatsby-remark-embed-video for YouTube vids in the posts
-*/
-
 const IndexPage = ({ data, location }) => {
   return (
     <SidebarLayout location={location}>
