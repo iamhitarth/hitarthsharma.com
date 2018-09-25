@@ -9,7 +9,9 @@
     "gatsby-plugin-sharp": "^2.0.0-beta.9",
     "gatsby-plugin-typography": "^2.2.0-beta.3",
     "gatsby-remark-copy-linked-files": "^1.5.37",
+    "gatsby-remark-embed-video": "^1.4.0",
     "gatsby-remark-images": "^2.0.1-beta.11",
+    "gatsby-remark-responsive-iframe": "^1.4.20",
     "gatsby-source-filesystem": "^2.0.1-beta.10",
     "gatsby-transformer-remark": "^2.1.1-beta.6",
     "graphql-tools": "^3.1.1",
@@ -18,7 +20,11 @@
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.13",
     "typography": "^0.16.17",
-    "typography-theme-lawton": "^0.15.10"
+    "typography-theme-alton": "^0.15.10",
+    "typography-theme-fairy-gates": "^0.15.11",
+    "typography-theme-irving": "^0.15.10",
+    "typography-theme-noriega": "^0.15.10",
+    "typography-theme-sutro": "^0.15.10"
   },
   "keywords": [
     "gatsby",
@@ -39,6 +45,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/iamhitarth/hitarthsharma.com"
   }
 }

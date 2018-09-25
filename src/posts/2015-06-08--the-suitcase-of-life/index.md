@@ -4,7 +4,7 @@ title: The Suitcase of Life
 cover: photo-1504884060002-619141ede057.jpeg
 ---
 
-<img src="india-luggage.jpg" title="Travelling - Indian style - on my last trip!"></img>
+<img src="india-luggage.jpg" title="Travelling - Indian style - on my last trip!" />
 
 Travelling - especially Indian style - is never easy.
 
@@ -30,7 +30,7 @@ While I love the thought of travelling, I hate packing for it!
 
 I hate it because it forces me to show favouritism for my clothes.
 
-<img src="socks.jpg" title="Superman vs Batman vs Wonder Woman socks - now that's a tough one.."></img>
+<img src="socks.jpg" title="Superman vs Batman vs Wonder Woman socks - now that's a tough one.." />
 
 That moment, when you have almost got your suitcase packed up.
 
@@ -102,7 +102,7 @@ Don't believe me?
 
 I didn't believe my alternate self, telling me that I was being stupid and wasting my time without realising it, either.
 
-<img src="fight-club-mirror.jpg" title="Fight club anyone?"></img>
+<img src="fight-club-mirror.jpg" title="Fight club anyone?" />
 
 So I decided to run an experiment. I decided to measure where I was spending my time.
 
@@ -110,7 +110,7 @@ At first, I was going to keep a time log of everything I did (old school pen and
 
 ---
 
-<em><strong>Note:</strong> I am not affiliated with RescueTime nor am I getting paid/compensated for this in any way (unfortunately).</em>
+_**Note:** I am not affiliated with RescueTime nor am I getting paid/compensated for this in any way (unfortunately)._
 
 ---
 
@@ -161,4 +161,4 @@ My worst offenders were YouTube, VLC Media Player and Facebook!
 
 Let me know in the comments below where you ended up spending most of your time! (and also if you have any trouble setting up RescueTime)
 
-<strong>P.S.</strong> Regardless of whether you use RescueTime or not, I urge you to note down where you are spending your time as I can guarantee that you will be surprised at what you uncover!
+**P.S.** Regardless of whether you use RescueTime or not, I urge you to note down where you are spending your time as I can guarantee that you will be surprised at what you uncover!

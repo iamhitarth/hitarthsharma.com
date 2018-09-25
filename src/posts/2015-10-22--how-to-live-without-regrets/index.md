@@ -20,7 +20,7 @@ As you manage to break free of the bear hug, the guy in the front swings at you 
 
 That's right. You read it right. _Cake_.
 
-<img src="wtf-old-lady.jpg" alt="What the hell?" title="Since when do people attack with cake?!"></img>
+<img src="wtf-old-lady.jpg" alt="What the hell?" title="Since when do people attack with cake?!" />
 
 This is more or less what happened to me on my 25th birthday last week. It was an awesome end to a very non-birthday like day where my mates _tried to_ surprise me! (with some cake in the face)
 
@@ -28,7 +28,7 @@ However, I couldn't help but wonder what would have happened had I been jumped f
 
 What if that had turned in to my last day ever?
 
-<img src="escalated-quickly.jpg"></img>
+<img src="escalated-quickly.jpg" alt="That escalated quickly." />
 
 I know. I know. It's a pretty depressing way of thinking about it.
 
@@ -56,6 +56,6 @@ Below are a few of my favourites:
 
 With these in mind, hopefully both you and I will be able to avoid any more (or at least move past previous) regrettable decisions because at the end of the day...
 
-<img src="yolo.jpg" title="..and it's all about making the most of this one time!"></img>
+<img src="yolo.jpg" title="..and it's all about making the most of this one time!" />
 
 <p style="text-align: center;"><strong>Can you relate to this? Don't regret not sharing this then! Use the buttons below and please share it around :)</strong></p>

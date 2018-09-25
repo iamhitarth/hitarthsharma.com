@@ -10,9 +10,12 @@ The story. The flawed characters. The dialogue between the characters. Everythin
 
 Take the quote below for example:
 
-<blockquote>Does that make you sad or anxious?
-I mean, I am always anxious thinking that I am not living my life to the fullest. You know, taking advantage of every possibility, making sure I am not wasting one second of the little time I have.
-- Clementine</blockquote>
+> Does that make you sad or anxious?
+> I mean, I am always anxious thinking that I am not living my life to the fullest. You know, taking
+> advantage of every possibility, making sure I am not wasting one second of the little time I have.
+>
+> Clementine
+
 Can you relate to that?
 
 Knowing deep down that the clock is ticking and every second that slips by is one less second left for you to get to where you want to.
@@ -31,7 +34,7 @@ To spend time with your friends.
 
 To become successful.
 
-To become <em>happy.</em>
+To become *happy*.
 
 To achieve everything you ever wanted to.
 
@@ -47,7 +50,8 @@ I thought about it more than I usually think about it.
 
 I thought about why it is that we feel that way.
 
-<h2 id="because-scarcity">Because of scarcity. That's why.</h2>
+## Because of scarcity. That's why.
+
 Assuming you and I are average people, we have roughly 50 years or 1.5 billion seconds (Thank you Google!) to make things happen for us.
 
 Yet, it feels like nothing.
@@ -70,7 +74,7 @@ Chores to do.
 
 Projects to complete.
 
-It is because we are buried so deep under this mountain of seemingly necessary and important things we <em>have to </em>do, we forget about the things that we <em>want to</em> do.
+It is because we are buried so deep under this mountain of seemingly necessary and important things we *have to* do, we forget about the things that we _want to_ do.
 
 Things that make us feel happy.
 
@@ -92,7 +96,8 @@ Because while they absolutely need to get done.
 
 They don't have to be done by you.
 
-<h2>Say no to make the most of your time</h2>
+## Say no to make the most of your time
+
 In recent times, saying no as productivity advice has become all the rage (and with good reason).
 
 Being bombarded with information, opportunities and things that we must do from all sides, shutting it all out seems to be the only way of preserving our sanity.
@@ -100,7 +105,7 @@ Being bombarded with information, opportunities and things that we must do from 
 Yet, depending on where you are in your life and what you say no to, you could easily end up like Jim Carrey from Yes Man.
 
 <span id="say-no-to-everything"></span>
-https://www.youtube.com/watch?v=d15qaCNGxpY
+`video: https://www.youtube.com/watch?v=d15qaCNGxpY`
 
 And that isn't a very nice place to be at.
 
@@ -112,29 +117,31 @@ So is there a way clear cut way of doing that?
 
 Short answer - no.
 
-Long answer - still no BUT there is a rule of thumb that you can follow to deflect majority of the "time drainers" <em>before </em>you even take them on.
+Long answer - still no BUT there is a rule of thumb that you can follow to deflect majority of the "time drainers" _before_ you even take them on.
 
 <span id="rule-of-thumb"></span>Here is the rule:
 
-<blockquote>Only say yes to things that benefit you (in a relevant way) and that you can make time for. <strong><a href="http://ctt.ec/adOfe" target="_blank" rel="noopener">[Tweet this]</a></strong></blockquote>
+> Only say yes to things that benefit you (in a relevant way) and that you can make time for. <strong><a href="http://ctt.ec/adOfe" target="_blank" rel="noopener">[Tweet this]</a></strong>
+
 Because as a wise man once said, prevention is better than the cure.
 
 The less "busy work" we take on, the more time we have left to do the things that really count.
 
-<h2 id="job-offer">A job offer from a drunk friend</h2>
+## A job offer from a drunk friend
+
 Let me give you an example.
 
 It was the night of my graduation dinner.
 
 I was just being cool sipping on my drink when this friend of mine came up to me.
 
-It was obvious that he was drunk. Possibly, <em>very</em> drunk.
+It was obvious that he was drunk. Possibly, _very_ drunk.
 
 He came in real close and said "Yo.. bro are you looking for a job?"
 
 After saying no to him, only to have him come back and ask me the exact same question two more times, I realised that he wasn't kidding.
 
-<img src="say-what.jpg" alt="" width="328" height="372" />
+<img src="say-what.jpg" alt="Say what?" />
 
 Now at this stage, I was happily working for the company that I was interning for and had every intention of going to work full time for them.
 
@@ -162,14 +169,15 @@ It was quite simple. The amount of time I could lose vs the potential gain made 
 
 So I sent that message, met up with the directors of LeapThought and 3 years (plus a lot of lessons learnt) later, here I am thanking my stars for having made that decision.
 
-<h2>Do you want to build an app?</h2>
+## Do you want to build an app?
+
 I got one more example for you.
 
 Last year, I had a friend come to me with an app idea that he and his brother were quite keen to work on.
 
 They had done their research. They spotted a gap in the market and were ready to rumble.
 
-<img src="infinity-and-beyond.jpg" alt="To Infinity And Beyond"></img>
+<img src="infinity-and-beyond.jpg" alt="To Infinity And Beyond" />
 
 Then, they approached me to work on it.
 
@@ -189,9 +197,9 @@ Well of course it would, my mind said.
 
 But then I rephrased the question:
 
-If I say yes to this, will it benefit me in a way <em>that is relevant</em>?
+If I say yes to this, will it benefit me in a way _that is relevant_?
 
-All of a sudden, I found myself answering <em>maybe</em>.
+All of a sudden, I found myself answering _maybe_.
 
 Simply because I wasn't sure if building an app was what I wanted to do. If it was aligned with where I saw myself going.
 
@@ -203,7 +211,8 @@ So time was a bit short. Which meant the answer was a "probably not".
 
 Based on these two answers (maybe and probably not), I decided to not go for it.
 
-<h2 id="two-phases">The two phases that we all go through (repeatedly)</h2>
+## The two phases that we all go through (repeatedly)
+
 That was pretty straightforward.
 
 But, imagine if I had just gotten fired from my job or if the app that they were talking about building was sure to be the next Google or Facebook.
@@ -214,7 +223,7 @@ Grabbed the opportunity with both hands (and legs) and hung on to it for dear li
 
 Yet, anything less would not have been enough to get us to commit.
 
-This is interesting because it highlights that throughout our life (without even realising it), we go through phases where we can easily let most things go by (except for the blindingly obvious opportunities) vs phases where we <em>have to</em> capitalise on even the half chances that come our way (aka desperation mode).
+This is interesting because it highlights that throughout our life (without even realising it), we go through phases where we can easily let most things go by (except for the blindingly obvious opportunities) vs phases where we *have to* capitalise on even the half chances that come our way (aka desperation mode).
 
 Since I was in a phase of my life where I knew my goals (to grow as a software engineer and make some money on the side), I could let most opportunities (except for the ultra awesome ones) pass by without even casting a second glance at them.
 
@@ -228,10 +237,11 @@ Whereas in the latter scenario, I would have had "Yes" as my default answer and 
 
 Understanding what phase of your life you are in and having a default mode based on that is the most optimum way of handling your day to day tasks (without getting bogged down) while keeping you open for the important things in life.
 
-<h2>Rule of thumb for a reason</h2>
+## Rule of thumb for a reason
+
 As a final tip, remember that this is a "rule of thumb" a.k.a. not something set in stone.
 
-When things are looking marginal, <em>always</em> back yourself.
+When things are looking marginal, _always_ back yourself.
 
 This means that if you apply this rule and are still unsure about what to do, do what your gut says.
 
@@ -241,7 +251,7 @@ Yet within these shades of grey, using techniques like this can help us ensure 
 
 To make the most of this, apply it as often as you can till it becomes second nature.
 
-When all is said and done, our aim should be to minimise the things that we <em>have to do</em> while maximising the things that we <em>want to do</em>.
+When all is said and done, our aim should be to minimise the things that we _have to do_ while maximising the things that we *want to do*.
 
 Things that make us happy.
 
