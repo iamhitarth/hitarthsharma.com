@@ -13,13 +13,14 @@ const PostListItem = ({ node }) => {
           fontWeight: `normal`,
         }}
       >
-        <h3>{node.frontmatter.title}</h3>
+        <h3 style={{ marginTop: '1.175rem' }}>{node.frontmatter.title}</h3>
         <h5
           style={{
             color: '#BBB',
             display: 'flex',
             justifyContent: 'space-between',
             flex: 1,
+            marginTop: '1.175rem',
           }}
         >
           <span>{node.fields.postDate}</span>

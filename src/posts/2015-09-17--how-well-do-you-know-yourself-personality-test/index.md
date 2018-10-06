@@ -24,7 +24,7 @@ Kind of like those Facebook quizzes that really took over a little while back.
 
 I took the Myers Briggs personality test (free link at the bottom) last week and what it revealed about me was fascinating. Technically, because it just told me things about my own personality, none of it should have come as a surprise. However, the fascinating aspect was how well it articulated some of my most common traits that I didn't even know existed.
 
-<img src="estp-personality.png" alt="ESTP Personality" title="Sounds and looks just like me!" />>
+<img src="estp-personality.png" alt="ESTP Personality" title="Sounds and looks just like me!" />
 
 For example, my personality type turned out to be ESTP - Extroverted Sensory Thinking Perceiving type. While most of the things I read about myself were pretty awesome, my "profile" did point out that when it comes to dealing with theoretical or abstract concepts, I tend to zone out. Armed with this knowledge, next time I try to learn something theoretical, I will attempt to link it to a concrete/practical example to ensure I understand and retain the theoretical/abstract aspects of the concept (in my own way).
 

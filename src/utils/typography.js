@@ -7,7 +7,7 @@ import irvingTheme from 'typography-theme-irving' // Like the look of this - onl
 
 import sutroTheme from 'typography-theme-sutro' // Looks great - using the opposite combo of what I was going for
 
-const typography = new Typography(irvingTheme)
+const typography = new Typography(fairyGatesTheme)
 const { rhythm, scale } = typography
 
 export { rhythm, scale, typography as default }
