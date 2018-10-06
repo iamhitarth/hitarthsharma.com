@@ -45,4 +45,4 @@ So once again, to reiterate:
 
 ...and before you know it, you will be in "the zone" and focusing like your life depended on it (for hours).
 
-<img src="focus-level.jpg" alt="Focus level over 9000!" title="Kinda like this dude!" />>
+<img src="focus-level.jpg" alt="Focus level over 9000!" title="Kinda like this dude!" />

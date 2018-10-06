@@ -13,20 +13,21 @@ const PostListItem = ({ node }) => {
           fontWeight: `normal`,
         }}
       >
-        <div
+        <h3 style={{ marginTop: '1.175rem' }}>{node.frontmatter.title}</h3>
+        <h5
           style={{
+            color: '#BBB',
             display: 'flex',
             justifyContent: 'space-between',
+            flex: 1,
+            marginTop: '1.175rem',
           }}
         >
-          <h3 style={{ display: 'flex' }}>
-            {node.frontmatter.title}{' '}
-            <span style={{ color: '#BBB' }}>— {node.fields.postDate}</span>
-          </h3>
-          <h3 style={{ color: '#BBB' }}>
+          <span>{node.fields.postDate}</span>
+          <span>
             {node.timeToRead || 1} {node.timeToRead > 1 ? 'mins' : 'min'}.
-          </h3>
-        </div>
+          </span>
+        </h5>
         <p>{node.excerpt}</p>
       </Link>
     </div>

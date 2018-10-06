@@ -90,7 +90,7 @@ const SidebarLayout = ({ children, location }) => {
               </div>
               <div>
                 {/* Recent posts */}
-                <h3>Recent posts</h3>
+                <h3 style={styles.recentPostsTitle}>Recent posts</h3>
                 <ul>
                   {data.allMarkdownRemark.edges.map(({ node }) => (
                     <Link to={node.fields.slug}>
@@ -161,6 +161,7 @@ const styles = {
     padding: 6,
     coolor: 'hsla(0,0%,0%,1)',
   },
+  recentPostsTitle: { textAlign: 'center' },
   main: { flex: 2.5, paddingLeft: '2rem' },
 }
 

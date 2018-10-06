@@ -45,6 +45,7 @@ const styles = {
   headerLink: {
     color: 'white',
     textDecoration: 'none',
+    textShadow: 'none',
   },
   nav: {
     margin: 0,
