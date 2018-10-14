@@ -10,12 +10,12 @@ describe('Header', () => {
     expect(container.firstChild).toMatchSnapshot()
   })
 
-  it('displays site title', () => {
-    const siteTitleElement = getByText(siteTitle)
-    expect(siteTitleElement).toHaveTextContent(siteTitle)
+  it('has site title', () => {
+    expect(getByText(siteTitle)).not.toBeNull()
+    // TODO: Assert title is h1
   })
 
-  it('displays nav links', () => {
+  it('has nav links', () => {
     expect(getByText('Home')).not.toBeNull()
     expect(getByText('About')).not.toBeNull()
   })
