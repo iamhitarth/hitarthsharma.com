@@ -42,11 +42,44 @@
     "test:watch": "jest --watch"
   },
   "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^23.6.0",
     "jest": "^23.6.0",
-    "prettier": "^1.12.0"
+    "jest-dom": "^2.1.0",
+    "prettier": "^1.12.0",
+    "react-testing-library": "^5.2.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/iamhitarth/hitarthsharma.com"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/config/jestPreprocess.js"
+    },
+    "testRegex": "/.*(__tests__\\/.*)|(.*(test|spec))\\.jsx?$",
+    "moduleNameMapper": {
+      ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
+    },
+    "testPathIgnorePatterns": [
+      "node_modules",
+      ".cache"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(gatsby)/)"
+    ],
+    "globals": {
+      "__PATH_PREFIX__": ""
+    },
+    "testURL": "http://localhost",
+    "setupFiles": [
+      "<rootDir>/config/loaderShim.js"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/config/testsSetup.js"
   }
 }
