@@ -49,6 +49,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-core": "^7.0.0-0",
     "babel-jest": "^23.6.0",
+    "husky": "^1.1.2",
     "jest": "^23.6.0",
     "jest-dom": "^2.1.0",
     "prettier": "^1.12.0",
@@ -81,5 +82,10 @@
       "<rootDir>/config/loaderShim.js"
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/config/testsSetup.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test"
+    }
   }
 }
