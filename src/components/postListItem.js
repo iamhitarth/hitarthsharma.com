@@ -25,7 +25,7 @@ const PostListItem = ({ node }) => {
         >
           <span>{node.fields.postDate}</span>
           <span>
-            {node.timeToRead || 1} {node.timeToRead > 1 ? 'mins' : 'min'}.
+            {`${node.timeToRead || 1} ${node.timeToRead > 1 ? 'mins' : 'min'}.`}
           </span>
         </h5>
         <p>{node.excerpt}</p>
