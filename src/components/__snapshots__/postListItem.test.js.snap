@@ -7,6 +7,7 @@ exports[`Post list item matches snapshot 1`] = `
     to="my-test-post"
   >
     <h3
+      data-testid="postTitle"
       style="margin-top: 1.175rem;"
     >
       My test post
@@ -14,14 +15,20 @@ exports[`Post list item matches snapshot 1`] = `
     <h5
       style="color: rgb(187, 187, 187); display: flex; justify-content: space-between; margin-top: 1.175rem;"
     >
-      <span>
+      <span
+        data-testid="postDate"
+      >
         21 October, 2018
       </span>
-      <span>
+      <span
+        data-testid="timeToRead"
+      >
         3 mins.
       </span>
     </h5>
-    <p>
+    <p
+      data-testid="postExcerpt"
+    >
       This is the excerpt
     </p>
   </link>

@@ -16,25 +16,27 @@ describe('Post list item', () => {
     },
   }
 
-  const { getByText, container } = render(<PostListItem node={node} />)
+  const { getByTestId, container } = render(<PostListItem node={node} />)
 
   it('matches snapshot', () => {
     expect(container.firstChild).toMatchSnapshot()
   })
 
   it('displays post title', () => {
-    expect(getByText(node.frontmatter.title)).not.toBeNull()
+    expect(getByTestId('postTitle')).toHaveTextContent(node.frontmatter.title)
   })
 
   it('displays post date', () => {
-    expect(getByText('21 October, 2018')).not.toBeNull()
+    expect(getByTestId('postDate')).toHaveTextContent(node.fields.postDate)
   })
 
   it('displays read time', () => {
-    expect(getByText(`${node.timeToRead} mins.`)).not.toBeNull()
+    expect(getByTestId('timeToRead')).toHaveTextContent(
+      `${node.timeToRead} mins.`
+    )
   })
 
   it('displays post excerpt', () => {
-    expect(getByText(node.excerpt)).not.toBeNull()
+    expect(getByTestId('postExcerpt')).toHaveTextContent(node.excerpt)
   })
 })

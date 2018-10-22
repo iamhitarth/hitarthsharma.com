@@ -39,7 +39,10 @@
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "postmerge": "yarnhook",
+    "postcheckout": "yarnhook",
+    "postrewrite": "yarnhook"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
@@ -53,7 +56,8 @@
     "jest": "^23.6.0",
     "jest-dom": "^2.1.0",
     "prettier": "^1.12.0",
-    "react-testing-library": "^5.2.0"
+    "react-testing-library": "^5.2.0",
+    "yarnhook": "^0.3.0"
   },
   "repository": {
     "type": "git",
