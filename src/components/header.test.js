@@ -12,7 +12,6 @@ describe('Header', () => {
 
   it('has site title', () => {
     expect(getByText(siteTitle)).not.toBeNull()
-    // TODO: Assert title is h1
   })
 
   it('has nav links', () => {
