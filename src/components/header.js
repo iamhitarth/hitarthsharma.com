@@ -1,57 +1,59 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled from 'styled-components'
+
+const Heading = styled.h1`
+  margin: 0;
+`
+
+const HeaderLink = styled(Link)`
+  color: white;
+  text-decoration: none;
+  text-shadow: none;
+`
+
+const HeaderNavList = styled.ul`
+  margin: 0;
+  list-style-type: 'none';
+  display: flex;
+  align-items: flex-end;
+`
+
+const HeaderNavItem = styled.li`
+  display: inline;
+  margin: 0;
+  padding-left: 1.5rem;
+`
+
+const HeaderWrapper = styled.div`
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1.45rem 1.0875rem;
+  display: flex;
+  justify-content: space-between;
+`
+
+const HeaderContainer = styled.div`
+  background: black;
+  margin-bottom: 1.2rem;
+`
 
 const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'black',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-        display: 'flex',
-        justifyContent: 'space-between',
-      }}
-    >
-      <h1 style={styles.heading}>
-        <Link to="/" style={styles.headerLink}>
-          {siteTitle}
-        </Link>
-      </h1>
-      <ul style={styles.nav}>
-        <li style={styles.navItem}>
-          <Link to="/" style={styles.headerLink}>
-            Home
-          </Link>
-        </li>
-        <li style={styles.navItem}>
-          <Link to="/about" style={styles.headerLink}>
-            About
-          </Link>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <HeaderContainer>
+    <HeaderWrapper>
+      <Heading>
+        <HeaderLink to="/">{siteTitle}</HeaderLink>
+      </Heading>
+      <HeaderNavList>
+        <HeaderNavItem>
+          <HeaderLink to="/">Home</HeaderLink>
+        </HeaderNavItem>
+        <HeaderNavItem>
+          <HeaderLink to="/about">About</HeaderLink>
+        </HeaderNavItem>
+      </HeaderNavList>
+    </HeaderWrapper>
+  </HeaderContainer>
 )
 
 export default Header
-
-const styles = {
-  heading: { margin: 0 },
-  headerLink: {
-    color: 'white',
-    textDecoration: 'none',
-    textShadow: 'none',
-  },
-  nav: {
-    margin: 0,
-    listStyleType: 'none',
-    display: 'flex',
-    alignItems: 'flex-end',
-  },
-  navItem: { display: 'inline ', margin: 0, paddingLeft: 20 },
-}

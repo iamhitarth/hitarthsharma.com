@@ -2,39 +2,39 @@
 
 exports[`Header matches snapshot 1`] = `
 <div
-  style="background: black; margin-bottom: 1.45rem;"
+  class="sc-EHOje fWrQAX"
 >
   <div
-    style="margin: 0px auto; max-width: 960px; padding: 1.45rem 1.0875rem; display: flex; justify-content: space-between;"
+    class="sc-ifAKCX CToAk"
   >
     <h1
-      style="margin: 0px;"
+      class="sc-bdVaJa bcSwbK"
     >
       <link
-        style="color: white; text-decoration: none; text-shadow: none;"
+        class="sc-bwzfXH gRlGoj"
         to="/"
       >
         Hitarth Sharma
       </link>
     </h1>
     <ul
-      style="margin: 0px; list-style-type: none; display: flex; align-items: flex-end;"
+      class="sc-htpNat bGvYfA"
     >
       <li
-        style="display: inline; margin: 0px; padding-left: 20px;"
+        class="sc-bxivhb lmyeQp"
       >
         <link
-          style="color: white; text-decoration: none; text-shadow: none;"
+          class="sc-bwzfXH gRlGoj"
           to="/"
         >
           Home
         </link>
       </li>
       <li
-        style="display: inline; margin: 0px; padding-left: 20px;"
+        class="sc-bxivhb lmyeQp"
       >
         <link
-          style="color: white; text-decoration: none; text-shadow: none;"
+          class="sc-bwzfXH gRlGoj"
           to="/about"
         >
           About
