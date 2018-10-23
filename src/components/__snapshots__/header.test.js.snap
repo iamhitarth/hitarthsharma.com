@@ -1,40 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header matches snapshot 1`] = `
+.c2 {
+  margin: 0;
+}
+
+.c3 {
+  color: white;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+.c4 {
+  margin: 0;
+  list-style-type: 'none';
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c5 {
+  display: inline;
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.c1 {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1.45rem 1.0875rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c0 {
+  background: black;
+  margin-bottom: 1.2rem;
+}
+
 <div
-  class="sc-EHOje fWrQAX"
+  class="c0"
 >
   <div
-    class="sc-ifAKCX CToAk"
+    class="c1"
   >
     <h1
-      class="sc-bdVaJa bcSwbK"
+      class="c2"
     >
       <link
-        class="sc-bwzfXH gRlGoj"
+        class="c3"
         to="/"
       >
         Hitarth Sharma
       </link>
     </h1>
     <ul
-      class="sc-htpNat bGvYfA"
+      class="c4"
     >
       <li
-        class="sc-bxivhb lmyeQp"
+        class="c5"
       >
         <link
-          class="sc-bwzfXH gRlGoj"
+          class="c3"
           to="/"
         >
           Home
         </link>
       </li>
       <li
-        class="sc-bxivhb lmyeQp"
+        class="c5"
       >
         <link
-          class="sc-bwzfXH gRlGoj"
+          class="c3"
           to="/about"
         >
           About

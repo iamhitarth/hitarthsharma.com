@@ -1,38 +1,38 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import styled from 'styled-components'
+
+const PostItemMetadataWrapper = styled.h5`
+  color: #bbb;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  margin-top: 1.175rem;
+`
+
+const PostItemTitle = styled.h3`
+  margin-top: 1.175rem;
+`
+
+const PostItemLink = styled(Link)`
+  color: inherit;
+`
 
 const PostListItem = ({ node }) => {
   return (
-    <div key={node.id}>
-      <Link
-        to={node.fields.slug}
-        style={{
-          textDecoration: `none`,
-          color: `inherit`,
-          fontWeight: `normal`,
-        }}
-      >
-        <h3 style={{ marginTop: '1.175rem' }} data-testid="postTitle">
-          {node.frontmatter.title}
-        </h3>
-        <h5
-          style={{
-            color: '#BBB',
-            display: 'flex',
-            justifyContent: 'space-between',
-            flex: 1,
-            marginTop: '1.175rem',
-          }}
-        >
-          <span data-testid="postDate">{node.fields.postDate}</span>
-          <span data-testid="timeToRead">
-            {`${node.timeToRead || 1} ${node.timeToRead > 1 ? 'mins' : 'min'}.`}
-          </span>
-        </h5>
-        <p data-testid="postExcerpt">{node.excerpt}</p>
-      </Link>
-    </div>
+    <PostItemLink to={node.fields.slug}>
+      <PostItemTitle data-testid="postTitle">
+        {node.frontmatter.title}
+      </PostItemTitle>
+      <PostItemMetadataWrapper>
+        <span data-testid="postDate">{node.fields.postDate}</span>
+        <span data-testid="timeToRead">
+          {`${node.timeToRead || 1} ${node.timeToRead > 1 ? 'mins' : 'min'}.`}
+        </span>
+      </PostItemMetadataWrapper>
+      <p data-testid="postExcerpt">{node.excerpt}</p>
+    </PostItemLink>
   )
 }
 

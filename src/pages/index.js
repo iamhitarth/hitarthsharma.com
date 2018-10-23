@@ -9,7 +9,7 @@ const IndexPage = ({ data, location }) => {
     <SidebarLayout location={location}>
       <div>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <PostListItem node={node} />
+          <PostListItem key={node.id} node={node} />
         ))}
       </div>
     </SidebarLayout>
