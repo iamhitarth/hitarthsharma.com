@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header matches snapshot 1`] = `
+<div
+  style="background: black; margin-bottom: 1.45rem;"
+>
+  <div
+    style="margin: 0px auto; max-width: 960px; padding: 1.45rem 1.0875rem; display: flex; justify-content: space-between;"
+  >
+    <h1
+      style="margin: 0px;"
+    >
+      <link
+        style="color: white; text-decoration: none; text-shadow: none;"
+        to="/"
+      >
+        Hitarth Sharma
+      </link>
+    </h1>
+    <ul
+      style="margin: 0px; list-style-type: none; display: flex; align-items: flex-end;"
+    >
+      <li
+        style="display: inline; margin: 0px; padding-left: 20px;"
+      >
+        <link
+          style="color: white; text-decoration: none; text-shadow: none;"
+          to="/"
+        >
+          Home
+        </link>
+      </li>
+      <li
+        style="display: inline; margin: 0px; padding-left: 20px;"
+      >
+        <link
+          style="color: white; text-decoration: none; text-shadow: none;"
+          to="/about"
+        >
+          About
+        </link>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

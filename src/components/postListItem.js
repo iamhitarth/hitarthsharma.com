@@ -13,7 +13,9 @@ const PostListItem = ({ node }) => {
           fontWeight: `normal`,
         }}
       >
-        <h3 style={{ marginTop: '1.175rem' }}>{node.frontmatter.title}</h3>
+        <h3 style={{ marginTop: '1.175rem' }} data-testid="postTitle">
+          {node.frontmatter.title}
+        </h3>
         <h5
           style={{
             color: '#BBB',
@@ -23,12 +25,12 @@ const PostListItem = ({ node }) => {
             marginTop: '1.175rem',
           }}
         >
-          <span>{node.fields.postDate}</span>
-          <span>
-            {node.timeToRead || 1} {node.timeToRead > 1 ? 'mins' : 'min'}.
+          <span data-testid="postDate">{node.fields.postDate}</span>
+          <span data-testid="timeToRead">
+            {`${node.timeToRead || 1} ${node.timeToRead > 1 ? 'mins' : 'min'}.`}
           </span>
         </h5>
-        <p>{node.excerpt}</p>
+        <p data-testid="postExcerpt">{node.excerpt}</p>
       </Link>
     </div>
   )

@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post list item matches snapshot 1`] = `
+<div>
+  <link
+    style="text-decoration: none; font-weight: normal;"
+    to="my-test-post"
+  >
+    <h3
+      data-testid="postTitle"
+      style="margin-top: 1.175rem;"
+    >
+      My test post
+    </h3>
+    <h5
+      style="color: rgb(187, 187, 187); display: flex; justify-content: space-between; margin-top: 1.175rem;"
+    >
+      <span
+        data-testid="postDate"
+      >
+        21 October, 2018
+      </span>
+      <span
+        data-testid="timeToRead"
+      >
+        3 mins.
+      </span>
+    </h5>
+    <p
+      data-testid="postExcerpt"
+    >
+      This is the excerpt
+    </p>
+  </link>
+</div>
+`;
