@@ -2,8 +2,34 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql, Link } from 'gatsby'
+import styled from 'styled-components'
 
 import Avatar from '../assets/images/avatar.jpg'
+
+const Container = styled.div`
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 3rem 0;
+  display: flex;
+
+  @media (max-width: 900px) {
+    display: block;
+  }
+`
+
+const Sidebar = styled.aside`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 900px) {
+    .recent-posts,
+    .copyright {
+      display: none;
+    }
+  }
+`
 
 const SidebarLayout = ({ children, location }) => {
   return (
@@ -45,8 +71,8 @@ const SidebarLayout = ({ children, location }) => {
               },
             ]}
           />
-          <div style={styles.content}>
-            <aside style={styles.sidebar}>
+          <Container>
+            <Sidebar>
               <div>
                 {/* Avatar */}
                 <img src={Avatar} style={styles.avatar} alt="Hitarth Sharma" />
@@ -88,8 +114,7 @@ const SidebarLayout = ({ children, location }) => {
                   </li>
                 </ul>
               </div>
-              <div>
-                {/* Recent posts */}
+              <div class="recent-posts">
                 <h3 style={styles.recentPostsTitle}>Recent posts</h3>
                 <ul>
                   {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -100,15 +125,14 @@ const SidebarLayout = ({ children, location }) => {
                 </ul>
               </div>
               <div>{/* TODO: Categories */}</div>
-              <div>
-                {/* Copyright */}
+              <div class="copyright">
                 <small>
                   Copyright © {new Date().getFullYear()} Hitarth Sharma
                 </small>
               </div>
-            </aside>
+            </Sidebar>
             <main style={styles.main}>{children}</main>
-          </div>
+          </Container>
         </div>
       )}
     />
@@ -120,18 +144,6 @@ SidebarLayout.propTypes = {
 }
 
 const styles = {
-  content: {
-    margin: '0 auto',
-    maxWidth: 960,
-    padding: '3rem 0',
-    display: 'flex',
-  },
-  sidebar: {
-    flex: 1,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
   avatar: {
     height: '11.25rem',
     width: '11.25rem',
