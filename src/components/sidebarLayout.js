@@ -9,7 +9,7 @@ import Avatar from '../assets/images/avatar.jpg'
 const Container = styled.div`
   margin: 0 auto;
   max-width: 960px;
-  padding: 3rem 0;
+  padding: 2rem 0;
   display: flex;
 
   @media (max-width: 900px) {
@@ -29,6 +29,18 @@ const Sidebar = styled.aside`
       display: none;
     }
   }
+`
+const SiteTitleWrapper = styled.div`
+  h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+`
+
+const SiteTitleLink = styled(Link)`
+  text-decoration: none;
+  color: hsla(0, 0%, 0%, 1);
 `
 
 const SidebarLayout = ({ children, location }) => {
@@ -77,14 +89,11 @@ const SidebarLayout = ({ children, location }) => {
                 {/* Avatar */}
                 <img src={Avatar} style={styles.avatar} alt="Hitarth Sharma" />
               </div>
-              <div>
-                {/* Site title */}
-                <h1 style={styles.titleWrapper}>
-                  <Link to="/" style={styles.titleLink}>
-                    {data.site.siteMetadata.title}
-                  </Link>
-                </h1>
-              </div>
+              <SiteTitleWrapper>
+                <SiteTitleLink to="/">
+                  <h1>{data.site.siteMetadata.title}</h1>
+                </SiteTitleLink>
+              </SiteTitleWrapper>
               <div>
                 {/* Navigation */}
                 <ul style={styles.nav}>
@@ -149,13 +158,6 @@ const styles = {
     width: '11.25rem',
     borderRadius: '50%',
     marginBottom: '1rem',
-  },
-  titleWrapper: {
-    textAlign: 'center',
-  },
-  titleLink: {
-    textDecoration: 'none',
-    color: 'hsla(0,0%,0%,1)',
   },
   nav: {
     listStyleType: 'none',
