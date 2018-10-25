@@ -174,7 +174,7 @@ const styles = {
     coolor: 'hsla(0,0%,0%,1)',
   },
   recentPostsTitle: { textAlign: 'center' },
-  main: { flex: 2.5, paddingLeft: '2rem' },
+  main: { flex: 2.5, paddingLeft: '2rem', paddingRight: '0.25rem' },
 }
 
 export default SidebarLayout

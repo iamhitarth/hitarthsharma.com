@@ -4,9 +4,11 @@
   "version": "1.0.0",
   "author": "Hitarth Sharma <hitarth.sharma@gmail.com>",
   "dependencies": {
+    "babel-plugin-styled-components": "^1.8.0",
     "gatsby": "^2.0.0-beta.106",
     "gatsby-plugin-react-helmet": "^3.0.0-beta.4",
     "gatsby-plugin-sharp": "^2.0.0-beta.9",
+    "gatsby-plugin-styled-components": "^3.0.0",
     "gatsby-plugin-typography": "^2.2.0-beta.3",
     "gatsby-remark-copy-linked-files": "^1.5.37",
     "gatsby-remark-embed-video": "^1.4.0",
