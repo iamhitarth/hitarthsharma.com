@@ -92,6 +92,12 @@ const RecentPostsWrapper = styled.div`
   }
 `
 
+const MainContent = styled.main`
+  flex: 2.5;
+  padding-left: 2rem;
+  padding-right: 1rem;
+`
+
 const SidebarLayout = ({ children, location }) => {
   return (
     <StaticQuery
@@ -191,7 +197,7 @@ const SidebarLayout = ({ children, location }) => {
               </div>
             </Sidebar>
 
-            <main style={styles.main}>{children}</main>
+            <MainContent>{children}</MainContent>
           </Container>
         </div>
       )}
@@ -201,10 +207,6 @@ const SidebarLayout = ({ children, location }) => {
 
 SidebarLayout.propTypes = {
   children: PropTypes.node,
-}
-
-const styles = {
-  main: { flex: 2.5, paddingLeft: '2rem', paddingRight: '1rem' },
 }
 
 export default SidebarLayout
