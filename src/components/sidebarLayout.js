@@ -80,6 +80,18 @@ const NavItem = styled.li`
   }
 `
 
+const RecentPostsWrapper = styled.div`
+  h3 {
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+    text-align: center;
+  }
+`
+
 const SidebarLayout = ({ children, location }) => {
   return (
     <StaticQuery
@@ -159,8 +171,8 @@ const SidebarLayout = ({ children, location }) => {
                 </NavItem>
               </NavList>
 
-              <div class="recent-posts">
-                <h3 style={styles.recentPostsTitle}>Recent posts</h3>
+              <RecentPostsWrapper className="recent-posts">
+                <h3>Recent posts</h3>
                 <ul>
                   {data.allMarkdownRemark.edges.map(({ node }) => (
                     <Link to={node.fields.slug}>
@@ -168,11 +180,11 @@ const SidebarLayout = ({ children, location }) => {
                     </Link>
                   ))}
                 </ul>
-              </div>
+              </RecentPostsWrapper>
 
               <div>{/* TODO: Categories */}</div>
 
-              <div class="copyright">
+              <div className="copyright">
                 <small>
                   Copyright © {new Date().getFullYear()} Hitarth Sharma
                 </small>
@@ -192,7 +204,6 @@ SidebarLayout.propTypes = {
 }
 
 const styles = {
-  recentPostsTitle: { textAlign: 'center' },
   main: { flex: 2.5, paddingLeft: '2rem', paddingRight: '1rem' },
 }
 
