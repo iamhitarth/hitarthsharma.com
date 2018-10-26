@@ -5,6 +5,7 @@ import { StaticQuery, graphql, Link } from 'gatsby'
 import styled from 'styled-components'
 
 import Avatar from '../assets/images/avatar.jpg'
+import NavItems from '../../config/sideNavItems.json'
 
 const Container = styled.div`
   margin: 0 auto;
@@ -151,30 +152,14 @@ const SidebarLayout = ({ children, location }) => {
               </SiteTitleWrapper>
 
               <NavList>
-                <NavItem>
-                  <Link to="/about">About</Link>
-                </NavItem>
-                <NavItem>
-                  <Link to="/">My Book List</Link>
-                </NavItem>
-                <NavItem>
-                  <Link to="/">Productivity</Link>
-                </NavItem>
-                <NavItem>
-                  <Link to="/">Inspiration</Link>
-                </NavItem>
-                <NavItem>
-                  <Link to="/">Tech</Link>
-                </NavItem>
-                <NavItem>
-                  <Link to="/">Quotes</Link>
-                </NavItem>
-                <NavItem>
-                  <Link to="/">Movies</Link>
-                </NavItem>
-                <NavItem>
-                  <Link to="/">TV Series</Link>
-                </NavItem>
+                {NavItems.map(
+                  navItem =>
+                    navItem.isShown && (
+                      <NavItem key={navItem.displayName}>
+                        <Link to={navItem.href}>{navItem.displayName}</Link>
+                      </NavItem>
+                    )
+                )}
               </NavList>
 
               <RecentPostsWrapper className="recent-posts">
