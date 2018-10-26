@@ -30,6 +30,16 @@ const Sidebar = styled.aside`
     }
   }
 `
+
+const AvatarWrapper = styled.div`
+  img {
+    height: 11.25rem;
+    width: 11.25rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+`
+
 const SiteTitleWrapper = styled.div`
   h1 {
     text-align: center;
@@ -41,6 +51,33 @@ const SiteTitleWrapper = styled.div`
 const SiteTitleLink = styled(Link)`
   text-decoration: none;
   color: hsla(0, 0%, 0%, 1);
+`
+
+const NavList = styled.ul`
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+  margin-left: 0;
+  margin-bottom: 2rem;
+
+  @media (max-width: 900px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+`
+
+const NavItem = styled.li`
+  margin: 5px;
+  border: solid 1px blue;
+  border-radius: 0.25rem;
+  padding: 6px;
+  color: hsla(0, 0%, 0%, 1);
+
+  @media (max-width: 900px) {
+    margin: 7px;
+  }
 `
 
 const SidebarLayout = ({ children, location }) => {
@@ -85,44 +122,43 @@ const SidebarLayout = ({ children, location }) => {
           />
           <Container>
             <Sidebar>
-              <div>
-                {/* Avatar */}
-                <img src={Avatar} style={styles.avatar} alt="Hitarth Sharma" />
-              </div>
+              <AvatarWrapper>
+                <img src={Avatar} alt="Hitarth Sharma" />
+              </AvatarWrapper>
+
               <SiteTitleWrapper>
                 <SiteTitleLink to="/">
                   <h1>{data.site.siteMetadata.title}</h1>
                 </SiteTitleLink>
               </SiteTitleWrapper>
-              <div>
-                {/* Navigation */}
-                <ul style={styles.nav}>
-                  <li style={styles.navItem}>
-                    <Link to="/about">About</Link>
-                  </li>
-                  <li style={styles.navItem}>
-                    <Link to="/">My Book List</Link>
-                  </li>
-                  <li style={styles.navItem}>
-                    <Link to="/">Productivity</Link>
-                  </li>
-                  <li style={styles.navItem}>
-                    <Link to="/">Inspiration</Link>
-                  </li>
-                  <li style={styles.navItem}>
-                    <Link to="/">Tech</Link>
-                  </li>
-                  <li style={styles.navItem}>
-                    <Link to="/">Quotes</Link>
-                  </li>
-                  <li style={styles.navItem}>
-                    <Link to="/">Movies</Link>
-                  </li>
-                  <li style={styles.navItem}>
-                    <Link to="/">TV Series</Link>
-                  </li>
-                </ul>
-              </div>
+
+              <NavList>
+                <NavItem>
+                  <Link to="/about">About</Link>
+                </NavItem>
+                <NavItem>
+                  <Link to="/">My Book List</Link>
+                </NavItem>
+                <NavItem>
+                  <Link to="/">Productivity</Link>
+                </NavItem>
+                <NavItem>
+                  <Link to="/">Inspiration</Link>
+                </NavItem>
+                <NavItem>
+                  <Link to="/">Tech</Link>
+                </NavItem>
+                <NavItem>
+                  <Link to="/">Quotes</Link>
+                </NavItem>
+                <NavItem>
+                  <Link to="/">Movies</Link>
+                </NavItem>
+                <NavItem>
+                  <Link to="/">TV Series</Link>
+                </NavItem>
+              </NavList>
+
               <div class="recent-posts">
                 <h3 style={styles.recentPostsTitle}>Recent posts</h3>
                 <ul>
@@ -133,13 +169,16 @@ const SidebarLayout = ({ children, location }) => {
                   ))}
                 </ul>
               </div>
+
               <div>{/* TODO: Categories */}</div>
+
               <div class="copyright">
                 <small>
                   Copyright © {new Date().getFullYear()} Hitarth Sharma
                 </small>
               </div>
             </Sidebar>
+
             <main style={styles.main}>{children}</main>
           </Container>
         </div>
@@ -153,30 +192,8 @@ SidebarLayout.propTypes = {
 }
 
 const styles = {
-  avatar: {
-    height: '11.25rem',
-    width: '11.25rem',
-    borderRadius: '50%',
-    marginBottom: '1rem',
-  },
-  nav: {
-    listStyleType: 'none',
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    alignSelf: 'center',
-    marginLeft: 0,
-    marginBottom: '2rem',
-  },
-  navItem: {
-    margin: 5,
-    border: 'solid 1px blue',
-    borderRadius: 4,
-    padding: 6,
-    coolor: 'hsla(0,0%,0%,1)',
-  },
   recentPostsTitle: { textAlign: 'center' },
-  main: { flex: 2.5, paddingLeft: '2rem', paddingRight: '0.25rem' },
+  main: { flex: 2.5, paddingLeft: '2rem', paddingRight: '1rem' },
 }
 
 export default SidebarLayout
