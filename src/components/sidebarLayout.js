@@ -166,7 +166,7 @@ const SidebarLayout = ({ children, location }) => {
                 <h3>Recent posts</h3>
                 <ul>
                   {data.allMarkdownRemark.edges.map(({ node }) => (
-                    <Link to={node.fields.slug}>
+                    <Link key={node.fields.slug} to={node.fields.slug}>
                       <li>{node.frontmatter.title}</li>
                     </Link>
                   ))}

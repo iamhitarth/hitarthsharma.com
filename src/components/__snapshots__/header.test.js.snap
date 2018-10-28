@@ -6,10 +6,11 @@ exports[`Header matches snapshot 1`] = `
 }
 
 .c3 {
-  color: white;
+  color: black;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-shadow: none;
+  background: none;
 }
 
 .c4 {
@@ -43,10 +44,11 @@ exports[`Header matches snapshot 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  border-bottom: solid 1px black;
 }
 
 .c0 {
-  background: black;
+  background-color: white;
   margin-bottom: 1.2rem;
 }
 

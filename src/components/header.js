@@ -7,9 +7,10 @@ const Heading = styled.h1`
 `
 
 const NavLink = styled(Link)`
-  color: white;
+  color: black;
   text-decoration: none;
   text-shadow: none;
+  background: none;
 `
 
 const NavList = styled.ul`
@@ -31,10 +32,11 @@ const Wrapper = styled.div`
   padding: 1.45rem 1.0875rem;
   display: flex;
   justify-content: space-between;
+  border-bottom: solid 1px black;
 `
 
 const Container = styled.div`
-  background: black;
+  background-color: white;
   margin-bottom: 1.2rem;
 `
 

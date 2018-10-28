@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
+import styled from 'styled-components'
 
 import Layout from '../components/layout'
 
@@ -18,6 +19,12 @@ export const query = graphql`
         title
       }
     }
+  }
+`
+
+const PostWrapper = styled.div`
+  h2 {
+    margin-bottom: 1.5rem;
   }
 `
 
@@ -39,10 +46,10 @@ export default ({ data, location }) => {
           },
         ]}
       />
-      <div>
-        <h1>{post.frontmatter.title}</h1>
+      <PostWrapper>
+        <h2>{post.frontmatter.title}</h2>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
+      </PostWrapper>
     </Layout>
   )
 }
