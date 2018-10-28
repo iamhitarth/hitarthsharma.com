@@ -22,10 +22,11 @@ export const query = graphql`
   }
 `
 
-const PostWrapper = styled.div`
-  h2 {
-    margin-bottom: 1.5rem;
-  }
+const PostTitle = styled.h1`
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  padding: 0 2rem;
 `
 
 export default ({ data, location }) => {
@@ -46,10 +47,10 @@ export default ({ data, location }) => {
           },
         ]}
       />
-      <PostWrapper>
-        <h2>{post.frontmatter.title}</h2>
+      <div>
+        <PostTitle>{post.frontmatter.title}</PostTitle>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </PostWrapper>
+      </div>
     </Layout>
   )
 }

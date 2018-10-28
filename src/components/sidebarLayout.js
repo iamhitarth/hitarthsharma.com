@@ -71,10 +71,14 @@ const NavList = styled.ul`
 
 const NavItem = styled.li`
   margin: 5px;
-  border: solid 1px blue;
+  border: solid 1px #82beed;
   border-radius: 0.25rem;
   padding: 6px;
-  color: hsla(0, 0%, 0%, 1);
+  color: hsla(0%, 0%, 0%, 1);
+
+  a {
+    background: none;
+  }
 
   @media (max-width: 900px) {
     margin: 7px;

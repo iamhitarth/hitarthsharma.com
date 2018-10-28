@@ -44,7 +44,6 @@ exports[`Header matches snapshot 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  border-bottom: solid 1px black;
 }
 
 .c0 {
@@ -58,7 +57,7 @@ exports[`Header matches snapshot 1`] = `
   <div
     class="c1"
   >
-    <h1
+    <h2
       class="c2"
     >
       <link
@@ -67,7 +66,7 @@ exports[`Header matches snapshot 1`] = `
       >
         Hitarth Sharma
       </link>
-    </h1>
+    </h2>
     <ul
       class="c4"
     >

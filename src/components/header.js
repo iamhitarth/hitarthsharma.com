@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-const Heading = styled.h1`
+const Heading = styled.h2`
   margin: 0;
 `
 
@@ -32,7 +32,6 @@ const Wrapper = styled.div`
   padding: 1.45rem 1.0875rem;
   display: flex;
   justify-content: space-between;
-  border-bottom: solid 1px black;
 `
 
 const Container = styled.div`
