@@ -43,6 +43,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-responsive-iframe`,
           },
+          `gatsby-plugin-styled-components`
         ],
       },
     },

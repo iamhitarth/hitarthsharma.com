@@ -1,36 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Post list item matches snapshot 1`] = `
-<div>
-  <link
-    style="text-decoration: none; font-weight: normal;"
-    to="my-test-post"
+.c2 {
+  color: #bbb;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-top: 1.175rem;
+}
+
+.c1 {
+  margin-top: 1.175rem;
+}
+
+.c0 {
+  color: inherit;
+}
+
+<link
+  class="c0"
+  to="my-test-post"
+>
+  <h3
+    class="c1"
+    data-testid="postTitle"
   >
-    <h3
-      data-testid="postTitle"
-      style="margin-top: 1.175rem;"
+    My test post
+  </h3>
+  <h5
+    class="c2"
+  >
+    <span
+      data-testid="postDate"
     >
-      My test post
-    </h3>
-    <h5
-      style="color: rgb(187, 187, 187); display: flex; justify-content: space-between; margin-top: 1.175rem;"
+      21 October, 2018
+    </span>
+    <span
+      data-testid="timeToRead"
     >
-      <span
-        data-testid="postDate"
-      >
-        21 October, 2018
-      </span>
-      <span
-        data-testid="timeToRead"
-      >
-        3 mins.
-      </span>
-    </h5>
-    <p
-      data-testid="postExcerpt"
-    >
-      This is the excerpt
-    </p>
-  </link>
-</div>
+      3 mins.
+    </span>
+  </h5>
+  <p
+    data-testid="postExcerpt"
+  >
+    This is the excerpt
+  </p>
+</link>
 `;

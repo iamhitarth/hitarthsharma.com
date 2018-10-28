@@ -2,8 +2,106 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql, Link } from 'gatsby'
+import styled from 'styled-components'
 
 import Avatar from '../assets/images/avatar.jpg'
+import NavItems from '../../config/sideNavItems.json'
+
+const Container = styled.div`
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 2rem 0;
+  display: flex;
+
+  @media (max-width: 900px) {
+    display: block;
+  }
+`
+
+const Sidebar = styled.aside`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 900px) {
+    .recent-posts,
+    .copyright {
+      display: none;
+    }
+  }
+`
+
+const AvatarWrapper = styled.div`
+  img {
+    height: 11.25rem;
+    width: 11.25rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+`
+
+const SiteTitleWrapper = styled.div`
+  h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+`
+
+const SiteTitleLink = styled(Link)`
+  text-decoration: none;
+  color: hsla(0, 0%, 0%, 1);
+`
+
+const NavList = styled.ul`
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+  margin-left: 0;
+  margin-bottom: 2rem;
+
+  @media (max-width: 900px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+`
+
+const NavItem = styled.li`
+  margin: 5px;
+  border: solid 1px #82beed;
+  border-radius: 0.25rem;
+  padding: 6px;
+  color: hsla(0%, 0%, 0%, 1);
+
+  a {
+    background: none;
+  }
+
+  @media (max-width: 900px) {
+    margin: 7px;
+  }
+`
+
+const RecentPostsWrapper = styled.div`
+  h3 {
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+    text-align: center;
+  }
+`
+
+const MainContent = styled.main`
+  flex: 2.5;
+  padding-left: 2rem;
+  padding-right: 1rem;
+`
 
 const SidebarLayout = ({ children, location }) => {
   return (
@@ -45,70 +143,51 @@ const SidebarLayout = ({ children, location }) => {
               },
             ]}
           />
-          <div style={styles.content}>
-            <aside style={styles.sidebar}>
-              <div>
-                {/* Avatar */}
-                <img src={Avatar} style={styles.avatar} alt="Hitarth Sharma" />
-              </div>
-              <div>
-                {/* Site title */}
-                <h1 style={styles.titleWrapper}>
-                  <Link to="/" style={styles.titleLink}>
-                    {data.site.siteMetadata.title}
-                  </Link>
-                </h1>
-              </div>
-              <div>
-                {/* Navigation */}
-                <ul style={styles.nav}>
-                  <li style={styles.navItem}>
-                    <Link to="/about">About</Link>
-                  </li>
-                  <li style={styles.navItem}>
-                    <Link to="/">My Book List</Link>
-                  </li>
-                  <li style={styles.navItem}>
-                    <Link to="/">Productivity</Link>
-                  </li>
-                  <li style={styles.navItem}>
-                    <Link to="/">Inspiration</Link>
-                  </li>
-                  <li style={styles.navItem}>
-                    <Link to="/">Tech</Link>
-                  </li>
-                  <li style={styles.navItem}>
-                    <Link to="/">Quotes</Link>
-                  </li>
-                  <li style={styles.navItem}>
-                    <Link to="/">Movies</Link>
-                  </li>
-                  <li style={styles.navItem}>
-                    <Link to="/">TV Series</Link>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                {/* Recent posts */}
-                <h3 style={styles.recentPostsTitle}>Recent posts</h3>
+          <Container>
+            <Sidebar>
+              <AvatarWrapper>
+                <img src={Avatar} alt="Hitarth Sharma" />
+              </AvatarWrapper>
+
+              <SiteTitleWrapper>
+                <SiteTitleLink to="/">
+                  <h1>{data.site.siteMetadata.title}</h1>
+                </SiteTitleLink>
+              </SiteTitleWrapper>
+
+              <NavList>
+                {NavItems.map(
+                  navItem =>
+                    navItem.isShown && (
+                      <NavItem key={navItem.displayName}>
+                        <Link to={navItem.href}>{navItem.displayName}</Link>
+                      </NavItem>
+                    )
+                )}
+              </NavList>
+
+              <RecentPostsWrapper className="recent-posts">
+                <h3>Recent posts</h3>
                 <ul>
                   {data.allMarkdownRemark.edges.map(({ node }) => (
-                    <Link to={node.fields.slug}>
+                    <Link key={node.fields.slug} to={node.fields.slug}>
                       <li>{node.frontmatter.title}</li>
                     </Link>
                   ))}
                 </ul>
-              </div>
+              </RecentPostsWrapper>
+
               <div>{/* TODO: Categories */}</div>
-              <div>
-                {/* Copyright */}
+
+              <div className="copyright">
                 <small>
                   Copyright © {new Date().getFullYear()} Hitarth Sharma
                 </small>
               </div>
-            </aside>
-            <main style={styles.main}>{children}</main>
-          </div>
+            </Sidebar>
+
+            <MainContent>{children}</MainContent>
+          </Container>
         </div>
       )}
     />
@@ -117,52 +196,6 @@ const SidebarLayout = ({ children, location }) => {
 
 SidebarLayout.propTypes = {
   children: PropTypes.node,
-}
-
-const styles = {
-  content: {
-    margin: '0 auto',
-    maxWidth: 960,
-    padding: '3rem 0',
-    display: 'flex',
-  },
-  sidebar: {
-    flex: 1,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  avatar: {
-    height: '11.25rem',
-    width: '11.25rem',
-    borderRadius: '50%',
-    marginBottom: '1rem',
-  },
-  titleWrapper: {
-    textAlign: 'center',
-  },
-  titleLink: {
-    textDecoration: 'none',
-    color: 'hsla(0,0%,0%,1)',
-  },
-  nav: {
-    listStyleType: 'none',
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    alignSelf: 'center',
-    marginLeft: 0,
-    marginBottom: '2rem',
-  },
-  navItem: {
-    margin: 5,
-    border: 'solid 1px blue',
-    borderRadius: 4,
-    padding: 6,
-    coolor: 'hsla(0,0%,0%,1)',
-  },
-  recentPostsTitle: { textAlign: 'center' },
-  main: { flex: 2.5, paddingLeft: '2rem' },
 }
 
 export default SidebarLayout

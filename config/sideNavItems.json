@@ -1,0 +1,42 @@
+[
+  {
+    "displayName": "About",
+    "href": "/about",
+    "isShown": true
+  },
+  {
+    "displayName": "My Book List",
+    "href": "/",
+    "isShown": true
+  },
+  {
+    "displayName": "Productivity",
+    "href": "/",
+    "isShown": false
+  },
+  {
+    "displayName": "Inspiration",
+    "href": "/",
+    "isShown": false
+  },
+  {
+    "displayName": "Tech",
+    "href": "/",
+    "isShown": false
+  },
+  {
+    "displayName": "Quotes",
+    "href": "/",
+    "isShown": false
+  },
+  {
+    "displayName": "Movies",
+    "href": "/",
+    "isShown": false
+  },
+  {
+    "displayName": "TV Series",
+    "href": "/",
+    "isShown": false
+  }
+]
