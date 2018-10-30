@@ -2,7 +2,7 @@
 title: Feeling Tired? Defeated? Broken?
 cover: photo-1495427513693-3f40da04b3fd.jpeg
 category: Inspiration
-tags: persistence, psychology, video, winning
+tags: ['persistence', 'psychology', 'video', 'winning']
 ---
 
 It's hard to keep going.
