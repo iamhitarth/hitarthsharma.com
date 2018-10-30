@@ -6,10 +6,9 @@ import SidebarLayout from '../components/sidebarLayout'
 import PostListItem from '../components/postListItem'
 
 /* TODO: https://www.gatsbyjs.org/docs/adding-tags-and-categories-to-blog-posts/
-Make tags appear separately on the tags page
-Figure out why tags for posts are appearing as a giant bunch and one tag only
-Split them out
-Display them on the posts page
+Display tags on the posts page
+Add tags to all posts
+Style tags page - better styling for individual tags and responsive
 */
 
 const Tag = ({ pageContext, data, location }) => {
