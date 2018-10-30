@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import styled from 'styled-components'
 
 import SidebarLayout from '../components/sidebarLayout'
 import PostListItem from '../components/postListItem'
@@ -10,6 +11,10 @@ Display tags on the posts page
 Add tags to all posts
 Style tags page - better styling for individual tags and responsive
 */
+
+const SeeAllTagsWrapper = styled.div`
+  padding-bottom: 0.5rem;
+`
 
 const Tag = ({ pageContext, data, location }) => {
   const { tag } = pageContext
@@ -22,17 +27,13 @@ const Tag = ({ pageContext, data, location }) => {
     <SidebarLayout location={location}>
       <div>
         <h1>{tagHeader}</h1>
-        <div style={{ paddingBottom: '1.25rem' }}>
+        <SeeAllTagsWrapper>
           <Link to="/tags">See all tags</Link>
-        </div>
+        </SeeAllTagsWrapper>
         <div>
           {edges.map(({ node }) => (
             <PostListItem node={node} />
           ))}
-          {/*
-              This links to a page that does not yet exist.
-              We'll come back to it!
-            */}
         </div>
       </div>
     </SidebarLayout>
