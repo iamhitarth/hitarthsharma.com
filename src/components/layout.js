@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
+import Favicon from '../assets/images/favicon.ico'
 
 const Layout = ({ children, location }) => {
   return (
@@ -27,6 +28,14 @@ const Layout = ({ children, location }) => {
                 name: 'keywords',
                 content: 'hitarth, sharma, blog, software, engineer',
               },
+            ]}
+            link={[
+              {
+                rel: 'shortcut icon',
+                href: `${Favicon}`,
+                type: 'image/x-icon',
+              },
+              { rel: 'icon', href: `${Favicon}`, type: 'image/x-icon' },
             ]}
           />
           <Header siteTitle={data.site.siteMetadata.title} />

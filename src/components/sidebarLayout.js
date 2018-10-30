@@ -5,6 +5,7 @@ import { StaticQuery, graphql, Link } from 'gatsby'
 import styled from 'styled-components'
 
 import Avatar from '../assets/images/avatar.jpg'
+import Favicon from '../assets/images/favicon.ico'
 import NavItems from '../../config/sideNavItems.json'
 
 const Container = styled.div`
@@ -141,6 +142,14 @@ const SidebarLayout = ({ children, location }) => {
                 name: 'keywords',
                 content: 'hitarth, sharma, blog, software, engineer',
               },
+            ]}
+            link={[
+              {
+                rel: 'shortcut icon',
+                href: `${Favicon}`,
+                type: 'image/x-icon',
+              },
+              { rel: 'icon', href: `${Favicon}`, type: 'image/x-icon' },
             ]}
           />
           <Container>
