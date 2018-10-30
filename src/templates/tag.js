@@ -5,7 +5,14 @@ import { Link, graphql } from 'gatsby'
 import SidebarLayout from '../components/sidebarLayout'
 import PostListItem from '../components/postListItem'
 
-const Tags = ({ pageContext, data, location }) => {
+/* TODO: https://www.gatsbyjs.org/docs/adding-tags-and-categories-to-blog-posts/
+Make tags appear separately on the tags page
+Figure out why tags for posts are appearing as a giant bunch and one tag only
+Split them out
+Display them on the posts page
+*/
+
+const Tag = ({ pageContext, data, location }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} post${
@@ -20,7 +27,9 @@ const Tags = ({ pageContext, data, location }) => {
           <Link to="/tags">See all tags</Link>
         </div>
         <div>
-          {edges.map(({ node }) => <PostListItem node={node} />)}
+          {edges.map(({ node }) => (
+            <PostListItem node={node} />
+          ))}
           {/*
               This links to a page that does not yet exist.
               We'll come back to it!
@@ -31,7 +40,7 @@ const Tags = ({ pageContext, data, location }) => {
   )
 }
 
-Tags.propTypes = {
+Tag.propTypes = {
   pageContext: PropTypes.shape({
     tag: PropTypes.string.isRequired,
     tagRegex: PropTypes.string.isRequired,
@@ -59,7 +68,7 @@ Tags.propTypes = {
   }),
 }
 
-export default Tags
+export default Tag
 
 export const pageQuery = graphql`
   query($tagRegex: String) {

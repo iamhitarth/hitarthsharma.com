@@ -24,7 +24,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   const blogPostTemplate = path.resolve(`./src/templates/blogPost.js`)
-  const tagTemplate = path.resolve(`./src/templates/tags.js`)
+  const tagTemplate = path.resolve(`./src/templates/tag.js`)
 
   return new Promise((resolve, reject) => {
     graphql(`
