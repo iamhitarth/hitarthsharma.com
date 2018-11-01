@@ -1,8 +1,33 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import styled from 'styled-components'
 
 import SidebarLayout from '../components/sidebarLayout'
+
+const TagsHeading = styled.h1`
+  text-align: center;
+  margin: 0rem 0 1.5rem 0;
+`
+
+const TagsList = styled.ul`
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  li {
+    list-style-type: none;
+    padding: 0.25rem;
+    margin: 0.25rem;
+    white-space: nowrap;
+    border: solid 1px #ccc;
+    border-radius: 0.25rem;
+  }
+`
+
+const TagLink = styled(Link)`
+  background: none;
+`
 
 const TagsPage = ({
   data: {
@@ -15,16 +40,16 @@ const TagsPage = ({
 }) => (
   <SidebarLayout location={location}>
     <div>
-      <h1>Tags</h1>
-      <ul>
+      <TagsHeading>Tags</TagsHeading>
+      <TagsList>
         {group.map(tag => (
           <li key={tag.fieldValue}>
-            <Link to={`/tags/${tag.fieldValue}/`}>
+            <TagLink to={`/tags/${tag.fieldValue}/`}>
               {tag.fieldValue} ({tag.totalCount})
-            </Link>
+            </TagLink>
           </li>
         ))}
-      </ul>
+      </TagsList>
     </div>
   </SidebarLayout>
 )
