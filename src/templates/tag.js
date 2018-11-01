@@ -7,12 +7,13 @@ import SidebarLayout from '../components/sidebarLayout'
 import PostListItem from '../components/postListItem'
 
 /* TODO: https://www.gatsbyjs.org/docs/adding-tags-and-categories-to-blog-posts/
+- Style tags page - better styling for individual tags and responsive
+- Fix link for tags with a space (need to add a - in the middle)
 Display tags on the posts page
 Add tags to all posts
-- Style tags page - better styling for individual tags and responsive
-Fix link for tags with a space (need to add a - in the middle)
 Style tag page - make heading center when on a mobile phone
 Missing favicon.ico
+Switch to book list asap
 */
 
 const SeeAllTagsWrapper = styled.div`

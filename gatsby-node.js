@@ -56,9 +56,7 @@ exports.createPages = ({ graphql, actions }) => {
         })
 
         // Collect it's tags
-        const postTags = node.frontmatter.tags
-          ? node.frontmatter.tags
-          : []
+        const postTags = node.frontmatter.tags ? node.frontmatter.tags : []
         postTags.forEach(postTag => {
           const trimmedTag = postTag.trim()
           if (allTags.indexOf(trimmedTag) < 0) {

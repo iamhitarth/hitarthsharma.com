@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
+import { getURLFormattedTag } from '../utils/tagHelper'
 
 import SidebarLayout from '../components/sidebarLayout'
 
@@ -44,7 +45,7 @@ const TagsPage = ({
       <TagsList>
         {group.map(tag => (
           <li key={tag.fieldValue}>
-            <TagLink to={`/tags/${tag.fieldValue}/`}>
+            <TagLink to={`/tags/${getURLFormattedTag(tag.fieldValue)}/`}>
               {tag.fieldValue} ({tag.totalCount})
             </TagLink>
           </li>
