@@ -1,7 +1,17 @@
 ---
 title: How To Avoid Fitful Productivity
-
 cover: photo-1516922654979-6833a58a1b83.jpeg
+tags:
+  [
+    fitful productivity,
+    performance,
+    planning,
+    productivity,
+    slippery slope,
+    work smarter,
+    momentum,
+    obama,
+  ]
 ---
 
 Last week I went on a ski trip for my brother's birthday.
@@ -50,7 +60,7 @@ In other words, slippery slope is an endless, inescapable shit slide that drags
 
 When put that way, it sounds terrifying. But let's see why it is perfectly placed to be an awesome anti-fitful productivity tool.
 
-On one hand, a slippery slope works because it puts people in a set of circumstances where they are _unable to stop_ doing things that make their situation go from okay to bad to worse. 
+On one hand, a slippery slope works because it puts people in a set of circumstances where they are *unable to stop* doing things that make their situation go from okay to bad to worse.
 
 On the other hand, the root cause for fitful productivity is that for whatever reason we _end up stopping_ while making good progress and being productive.
 
@@ -84,9 +94,11 @@ Taking advantage of this technique will make a world of difference to your produ
 <img src="sliding-stairs.gif" alt="Sliding Down The Stairs" /> Just like this guy.</p>
 
 ## Long Story Short
+
 Being productive every once in a while is easy but consistent productivity is the key to getting shit done.
 
 So in order to avoid fitful productivity (by taking advantage of the slippery slope technique):
+
 - Plan out your day by making a list of tasks.
 - Divide them up into four categories based on how complex vs how enjoyable they are.
 - Based on these categories, arrange tasks in a way that allows you to manage your energy levels by getting things done _while_ having a break as part of some of the more enjoyable/simpler tasks.

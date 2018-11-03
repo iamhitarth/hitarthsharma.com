@@ -1,7 +1,18 @@
 ---
 title: Feeling stuck? Here is how to get unstuck!
-
 cover: photo-1520462551646-bf2f6a00423b.jpeg
+tags:
+  [
+    stuck,
+    inspiration,
+    momentum,
+    persistence,
+    one job,
+    keep going,
+    motivation,
+    video,
+    martin luther king,
+  ]
 ---
 
 <p style="flex-direction: column; align-items: center; display: flex;">

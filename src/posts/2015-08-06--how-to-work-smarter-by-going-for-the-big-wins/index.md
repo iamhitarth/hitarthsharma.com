@@ -1,7 +1,19 @@
 ---
 title: How To Work Smarter By Going For The Big Wins
-
 cover: photo-1518859154638-ca29363763d8.jpeg
+tags:
+  [
+    big wins,
+    productivity,
+    psychology,
+    time management,
+    winning,
+    work smarter,
+    matrix,
+    neo,
+    mindset,
+    brad pitt,
+  ]
 ---
 
 Let's start off on a high note by checking out the most epic example of working smarter (ever)!

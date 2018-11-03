@@ -4,16 +4,17 @@ cover: photo-1510925768022-7e72e7cbdef8.jpeg
 category: Productivity
 tags:
   [
-    'creativity',
-    'deadlines',
-    'performance',
-    'productivity',
-    'science',
-    'software',
-    'systems',
-    'time management',
-    'work smarter',
-    'winning',
+    creativity,
+    deadlines,
+    performance,
+    productivity,
+    science,
+    software,
+    systems,
+    time management,
+    work smarter,
+    winning,
+    concentration,
   ]
 ---
 

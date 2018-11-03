@@ -72,7 +72,7 @@ export default ({ data, location }) => {
             <span>
               <strong>More on:</strong>
             </span>
-            {tags.map((tag, index) => (
+            {tags.sort().map((tag, index) => (
               <span key={tag}>
                 <Link to={`/tags/${getURLFormattedTag(tag)}/`}>{tag}</Link>
                 {index === tags.length - 1 ? `.` : `,`}

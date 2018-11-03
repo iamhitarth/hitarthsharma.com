@@ -1,6 +1,6 @@
 ---
-title: 'Failure Causes Laziness'
-date: '2018-09-21'
+title: Failure Causes Laziness
+tags: [fear, failure, lazy, grant cordone, break, procrastination]
 ---
 
 > Failure causes laziness.

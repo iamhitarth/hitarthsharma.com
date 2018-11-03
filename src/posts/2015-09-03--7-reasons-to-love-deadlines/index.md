@@ -1,7 +1,16 @@
 ---
 title: 7 Reasons To Love Deadlines
-
 cover: photo-1518169709214-6d2fff4a8a4e.jpeg
+tags:
+  [
+    deadlines,
+    list,
+    performance,
+    productivity,
+    psychology,
+    stress,
+    time management,
+  ]
 ---
 
 <img class="aligncenter" src="said-noone-ever.png" alt="Love deadlines... said noone ever." />

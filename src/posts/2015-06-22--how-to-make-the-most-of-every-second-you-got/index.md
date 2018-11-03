@@ -1,7 +1,15 @@
 ---
 title: How To Make the Most Of Every Second You Got
-
 cover: photo-1485881697404-78678dbc4639.jpg
+tags:
+  [
+    productivity,
+    rule of thumb,
+    systems,
+    time management,
+    priorities,
+    jim carrey,
+  ]
 ---
 
 I watched <a href="http://www.imdb.com/title/tt0338013/" target="_blank" rel="noopener">Eternal Sunshine of the Spotless Mind</a> a few days back and man it was amazing.
