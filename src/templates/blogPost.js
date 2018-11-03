@@ -1,9 +1,10 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
+import { getURLFormattedTag } from '../utils/tagHelper'
 
 export const query = graphql`
   query($slug: String!) {
@@ -17,6 +18,7 @@ export const query = graphql`
       timeToRead
       frontmatter {
         title
+        tags
       }
     }
   }
@@ -29,14 +31,29 @@ const PostTitle = styled.h1`
   padding: 0 2rem;
 `
 
+const PostTagsWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+
+  span {
+    white-space: nowrap;
+    margin-right: 0.25rem;
+  }
+
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
+`
+
 export default ({ data, location }) => {
   const post = data.markdownRemark
+  const { title, tags } = post.frontmatter
   return (
     <Layout location={location}>
       <Helmet
         title={
-          post.frontmatter.title
-            ? `${post.frontmatter.title} - ${data.site.siteMetadata.title}`
+          title
+            ? `${title} - ${data.site.siteMetadata.title}`
             : `${data.site.siteMetadata.title}`
         }
         meta={[
@@ -48,8 +65,21 @@ export default ({ data, location }) => {
         ]}
       />
       <div>
-        <PostTitle>{post.frontmatter.title}</PostTitle>
+        <PostTitle>{title}</PostTitle>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        {tags && (
+          <PostTagsWrapper>
+            <span>
+              <strong>More on:</strong>
+            </span>
+            {tags.map((tag, index) => (
+              <span key={tag}>
+                <Link to={`/tags/${getURLFormattedTag(tag)}/`}>{tag}</Link>
+                {index === tags.length - 1 ? `.` : `,`}
+              </span>
+            ))}
+          </PostTagsWrapper>
+        )}
       </div>
     </Layout>
   )
