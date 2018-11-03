@@ -1,7 +1,18 @@
 ---
 title: How Well Do You Know Yourself? (Personality Test)
-
 cover: photo-1495896138760-293144e6b1d9.jpeg
+tags:
+  [
+    measurement,
+    performance,
+    personality,
+    productivity,
+    psychology,
+    test,
+    winning,
+    work smarter,
+    split,
+  ]
 ---
 
 We all want to move forward in life. Whether it be for our career or relationships, we want to do what is best for us and people around us.

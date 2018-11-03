@@ -101,7 +101,7 @@ const RecentPostsWrapper = styled.div`
 const MainContent = styled.main`
   flex: 2.5;
   padding-left: 2rem;
-  padding-right: 1rem;
+  padding-right: 2rem;
 `
 
 const SidebarLayout = ({ children, location }) => {

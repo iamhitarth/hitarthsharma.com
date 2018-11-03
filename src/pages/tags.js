@@ -1,20 +1,34 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import styled from 'styled-components'
+import { getURLFormattedTag } from '../utils/tagHelper'
 
 import SidebarLayout from '../components/sidebarLayout'
 
-/*
-TODO: This page needs to be fixed as it's displaying but the tags are
-not showing up as individual tags and instead ALL the tags for each of
-the posts are showing up as individual tags.
-This might be a result of the way we've got the tags stored in the posts.
-The information we are after is how many posts is a tag used on and what 
-those posts are.
-Turning them into an array might be the easiest option but it will also 
-result in a change to gatsby-node.js and the tags.js template.
-So that's some food for thought.
-*/
+const TagsHeading = styled.h1`
+  text-align: center;
+  margin: 0rem 0 1.5rem 0;
+`
+
+const TagsList = styled.ul`
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  li {
+    list-style-type: none;
+    padding: 0.25rem;
+    margin: 0.25rem;
+    white-space: nowrap;
+    border: solid 1px #ccc;
+    border-radius: 0.25rem;
+  }
+`
+
+const TagLink = styled(Link)`
+  background: none;
+`
 
 const TagsPage = ({
   data: {
@@ -27,16 +41,16 @@ const TagsPage = ({
 }) => (
   <SidebarLayout location={location}>
     <div>
-      <h1>Tags</h1>
-      <ul>
+      <TagsHeading>Tags</TagsHeading>
+      <TagsList>
         {group.map(tag => (
           <li key={tag.fieldValue}>
-            <Link to={`/tags/${tag.fieldValue}/`}>
+            <TagLink to={`/tags/${getURLFormattedTag(tag.fieldValue)}/`}>
               {tag.fieldValue} ({tag.totalCount})
-            </Link>
+            </TagLink>
           </li>
         ))}
-      </ul>
+      </TagsList>
     </div>
   </SidebarLayout>
 )

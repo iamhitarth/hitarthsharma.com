@@ -24,7 +24,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   const blogPostTemplate = path.resolve(`./src/templates/blogPost.js`)
-  const tagTemplate = path.resolve(`./src/templates/tags.js`)
+  const tagTemplate = path.resolve(`./src/templates/tag.js`)
 
   return new Promise((resolve, reject) => {
     graphql(`
@@ -56,9 +56,7 @@ exports.createPages = ({ graphql, actions }) => {
         })
 
         // Collect it's tags
-        const postTags = node.frontmatter.tags
-          ? node.frontmatter.tags.split(',')
-          : []
+        const postTags = node.frontmatter.tags ? node.frontmatter.tags : []
         postTags.forEach(postTag => {
           const trimmedTag = postTag.trim()
           if (allTags.indexOf(trimmedTag) < 0) {

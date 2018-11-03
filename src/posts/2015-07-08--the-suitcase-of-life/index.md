@@ -1,7 +1,8 @@
 ---
 title: The Suitcase of Life
-
 cover: photo-1504884060002-619141ede057.jpeg
+tags:
+  [measurement, software, rescue time, time management, priorities, fight club]
 ---
 
 <img src="india-luggage.jpg" title="Travelling - Indian style - on my last trip!" />

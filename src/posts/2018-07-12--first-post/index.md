@@ -1,6 +1,6 @@
 ---
-title: "My first post"
-date: "2018-07-13"
+title: My first post back
+tags: [fresh start, letting go, aiming high]
 ---
 
 My first post on this new blog is going to be about the beginning of new things.

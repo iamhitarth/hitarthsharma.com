@@ -1,11 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import styled from 'styled-components'
 
 import SidebarLayout from '../components/sidebarLayout'
 import PostListItem from '../components/postListItem'
 
-const Tags = ({ pageContext, data, location }) => {
+const SeeAllTagsWrapper = styled.div`
+  padding-bottom: 0.5rem;
+`
+
+const Tag = ({ pageContext, data, location }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} post${
@@ -16,22 +21,20 @@ const Tags = ({ pageContext, data, location }) => {
     <SidebarLayout location={location}>
       <div>
         <h1>{tagHeader}</h1>
-        <div style={{ paddingBottom: '1.25rem' }}>
+        <SeeAllTagsWrapper>
           <Link to="/tags">See all tags</Link>
-        </div>
+        </SeeAllTagsWrapper>
         <div>
-          {edges.map(({ node }) => <PostListItem node={node} />)}
-          {/*
-              This links to a page that does not yet exist.
-              We'll come back to it!
-            */}
+          {edges.map(({ node }) => (
+            <PostListItem node={node} />
+          ))}
         </div>
       </div>
     </SidebarLayout>
   )
 }
 
-Tags.propTypes = {
+Tag.propTypes = {
   pageContext: PropTypes.shape({
     tag: PropTypes.string.isRequired,
     tagRegex: PropTypes.string.isRequired,
@@ -59,7 +62,7 @@ Tags.propTypes = {
   }),
 }
 
-export default Tags
+export default Tag
 
 export const pageQuery = graphql`
   query($tagRegex: String) {
