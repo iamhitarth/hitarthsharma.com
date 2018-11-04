@@ -5,6 +5,11 @@ import styled from 'styled-components'
 import { get } from '../utils/requestHelper'
 import { PostTitle } from '../templates/blogPost'
 
+/* TODO:
+Show read and unread links with count of each
+Links to Amazon for each book maybe
+ */
+
 const MyBooksList = styled.ul`
   display: flex;
   flex-direction: column;
