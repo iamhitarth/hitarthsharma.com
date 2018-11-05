@@ -6,11 +6,40 @@ import { get } from '../utils/requestHelper'
 import { PostTitle } from '../templates/blogPost'
 
 /* TODO:
-Show read and unread links with count of each
 Links to Amazon for each book maybe
+Use something like OpenLibrary to pull through thumbnail and summary etc.
  */
 
-const MyBooks = styled.div``
+const MyBooks = styled.div`
+  input[type='radio'] {
+    position: absolute;
+    top: auto;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip-path: rect(1px, 1px, 1px, 1px);
+    width: 1px;
+    height: 1px;
+    white-space: nowrap;
+  }
+
+  label.radio-label {
+    border: solid 1px #82beed;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+    cursor: pointer;
+  }
+
+  label.radio-active {
+    background: #82beed;
+    color: white;
+  }
+
+  @media (max-width: 900px) {
+    p {
+      text-align: center;
+    }
+  }
+`
 
 const MyBooksList = styled.ul`
   display: flex;
@@ -83,7 +112,9 @@ class BookList extends React.Component {
     return (
       <p>
         Show{' '}
-        <label className="button">
+        <label
+          className={`radio-label${filterBy === 'all' ? ' radio-active' : ''}`}
+        >
           <input
             type="radio"
             value="all"
@@ -92,7 +123,11 @@ class BookList extends React.Component {
           />
           {`All (${complete + incomplete})`}
         </label>{' '}
-        <label className="button">
+        <label
+          className={`radio-label${
+            filterBy === 'complete' ? ' radio-active' : ''
+          }`}
+        >
           <input
             type="radio"
             value="complete"
@@ -101,7 +136,11 @@ class BookList extends React.Component {
           />
           {`Read (${complete})`}
         </label>{' '}
-        <label className="button">
+        <label
+          className={`radio-label${
+            filterBy === 'incomplete' ? ' radio-active' : ''
+          }`}
+        >
           <input
             type="radio"
             value="incomplete"
