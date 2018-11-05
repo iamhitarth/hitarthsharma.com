@@ -29,15 +29,15 @@ const MyBooksList = styled.ul`
 class BookList extends React.Component {
   state = {
     books: [],
-    read: 0,
-    unread: 0,
+    complete: 0,
+    incomplete: 0,
     filterBy: 'all',
   }
 
   componentDidMount() {
     const readingListUrl = 'https://runkit.io/iamhitarth/reading-list-api/4.0.0'
-    let booksRead = 0
-    let booksUnread = 0
+    let booksComplete = 0
+    let booksIncomplete = 0
 
     get(readingListUrl, this)
       .then(JSON.parse)
@@ -53,13 +53,14 @@ class BookList extends React.Component {
                   : 1
         )
         sorted.forEach(
-          book => (book.state === 'complete' ? booksRead++ : booksUnread++)
+          book =>
+            book.state === 'complete' ? booksComplete++ : booksIncomplete++
         )
 
         this.setState({
           books: [...sorted],
-          read: booksRead,
-          unread: booksUnread,
+          complete: booksComplete,
+          incomplete: booksIncomplete,
         })
       })
   }
@@ -70,23 +71,64 @@ class BookList extends React.Component {
     }
   }
 
-  handleFilterChange(target) {
-    console.log('Filter changed to', target)
+  handleFilterChange = event => {
+    this.setState({
+      filterBy: event.target.value,
+    })
+  }
+
+  renderFilter() {
+    const { complete, incomplete, filterBy } = this.state
+
+    return (
+      <p>
+        Show{' '}
+        <label className="button">
+          <input
+            type="radio"
+            value="all"
+            checked={filterBy === 'all'}
+            onChange={this.handleFilterChange}
+          />
+          {`All (${complete + incomplete})`}
+        </label>{' '}
+        <label className="button">
+          <input
+            type="radio"
+            value="complete"
+            checked={filterBy === 'complete'}
+            onChange={this.handleFilterChange}
+          />
+          {`Read (${complete})`}
+        </label>{' '}
+        <label className="button">
+          <input
+            type="radio"
+            value="incomplete"
+            checked={filterBy === 'incomplete'}
+            onChange={this.handleFilterChange}
+          />
+          {`Unread (${incomplete})`}
+        </label>
+      </p>
+    )
   }
 
   renderBooks() {
-    return this.state.books.map(book => (
-      <li key={book.id} className={`book book-${book.state}`}>
-        {book.name}
-      </li>
-    ))
+    const { filterBy } = this.state
+    return this.state.books
+      .filter(book => filterBy === 'all' || filterBy === book.state)
+      .map(book => (
+        <li key={book.id} className={`book book-${book.state}`}>
+          {book.name}
+        </li>
+      ))
   }
 
   render() {
     const { location } = this.props
     const areBooksLoaded = this.state.books.length > 0
-    const { unread, read, filterBy } = this.state
-    console.log('Checked for all', this.state)
+
     return (
       <Layout location={location}>
         <div>
@@ -94,33 +136,7 @@ class BookList extends React.Component {
           <p>What I have read, am reading and would like to read.</p>
           {areBooksLoaded ? (
             <MyBooks>
-              <p>
-                Show{' '}
-                <label className="button">
-                  <input
-                    type="radio"
-                    checked={filterBy === 'all'}
-                    onChange={this.handleFilterChange}
-                  />
-                  {`All (${read + unread})`}
-                </label>{' '}
-                <label className="button">
-                  <input
-                    type="radio"
-                    checked={filterBy === 'read'}
-                    onChange={this.handleFilterChange}
-                  />
-                  {`Read (${read})`}
-                </label>{' '}
-                <label className="button">
-                  <input
-                    type="radio"
-                    checked={filterBy === 'unread'}
-                    onChange={this.handleFilterChange}
-                  />
-                  {`Unread (${unread})`}
-                </label>
-              </p>
+              {this.renderFilter()}
               <MyBooksList>{this.renderBooks()}</MyBooksList>
             </MyBooks>
           ) : (
