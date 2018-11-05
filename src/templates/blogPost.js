@@ -24,7 +24,7 @@ export const query = graphql`
   }
 `
 
-const PostTitle = styled.h1`
+export const PostTitle = styled.h1`
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   text-align: center;
