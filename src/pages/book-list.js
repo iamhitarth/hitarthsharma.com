@@ -6,7 +6,8 @@ import { get } from '../utils/requestHelper'
 import { PostTitle } from '../templates/blogPost'
 
 /* TODO:
-Links to Amazon for each book maybe
+Add top 5 books
+Links to Amazon for each book in the list maybe
 Use something like OpenLibrary to pull through thumbnail and summary etc.
  */
 
@@ -27,6 +28,7 @@ const MyBooks = styled.div`
     border-radius: 0.25rem;
     padding: 0.25rem;
     cursor: pointer;
+    transition: all 0.2s ease-out;
   }
 
   label.radio-active {
