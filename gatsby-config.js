@@ -43,7 +43,14 @@ module.exports = {
           {
             resolve: `gatsby-remark-responsive-iframe`,
           },
-          `gatsby-plugin-styled-components`
+          `gatsby-plugin-styled-components`,
+          {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+              trackingId: `UA-121043603-1`,
+              head: true,
+            },
+          },
         ],
       },
     },
