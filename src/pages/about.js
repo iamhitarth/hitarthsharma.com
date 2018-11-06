@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { Link } from 'gatsby'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import { PostTitle } from '../templates/blogPost'
 import me from '../assets/images/me.jpg'
@@ -46,10 +47,17 @@ const AboutPage = ({ location }) => (
           </span>
         </p>
         <p>
-          <Link to="https://www.instagram.com/disruptive.kiwi/">Instagram</Link>{' '}
+          <OutboundLink href="https://www.instagram.com/disruptive.kiwi/">
+            Instagram
+          </OutboundLink>{' '}
           |{' '}
-          <Link to="https://www.linkedin.com/in/hitarthsharma/">LinkedIn</Link>{' '}
-          | <Link to="https://twitter.com/iamhitarth">Twitter</Link>
+          <OutboundLink href="https://www.linkedin.com/in/hitarthsharma/">
+            LinkedIn
+          </OutboundLink>{' '}
+          |{' '}
+          <OutboundLink href="https://twitter.com/iamhitarth">
+            Twitter
+          </OutboundLink>
         </p>
       </div>
     </div>
