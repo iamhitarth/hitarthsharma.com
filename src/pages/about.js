@@ -9,7 +9,7 @@ import me from '../assets/images/me.jpg'
 const AboutPage = ({ location }) => (
   <Layout location={location}>
     <div>
-      <PostTitle>Hi.</PostTitle>
+      <PostTitle>Yo.</PostTitle>
       <div style={{ textAlign: 'center' }}>
         <img
           src={me}
