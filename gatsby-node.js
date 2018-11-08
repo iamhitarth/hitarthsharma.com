@@ -8,7 +8,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: slug,
+      value: slug.split('--')[1],
     })
 
     const dateRegex = '(\\d{4}-\\d{2}-\\d{2})--'
