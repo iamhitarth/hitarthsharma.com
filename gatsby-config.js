@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Hitarth Sharma',
+    url: 'https://hitarthsharma.com',
   },
   plugins: [
     {

@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
+import SocialShare from '../components/socialShare'
 import { getURLFormattedTag } from '../utils/tagHelper'
 
 export const query = graphql`
@@ -11,14 +12,19 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        url
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       timeToRead
+      excerpt
       frontmatter {
         title
         tags
+      }
+      fields {
+        slug
       }
     }
   }
@@ -47,6 +53,8 @@ const PostTagsWrapper = styled.div`
 
 export default ({ data, location }) => {
   const post = data.markdownRemark
+  const siteUrl = data.site.siteMetadata.url
+  const postUrl = `${siteUrl}/${post.fields.slug}`
   const { title, tags } = post.frontmatter
   return (
     <Layout location={location}>
@@ -67,6 +75,12 @@ export default ({ data, location }) => {
       <div>
         <PostTitle>{title}</PostTitle>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <SocialShare
+          title={title}
+          url={postUrl}
+          siteUrl={siteUrl}
+          excerpt={post.excerpt}
+        />
         {tags && (
           <PostTagsWrapper>
             <span>
