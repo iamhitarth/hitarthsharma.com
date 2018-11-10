@@ -75,12 +75,7 @@ export default ({ data, location }) => {
       <div>
         <PostTitle>{title}</PostTitle>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <SocialShare
-          title={title}
-          url={postUrl}
-          siteUrl={siteUrl}
-          excerpt={post.excerpt}
-        />
+        <SocialShare title={title} url={postUrl} excerpt={post.excerpt} />
         {tags && (
           <PostTagsWrapper>
             <span>
