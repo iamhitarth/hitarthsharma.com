@@ -41,6 +41,7 @@ const PostContent = styled.div`
   blockquote {
     text-align: center;
     border-left: none;
+    margin-top: 1.45rem;
   }
 
   figcaption.gatsby-resp-image-figcaption {
