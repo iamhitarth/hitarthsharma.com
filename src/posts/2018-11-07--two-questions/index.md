@@ -1,11 +1,21 @@
 ---
-title: Two questions
+title: Two Questions
 tags: [questions, purpose, right thing, direction, motivation]
 ---
 
-<img src='https://images.unsplash.com/photo-1520931886951-9487ee93d10c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2096d075e424ded51d8d72a894164dac&auto=format&fit=crop&w=1653&q=80' />
+<img src='questions.jpg' alt="Question mark on the wall" title="Photo by Emily Morter on Unsplash" />
 
-TODO: Should probably jump right into it - instead of drawing it out. Can give away the questions and then draw it out.
+I spend a lot of time being unsure of where I am heading and where my life is heading and what's purpose etc.
+
+The result of doing so means that I frequently find myself questioning the decisions I made in the past that got me to where I am.
+
+Am I doing the right thing? Am I wasting my time? Should I do that totally random thing from the left field that I saw some guy on YouTube talking about and think I'd be good at?
+
+So as you can imagine, that results in some pretty anxious times.
+
+Because of that I am constantly on the look out for things that will allow me to not get bothered by my brain suddenly encountering and throwing up new options.
+
+Something that I recently stumbled upon was this simple test mentioned by Ryan Holiday on Impact Theory
 
 When was the last time you started questioning things?
 
