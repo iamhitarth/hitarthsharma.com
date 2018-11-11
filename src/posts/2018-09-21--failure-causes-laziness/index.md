@@ -3,15 +3,17 @@ title: Failure Causes Laziness
 tags: [fear, failure, lazy, grant cordone, break, procrastination]
 ---
 
-> Failure causes laziness.
->
-> Grant Cordone
+<img src="plane-in-woods.jpg" alt="Plane stuck in the woods" />
 
 Why wouldn't you hustle if you were succeeding?
 
 What reason would you have to sit around and procrastinate if you were hitting home runs all around?
 
 It's when you keep failing.
+
+> Failure causes laziness.
+>
+> Grant Cordone
 
 Getting your hopes up and then watching them crash right down like a house of cards.
 
