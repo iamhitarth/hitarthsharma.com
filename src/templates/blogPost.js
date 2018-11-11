@@ -42,6 +42,11 @@ const PostContent = styled.div`
     text-align: center;
     border-left: none;
   }
+
+  figcaption.gatsby-resp-image-figcaption {
+    font-size: 0.9rem;
+    padding-top: 0.2rem;
+  }
 `
 
 const PostTagsWrapper = styled.div`

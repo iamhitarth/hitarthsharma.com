@@ -3,7 +3,7 @@ title: Failure Causes Laziness
 tags: [fear, failure, lazy, grant cordone, break, procrastination]
 ---
 
-<img src="plane-in-woods.jpg" alt="Plane stuck in the woods" />
+<img src="plane-in-woods.jpg" alt="Plane stuck in the woods" title="Photo by David Kovalenko on Unsplash" />
 
 Why wouldn't you hustle if you were succeeding?
 
