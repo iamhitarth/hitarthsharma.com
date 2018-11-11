@@ -37,6 +37,13 @@ export const PostTitle = styled.h1`
   padding: 0 2rem;
 `
 
+const PostContent = styled.div`
+  blockquote {
+    text-align: center;
+    border-left: none;
+  }
+`
+
 const PostTagsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -74,7 +81,7 @@ export default ({ data, location }) => {
       />
       <div>
         <PostTitle>{title}</PostTitle>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <PostContent dangerouslySetInnerHTML={{ __html: post.html }} />
         <SocialShare title={title} url={postUrl} excerpt={post.excerpt} />
         {tags && (
           <PostTagsWrapper>
