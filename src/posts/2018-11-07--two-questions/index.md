@@ -1,48 +1,60 @@
 ---
 title: Two Questions
-tags: [questions, purpose, right thing, direction, motivation]
+tags:
+  [
+    questions,
+    purpose,
+    right thing,
+    direction,
+    motivation,
+    lost,
+    impact theory,
+    ryna holiday,
+    tom bilyeu,
+  ]
 ---
 
-<img src='questions.jpg' alt="Question mark on the wall" title="Photo by Emily Morter on Unsplash" />
+<img src='walking.jpg' alt="Person walking" title="Photo by Olia Gozha on Unsplash" />
 
-I spend a lot of time being unsure of where I am heading and where my life is heading and what's purpose etc.
+I spend a lot of time being unsure about where I am heading and where my life is heading and what's my purpose in life yada yada yada.
 
-The result of doing so means that I frequently find myself questioning the decisions I made in the past that got me to where I am.
+As an unfortunate side effect of this, I frequently find myself questioning my current position and the decisions that led me to it.
 
-Am I doing the right thing? Am I wasting my time? Should I do that totally random thing from the left field that I saw some guy on YouTube talking about and think I'd be good at?
+Am I doing the right thing? Am I wasting my time? Should I do that totally random thing that I saw some guy on YouTube talking about because a.) it looks fun and b.) my brain thinks I'd be awesome at it?
 
-So as you can imagine, that results in some pretty anxious times.
+> What do I really want to do? And, what do I have to do to do what I really want to do?
 
-Because of that I am constantly on the look out for things that will allow me to not get bothered by my brain suddenly encountering and throwing up new options.
+So as you can imagine, this circular line of questioning generally results in some pretty anxious and roller coaster-ish times.
 
-Something that I recently stumbled upon was this simple test mentioned by Ryan Holiday on Impact Theory
+Which is why I am constantly on the look out for tips and tricks that can help me be at peace with myself.
 
-When was the last time you started questioning things?
+Enter two questions below:
 
-When that voice in the back of your head started wondering... am I doing the right thing? or am I really just wasting my time?
+> Am I happy with what I am doing?
+>
+> Does doing this enable me to do something else that I will be happy about?
 
-It starts out as a whisper that you manage to supress - sometimes.
+Be honest.
 
-In time though, it starts feeling like someone is yelling right in your ear.
+If you answered yes-yes or yes-no or no-yes, then you can stop reading right now.
 
-> WHAT THE FUCK are you doing wasting your time here?
+Or, if you're still reading, tell your brain to shut the fuck up and get back to work.
 
-You try to talk back - but you know it's an uphill battle.
+However, if you answered no-no, then it's time for a change my friend.
 
-In those times, two questions are all you need.
+Either, change what you are doing or change your perspective about it.
 
-Two questions to lay all this to rest.
+Because, if you can't answer yes to either of those questions, then:
 
-Whether you like the answer or not is a different question - but it works 💯
+- At best, you're wasting your time.
+- At worst, you're giving away a significant part of your life in exchange for something that is meaningless for you.
 
-> Am I proud of/happy about what I am doing?
+And, THAT is a damn shame.
 
-Or whatever it is that you are thinking of doing.
+---
 
-> Will doing this allow me to do something that I am proud of/happy about?
+In case you're wondering where I got these questions from, I highly recommend checking out this interview of <a href="https://ryanholiday.net/" target="_blank">Ryan Holiday</a> with <a href="https://www.youtube.com/channel/UCnYMOamNKLGVlJgRUbamveA" target="_blank">Tom Bilyeu</a> of <a href="https://youtu.be/QqaU5TQw_i4?t=1278" target="_blank">Impact Theory</a>.
 
-That's it.
+`video: https://www.youtube.com/watch?v=QqaU5TQw_i4`
 
-If the answer to neither of those questions is yes, then you need to either find something else to do.
-
-Or, you need to find happiness in what you're doing.
+---
