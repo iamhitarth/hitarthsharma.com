@@ -1,6 +1,6 @@
 ---
-title: Being Shut Down Sucks 🏀⚽️
-tags: [anxiety, self doubt, direction, motiviation, lost]
+title: Being Rejected Sucks 🏀⚽️
+tags: [anxiety, self doubt, direction, motiviation, lost, rejection]
 ---
 
 TODO: Finish off post. Download images locally.
