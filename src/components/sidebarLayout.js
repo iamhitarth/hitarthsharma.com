@@ -104,6 +104,17 @@ const MainContent = styled.main`
   padding-right: 2rem;
 `
 
+const BackToTopLink = styled.a`
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 9999;
+  text-align: center;
+  background: #f5f5f5;
+  color: #444;
+  cursor: pointer;
+`
+
 const SidebarLayout = ({ children, location }) => {
   return (
     <StaticQuery
@@ -197,6 +208,16 @@ const SidebarLayout = ({ children, location }) => {
 
             <MainContent>{children}</MainContent>
           </Container>
+
+          <BackToTopLink
+            href="#"
+            onClick={e => {
+              e.preventDefault()
+              alert('Back to the top we go!')
+            }}
+          >
+            Back to top
+          </BackToTopLink>
         </div>
       )}
     />
