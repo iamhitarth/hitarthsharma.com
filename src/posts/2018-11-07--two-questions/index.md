@@ -28,11 +28,11 @@ So as you can imagine, this circular line of questioning generally results in so
 
 Which is why I am constantly on the look out for tips and tricks that can help me be at peace with myself.
 
-Enter two questions below:
+Enter the two questions:
 
 > Am I happy with what I am doing?
 >
-> Does doing this enable me to do something else that I will be happy about?
+> Does doing this enable me to do the thing that will make me happy?
 
 Be honest.
 
