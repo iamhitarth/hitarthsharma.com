@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
+import SocialShare from '../components/socialShare'
 import { getURLFormattedTag } from '../utils/tagHelper'
 
 export const query = graphql`
@@ -11,14 +12,19 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        url
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       timeToRead
+      excerpt
       frontmatter {
         title
         tags
+      }
+      fields {
+        slug
       }
     }
   }
@@ -29,6 +35,19 @@ export const PostTitle = styled.h1`
   margin-bottom: 1.5rem;
   text-align: center;
   padding: 0 2rem;
+`
+
+const PostContent = styled.div`
+  blockquote {
+    text-align: center;
+    border-left: none;
+    margin-top: 1.45rem;
+  }
+
+  figcaption.gatsby-resp-image-figcaption {
+    font-size: 0.9rem;
+    padding-top: 0.2rem;
+  }
 `
 
 const PostTagsWrapper = styled.div`
@@ -47,6 +66,8 @@ const PostTagsWrapper = styled.div`
 
 export default ({ data, location }) => {
   const post = data.markdownRemark
+  const siteUrl = data.site.siteMetadata.url
+  const postUrl = `${siteUrl}/${post.fields.slug}`
   const { title, tags } = post.frontmatter
   return (
     <Layout location={location}>
@@ -66,7 +87,8 @@ export default ({ data, location }) => {
       />
       <div>
         <PostTitle>{title}</PostTitle>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <PostContent dangerouslySetInnerHTML={{ __html: post.html }} />
+        <SocialShare title={title} url={postUrl} excerpt={post.excerpt} />
         {tags && (
           <PostTagsWrapper>
             <span>
