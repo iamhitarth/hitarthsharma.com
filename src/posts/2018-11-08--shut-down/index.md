@@ -11,7 +11,7 @@ And the reasons for it were just as frustrating if not more as the situation its
 
 This was the kind of situation where you feel crazy mad because there is no one specifically to get mad at.
 
-<img src="http://superheroabode.com/wp-content/uploads/2018/03/hulk-3.jpg" alt="As mad as the hulk"/>
+<img src="hulk-mad.jpg" alt="As mad as the hulk"/>
 
 So I spent yesterday and most of the day before being mad.
 
@@ -45,3 +45,5 @@ So then feeling mad and tired and sitting on the train like:
 I realized that what's done is done.
 
 And yes, while I have to do something about it, I can either do those some things while being mad (and probably come across as a crazy mad man) or I could calm the fuck down and go about those same things like a professional.
+
+Maybe I should delete this post?
