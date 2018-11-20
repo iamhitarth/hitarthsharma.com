@@ -36,15 +36,13 @@ Enter the two questions:
 
 Be honest.
 
-If you answered yes-yes or yes-no or no-yes, then you can stop reading right now.
-
-Or, if you're still reading, tell your brain to shut the fuck up and get back to work.
+If you answered yes-yes or yes-no or no-yes, then you can stop reading right now. You are on the right path.
 
 However, if you answered no-no, then it's time for a change my friend.
 
 Either, change what you are doing or change your perspective about it.
 
-Because, if you can't answer yes to either of those questions, then:
+Because, if you can't answer yes to either of those questions:
 
 - At best, you're wasting your time.
 - At worst, you're giving away a significant part of your life in exchange for something that is meaningless for you.
