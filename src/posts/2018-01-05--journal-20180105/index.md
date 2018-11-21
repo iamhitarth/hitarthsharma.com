@@ -14,7 +14,7 @@ tags:
     psychology,
     johann wolfgang von goethe,
     dexter,
-    serial killer
+    serial killer,
   ]
 ---
 
@@ -24,13 +24,14 @@ Just finished the book Mastery and wow! What a book.
 
 This book combined with <a href="https://www.amazon.com/Be-Obsessed-Average-Grant-Cardone/dp/1101981059" target="_blank">Be Obsessed or Be Average</a>, should be enough for anyone pursuing anything with the goal of becoming a Master in that area, so long as they have some foundational personal development knowledge.
 
-It's crazy how this book broke down almost every single aspect and strategy for attaining Mastery (there are A LOT) and delved into the _why_ behind it all. 
+It's crazy how this book broke down almost every single aspect and strategy for attaining Mastery (there are A LOT) and delved into the _why_ behind it all.
 
 > The only difference between someone like me and a Master is that they decided to follow their inclinations and go all in.
 
 At the same time, constantly drilling the idea into my head that the only differences between someone like me and the most famous and well respected Masters are that they decided to:
-* Completely follow their natural inclinations. 
-* Put in the sort of effort that can only be put in when you are 💯 percent behind whatever it is that you intend to do.
+
+- Completely follow their natural inclinations.
+- Put in the sort of effort that can only be put in when you are 💯 percent behind whatever it is that you intend to do.
 
 I like how <a href="https://powerseductionandwar.com/" target="_blank">Robert Greene</a> - the author - talks about following those inclinations in an almost supernatural way. As if those inclinations - the voice of that "true self" is something that can't be logically explained but just felt. And followed.
 
@@ -45,3 +46,13 @@ One Master who's example stood out to me quite starkly was that of <a href="http
 <img src="dexter.jpg" alt="Dexter season 1 poster" title="Dexter - the serial killer"/>
 
 I can relate to that quite strongly as that is exactly how I feel a lot of the time and it's a feeling that has always been very hard to shake off. Guess it's just another one of those things that I can go on about for hours.
+
+---
+
+📖 Journal posts like this one look back and reflect on what I was reading, learning and writing, two to three years back, on this day.
+
+It's a great way for me to re-learn the lessons I ~~most probably have~~ might've forgotten and get a chance to share them with you as well.
+
+See more of these <a href="https://hitarthsharma.com/tags/journal/">here</a>.
+
+---
