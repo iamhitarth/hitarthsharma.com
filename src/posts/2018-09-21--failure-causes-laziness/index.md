@@ -1,5 +1,6 @@
 ---
 title: Failure Causes Laziness
+categories: [inpsiration, productivity]
 tags: [fear, failure, lazy, grant cordone, break, procrastination]
 ---
 

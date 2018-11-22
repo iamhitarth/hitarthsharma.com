@@ -1,5 +1,6 @@
 ---
 title: Two Questions
+catgories: [inspiration]
 tags:
   [
     questions,
