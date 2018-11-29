@@ -1,8 +1,30 @@
 ---
-title: Positive Attitude vs Persistence
+title: Positivity vs Persistence
 tags: [positivity, persistent, motivation, psychology]
 categories: [inspiration]
 ---
+
+Once upon a time, there was a donkey.
+
+He was a bit of a stupid donkey. I mean, the other donkeys certainly thought so. Even the farmer who owned him thought so.
+
+One day, the farmer was doing his afternoon rounds, checking his crops, when he heard braying in the distance - hee-haw! hee-haw!
+
+Almost instantly the farmer knew that it must be his stupid donkey, upto no good. So he followed the sound of hee-haw! hee-haw! and it led him to an old abandoned well just on the edge of his farm.
+
+When he looked down into the well, lo and behold, he saw the stupid donkey stuck there. Running around in circles, hee-haw! hee-haw!-ing away.
+
+Now the farmer was pissed off. First, the stupid donkey does not do anything useful and then on top of that, he decides to get stuck in a freakin' well out of all places. And to top it all off, he won't stop hee-haw! hee-haw!-ing until the farmer manages to pull him out 😡
+
+So mad and annoyed, the farmer somehow manages to convince his mates up in the village to come down and help him get the donkey out.
+
+While they're walking down to the well with shovels and ropes, the farmer realizes that maybe he can get rid of his stupid donkey problem once and for all.
+
+_Maybe_, just maybe he can get them to bury the donkey in the well and have one less problem to deal with for the rest of eternity 👿
+
+It's same as the difference between having a positive attitude vs being persistent.
+
+Are the two different?
 
 Positive attitude vs persistence - is there a difference? What is the difference? Is one better than the other? Are both useful? Where are they both useful? How can one cultivate one or the other? Can they be cultivated? What are some example situations? When does one prevail over the other one?
 
