@@ -5,27 +5,27 @@
     "isShown": true
   },
   {
-    "displayName": "My Book List",
+    "displayName": "📚 My Book List",
     "href": "/book-list",
     "isShown": true
   },
   {
-    "displayName": "Tech",
+    "displayName": "👨🏻‍💻 Tech",
     "href": "/category/tech",
     "isShown": true
   },
   {
-    "displayName": "Productivity",
+    "displayName": "📈 Productivity",
     "href": "/category/productivity",
     "isShown": true
   },
   {
-    "displayName": "Inspiration",
+    "displayName": "🚀 Inspiration",
     "href": "/category/inspiration",
     "isShown": true
   },
   {
-    "displayName": "Psychology",
+    "displayName": "🧠 Psychology",
     "href": "/category/psychology",
     "isShown": true
   },
