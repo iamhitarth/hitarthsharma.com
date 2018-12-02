@@ -30,3 +30,8 @@ const AppStack = createStackNavigator({
   LessonPreviewScreen,
 })
 ```
+
+Explain the problem with a diagram: tabs + stacks
+Draw arrows on the diagram to explain what we are trying to do
+Restructured diagram to show how we will get around the problem
+Then show the code.
