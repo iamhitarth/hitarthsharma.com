@@ -19,6 +19,7 @@
     "gatsby-source-filesystem": "^2.0.1-beta.10",
     "gatsby-transformer-remark": "^2.1.1-beta.6",
     "graphql-tools": "^3.1.1",
+    "prism-themes": "^1.0.1",
     "prismjs": "^1.15.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -42,6 +43,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "reset": "rm -rf node_modules && yarn cache clean && yarn",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
