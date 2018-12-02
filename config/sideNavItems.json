@@ -10,19 +10,24 @@
     "isShown": true
   },
   {
+    "displayName": "Tech",
+    "href": "/category/tech",
+    "isShown": true
+  },
+  {
     "displayName": "Productivity",
-    "href": "/",
-    "isShown": false
+    "href": "/category/productivity",
+    "isShown": true
   },
   {
     "displayName": "Inspiration",
-    "href": "/",
-    "isShown": false
+    "href": "/category/inspiration",
+    "isShown": true
   },
   {
-    "displayName": "Tech",
-    "href": "/",
-    "isShown": false
+    "displayName": "Psychology",
+    "href": "/category/psychology",
+    "isShown": true
   },
   {
     "displayName": "Quotes",

@@ -6,6 +6,10 @@ import styled from 'styled-components'
 import SidebarLayout from '../components/sidebarLayout'
 import PostListItem from '../components/postListItem'
 
+const PageHeading = styled.h1`
+  margin-top: 1.175rem;
+`
+
 const SeeAllTagsWrapper = styled.div`
   padding-bottom: 0.5rem;
 `
@@ -20,7 +24,7 @@ const Tag = ({ pageContext, data, location }) => {
   return (
     <SidebarLayout location={location}>
       <div>
-        <h1>{tagHeader}</h1>
+        <PageHeading>{tagHeader}</PageHeading>
         <SeeAllTagsWrapper>
           <Link to="/tags">See all tags</Link>
         </SeeAllTagsWrapper>
