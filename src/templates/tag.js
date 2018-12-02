@@ -6,12 +6,20 @@ import styled from 'styled-components'
 import SidebarLayout from '../components/sidebarLayout'
 import PostListItem from '../components/postListItem'
 
-const PageHeading = styled.h1`
+export const PageHeading = styled.h1`
   margin-top: 1.175rem;
+
+  @media (max-width: 900px) {
+    text-align: center;
+  }
 `
 
 const SeeAllTagsWrapper = styled.div`
   padding-bottom: 0.5rem;
+
+  @media (max-width: 900px) {
+    text-align: center;
+  }
 `
 
 const Tag = ({ pageContext, data, location }) => {

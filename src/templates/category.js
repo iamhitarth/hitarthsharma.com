@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 import SidebarLayout from '../components/sidebarLayout'
 import PostListItem from '../components/postListItem'
+import { PageHeading } from './tag'
 
 const Category = ({ pageContext, data, location }) => {
   const { category } = pageContext
@@ -16,7 +17,7 @@ const Category = ({ pageContext, data, location }) => {
   return (
     <SidebarLayout location={location}>
       <div>
-        <h1>{categoryHeader}</h1>
+        <PageHeading>{categoryHeader}</PageHeading>
         <div>
           {edges.map(({ node }) => (
             <PostListItem node={node} />
