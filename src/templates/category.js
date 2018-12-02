@@ -5,37 +5,19 @@ import styled from 'styled-components'
 
 import SidebarLayout from '../components/sidebarLayout'
 import PostListItem from '../components/postListItem'
+import { PageHeading } from './tag'
 
-export const PageHeading = styled.h1`
-  margin-top: 1.175rem;
-
-  @media (max-width: 900px) {
-    text-align: center;
-  }
-`
-
-const SeeAllTagsWrapper = styled.div`
-  padding-bottom: 0.5rem;
-
-  @media (max-width: 900px) {
-    text-align: center;
-  }
-`
-
-const Tag = ({ pageContext, data, location }) => {
-  const { tag } = pageContext
+const Category = ({ pageContext, data, location }) => {
+  const { category } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
-  const tagHeader = `${totalCount} post${
+  const categoryHeader = `${totalCount} post${
     totalCount === 1 ? '' : 's'
-  } tagged with "${tag}"`
-
+  } under "${category}"`
+  console.log('Category on the page is ', categoryHeader)
   return (
     <SidebarLayout location={location}>
       <div>
-        <PageHeading>{tagHeader}</PageHeading>
-        <SeeAllTagsWrapper>
-          <Link to="/tags">See all tags</Link>
-        </SeeAllTagsWrapper>
+        <PageHeading>{categoryHeader}</PageHeading>
         <div>
           {edges.map(({ node }) => (
             <PostListItem node={node} />
@@ -46,10 +28,10 @@ const Tag = ({ pageContext, data, location }) => {
   )
 }
 
-Tag.propTypes = {
+Category.propTypes = {
   pageContext: PropTypes.shape({
-    tag: PropTypes.string.isRequired,
-    tagRegex: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    categoryRegex: PropTypes.string.isRequired,
   }),
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
@@ -74,14 +56,14 @@ Tag.propTypes = {
   }),
 }
 
-export default Tag
+export default Category
 
 export const pageQuery = graphql`
-  query($tagRegex: String) {
+  query($categoryRegex: String) {
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [fields___postDate], order: DESC }
-      filter: { frontmatter: { tags: { regex: $tagRegex } } }
+      filter: { frontmatter: { categories: { regex: $categoryRegex } } }
     ) {
       totalCount
       edges {

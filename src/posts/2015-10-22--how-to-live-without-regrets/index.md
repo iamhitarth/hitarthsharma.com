@@ -1,6 +1,7 @@
 ---
 title: How To Live Without Regret
 cover: photo-1506702315536-dd8b83e2dcf9.jpeg
+categories: [psychology, inspiration, productivity]
 tags: [psychology, regret, birthday, happiness, success, perception]
 ---
 
