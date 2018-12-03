@@ -22,6 +22,14 @@ While they're walking down to the well with shovels and ropes, the farmer realiz
 
 _Maybe_, just maybe he can get them to bury the donkey in the well and have one less problem to deal with for the rest of eternity 👿
 
+So the farmer and his friends get to the well and start shoving dirt into the well to bury the donkey.
+
+At first, the farmer sees the donkey hee-haw! hee-haw!-ing more than ever and running around in panic. But then after a little while, the hee-haw!-ing stops so curious to see if the donkey has been buried, the farmer looks inside the well. To his surprise he sees the donkey looking up at him - standing on top of all the dirt that they've been showing down the well 😲
+
+The farmer realizes that at first the donkey tried running around but then just started dodging the dirt and staying on top of it to get closer to the top of the well.
+
+With this the farmer realizes that maybe the donkey is not so stupid after all and so decides to try and rescue him
+
 It's same as the difference between having a positive attitude vs being persistent.
 
 Are the two different?
