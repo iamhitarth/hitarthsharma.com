@@ -58,3 +58,5 @@ Just like with most other non-trivial things in life though, "it depends". A pos
 There are scenarios and situations where a positive attitude can work wonders - like the movie scenarios where a speech fires up a handful of soldiers, allowing them to beat a much biggera and sizeable army. Or, in team sports, where having a positive attitude is an infectious thing that can influence others around you in to being positive when the chips are down and vice versa - thus creating an atmosphere where the whole group becomes persistent as a result of the positive attitude.
 
 But at an individual level, positive attitude is not worth much. If you're just positive but not persistent, you're fucked.
+
+Postivity vs persistence is like style vs substance
