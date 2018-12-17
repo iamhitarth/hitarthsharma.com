@@ -47,7 +47,26 @@ On the other hand, when you're persistent, you essentially go into situations wi
 > Said every persistent person ever.
 
 So while going into something you might feel like you're 🐟ed, and life is throwing everything but the kitchen sink at you, if you just manage to hang on, you just might end up on top - and that is what persistence is about.
-Have a couple of gifs of a fighter getting tonked and then have a third gif with the fighter winning at the end. https://biteable.com/blog/tips/make-gif-video/
+
+<p style="flex-direction: column;align-items: center;display: flex;">
+    <img src="life-nailing-you-1.gif" alt="Life gets you." />
+    When life gets you again...
+</p>
+
+<p style="flex-direction: column;align-items: center;display: flex;">
+    <img src="life-nailing-you-2.gif" alt="Life will keep getting you." />
+    ...and again...
+</p>
+
+<p style="flex-direction: column;align-items: center;display: flex;">
+    <img src="life-nailing-you-3.gif" alt="Again and again." />
+    ...and again and again - you hang on.
+</p>
+
+<p style="flex-direction: column;align-items: center;display: flex;">
+    <img src="persistence-winning.gif" alt="But you hang in there and you give it your all when you get a chance." />
+    Hang on for when it's your turn.
+</p>
 
 The ability to hang in there and not give up, while you're the anvil and then strike with full force when it's your turn to be the hammer - that's persistence.
 
