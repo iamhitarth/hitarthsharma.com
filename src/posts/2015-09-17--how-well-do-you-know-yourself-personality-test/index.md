@@ -1,6 +1,7 @@
 ---
 title: How Well Do You Know Yourself? (Personality Test)
 cover: photo-1495896138760-293144e6b1d9.jpeg
+categories: [psychology, productivity]
 tags:
   [
     measurement,
