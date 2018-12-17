@@ -72,15 +72,25 @@ The ability to hang in there and not give up, while you're the anvil and then st
 
 <img src='persistence.png' alt="Fall down seven times, stand up eight" title="The Japanese know what's up ㊙️" />
 
+### Why must I give a 💩 about this?
+
+Great question.
+
+Think back to the last time you gave up on something (or someone). Now think about how it all started?
+
+You were full of energy and positivity and things were looking great. By the end, however, the positivity was gone - and so was your ability to continue.
+
+That is where we must get deliberate and cultivate a persistent mindset instead of a positive one.
+
 ### Maybe
+
+**What am I trying so say here? Maybe - not really - they aren't the same but they can go hand in hand quite well - like the examples I gave above. What's the takeaway? The takeaway is that there are situations where one is better to start things off than the other and they both can lead to the other.**
 
 Just like with most non-trivial things in life though, it's never quite that black and white. It always depends on the context. A positive attitude and persistence while being different, _can_ go hand in hand. _Sometimes_.
 
 Style and substance. Butter and bread. Patrick and Spongebob. That's the relationship between positivity and persistence. They work best in conjunction and without one, the other is not quite as good. BUT theoretically, if you had to, you would choose substance, bread and Spongebob hands down right?
 
 A positive group of people will attract more people but positivity is an emotion - a feeling - and just like most feelings it passes the moment our thoughts or our situation changes.
-
-**What am I trying so say here? Maybe - not really - they aren't the same but they can go hand in hand quite well - like the examples I gave above. What's the takeaway? The takeaway is that there are situations where one is better to start things off than the other and they both can lead to the other.**
 
 Think of positivity as style and persistence as substance. Style without substance can get you a fair amount of way but eventually you will get found out. Substance without style comes in handy when there is a real need for it but it's attractive. Noone wants to work with a grumpy but persistent person. They'd rather work with someone who is a little bit unsure about themselves but has an upbeat attitude.
 A positive attitude can attract other people and it can enhance your persistence but without persistence - the substance, the real deal - positivity is just a hollow front that will get squashed the moment you meet real adversity.
