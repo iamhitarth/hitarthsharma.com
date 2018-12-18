@@ -72,15 +72,27 @@ The ability to hang in there and not give up, while you're the anvil and then st
 
 <img src='persistence.png' alt="Fall down seven times, stand up eight" title="The Japanese know what's up ㊙️" />
 
-### Why must I give a 💩 about this?
+### Why would I give a 💩 about this?
 
-Great question.
+Great question. Think back to the last time you gave up on something (or someone).
 
-Think back to the last time you gave up on something (or someone). Now think about how it all started?
+Now, think about how it all started?
 
-You were full of energy and positivity and things were looking great. By the end, however, the positivity was gone - and so was your ability to continue.
+You were full of energy and positivity and things were looking great. The world was a better place with a 1000 watt bulb like radiant smile stuck on your face 😁
 
-That is where we must get deliberate and cultivate a persistent mindset instead of a positive one.
+By the end, however, the positivity was gone - and so was your ability to continue.
+
+<Photo or quote a scientific study>
+
+And that is why we must give a 💩 about this and cultivate a _persistent_ mindset instead of a _positive_ one.
+
+Be positive. There is no harm in that. It adds that cherry on top of your cake. Adds the style to your substance. People love other positive people.
+
+But know that when push comes to shove, persistence is what will get you through to the finish.
+
+But just be conscious about the fact that being positive is a luxury while being persistent is a necessity.
+
+So whenever you decide to do something. _Really_ decide to do it. Know that things will get hard, you will feel the opposite of positive. You will want to give up. You will want to quit. You will have a 1000 logical reasons for that. But you will be persistent. And you will not quit. That's it. Write that down somewhere and next time you're thinking of quitting go back to it and read it and remember these words.
 
 ### Maybe
 
