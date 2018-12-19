@@ -74,7 +74,7 @@ The ability to hang in there and not give up, while you're the anvil and then st
 
 ### Why would I give a 💩 about this?
 
-Great question. Think back to the last time you gave up on something (or someone).
+Think back to the last time you gave up on something (or someone).
 
 Now, think about how it all started?
 
@@ -86,11 +86,17 @@ By the end, however, the positivity was gone - and so was your ability to contin
 
 And that is why we must give a 💩 about this and cultivate a _persistent_ mindset instead of a _positive_ one.
 
+> Being positive is a luxury.
+>
+> Being persistent is a necessity.
+
+**Being positive gives you that emotional high that makes you feel like you can crush anything or anyone but being persistent gives you the quiet self confidence that noone can take away from you because you know that you will not stop taking that next step forward.**
+
+**Being positive is an emotion - emotions are fleeting. Being persistent is a thing you do. Like eating. You will eat regardless of how things might be going. They might be good and you will eat a lot and the food will taste great and they might not be good and you will have to force yourself to shove food down your face but either way you will eat. That's what persistence is like things might be good or things might be bad but persistence is a thing you do so you will just keep going.**
+
 Be positive. There is no harm in that. It adds that cherry on top of your cake. Adds the style to your substance. People love other positive people.
 
 But know that when push comes to shove, persistence is what will get you through to the finish.
-
-But just be conscious about the fact that being positive is a luxury while being persistent is a necessity.
 
 So whenever you decide to do something. _Really_ decide to do it. Know that things will get hard, you will feel the opposite of positive. You will want to give up. You will want to quit. You will have a 1000 logical reasons for that. But you will be persistent. And you will not quit. That's it. Write that down somewhere and next time you're thinking of quitting go back to it and read it and remember these words.
 
