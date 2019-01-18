@@ -13,6 +13,28 @@ tags:
 categories: [inspiration]
 ---
 
+Interesting notes from the book -
+Overly positive attitude can actually spook people off. Because our baseline is here \_ so when we come across someone who is here ¯ it naturally sets our spidey sense tingling.
+
+Being positive or being convinced that you're positive hands you a lemon and a spoon. Makes you conscious that you must be positive and so anything that might get in the way, scares the shit outta you. So you start being extra careful and uptight.
+
+Finally when things get tough, positivity gaps it. Persistence just takes one more step. Persistence draws its strength from adversity, while a positive attitude crumbles in the face of it.
+
+Interesting how positive attitude works at a group level - but breaks down on an individual level.
+Why is it that way? - this is interesting.
+In a group setting you have on job - individual success requires you to do a whole lot for a whole lot longer. The different between running a sprint and a marathon.
+
+Deep seated positivity - now that is useful. This is based on experiences though. Interesting? Not really. or maybe.
+
+Decide what you want and don't quit. Do anything but quit.
+Get comfortable as you can with the idea of failing. You will still live if you fail. Things happen. Be able to live on goat's milk.
+This is the mindset you need to be able to take risks that others wont. Protect the downside. Calculated risks that others won't take. Be willing to lose.
+Learn something from every loss. Change your definition. Its a loss if you haven't learnt anything or if you make the same mistake again.
+
+Don't expect success. Expect failure. Then fight like your life depends on it. If you can't, keep fighting. If you can't, then you have just one job. Don't quit. That's it. Just don't quit. Keep trying. Even if you're doing the same thing over and over again. Eventually your brain will get tired of doing the same thing and come up with something new. Story from Peak the book about performance and remembering a bunch of numbers.
+
+Successes are built on defeats that are handled correctly.
+
 Positive attitude vs persistence - is there a difference? What is the difference? Is one better than the other? Are both useful? Where are they both useful? How can one cultivate one or the other? Can they be cultivated? What are some example situations? When does one prevail over the other one? Is there a difference between how this applies to individuals vs teams?
 
 "Wtf is the difference?" - my initial reaction reading about this in <a href="https://www.goodreads.com/book/show/6963194-art-of-manipulation" target="_blank">Art of Manipulation by R. B. Sparkman</a>.
