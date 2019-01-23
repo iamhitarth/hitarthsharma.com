@@ -13,6 +13,9 @@ tags:
 categories: [inspiration]
 ---
 
+What am I trying to say with this post? What was it that initially drew me to it? The idea that positivity and persistence are different. Wouldn't most people know that already? Yeah but I didn't know it quite consciously. And also the difference between when positivity works and when it doesn't. The magic of accepting failure.
+The power of being negative. That's compelling and interesting isn't it. Just because you're negative doesn't mean you'll quit. My dad is pretty negative but he is tough. Think about some of the crowd favourites from the movies. Think about how they start of as cynical anti heroes who are negative af. But they do what they need to do and eventually end up making all the difference.
+
 Interesting notes from the book -
 Overly positive attitude can actually spook people off. Because our baseline is here \_ so when we come across someone who is here ¯ it naturally sets our spidey sense tingling.
 
