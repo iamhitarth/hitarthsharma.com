@@ -29,12 +29,12 @@ exports[`Post list item matches snapshot 1`] = `
   class="c0"
   to="my-test-post"
 >
-  <h3
+  <h2
     class="c1"
     data-testid="postTitle"
   >
     My test post
-  </h3>
+  </h2>
   <h5
     class="c2"
   >

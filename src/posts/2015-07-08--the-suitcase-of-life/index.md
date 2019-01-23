@@ -1,6 +1,7 @@
 ---
 title: The Suitcase of Life
 cover: photo-1504884060002-619141ede057.jpeg
+categories: [psychology, inspiration]
 tags:
   [measurement, software, rescue time, time management, priorities, fight club]
 ---

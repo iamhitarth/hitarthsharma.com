@@ -69,6 +69,7 @@ export default ({ data, location }) => {
   const siteUrl = data.site.siteMetadata.url
   const postUrl = `${siteUrl}/${post.fields.slug}`
   const { title, tags } = post.frontmatter
+  console.log('Tags', tags)
   return (
     <Layout location={location}>
       <Helmet
@@ -81,7 +82,9 @@ export default ({ data, location }) => {
           { name: 'description', content: "Hitarth Sharma's site" },
           {
             name: 'keywords',
-            content: 'hitarth, sharma, blog, software, engineer',
+            content: `hitarth, sharma, blog, software, engineer${
+              tags && tags.length > 0 ? `, ${tags.join(', ')}` : ''
+            }`,
           },
         ]}
       />

@@ -55,6 +55,15 @@ const SiteTitleLink = styled(Link)`
   color: hsla(0, 0%, 0%, 1);
 `
 
+const SiteTitle = styled.h1`
+  margin-top: 0.25rem;
+  font-size: 1.65rem;
+
+  @media (max-width: 900px) {
+    font-size: 2rem;
+  }
+`
+
 const NavList = styled.ul`
   list-style-type: none;
   display: flex;
@@ -160,7 +169,7 @@ const SidebarLayout = ({ children, location }) => {
 
               <SiteTitleWrapper>
                 <SiteTitleLink to="/">
-                  <h1>{data.site.siteMetadata.title}</h1>
+                  <SiteTitle>{data.site.siteMetadata.title}</SiteTitle>
                 </SiteTitleLink>
               </SiteTitleWrapper>
 

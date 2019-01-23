@@ -11,7 +11,7 @@ const PostMetadataWrapper = styled.h5`
   margin-top: 1.175rem;
 `
 
-const PostTitle = styled.h3`
+const PostTitle = styled.h2`
   margin-top: 1.175rem;
 `
 
