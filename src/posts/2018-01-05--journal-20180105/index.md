@@ -50,7 +50,7 @@ I can relate to that quite strongly as that is exactly how I feel a lot of the t
 
 ---
 
-📖 Journal posts like this one look back and reflect on what I was reading, learning and writing, two to three years back, on this day.
+📖 Journal posts like this one look back and reflect on what I was reading, learning and writing on the exact date of this post.
 
 It's a great way for me to re-learn the lessons I ~~most probably have~~ might've forgotten and get a chance to share them with you as well.
 
