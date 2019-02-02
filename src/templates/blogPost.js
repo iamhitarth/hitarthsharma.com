@@ -15,7 +15,7 @@ export const query = graphql`
         url
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    post: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       timeToRead
       excerpt
@@ -26,6 +26,11 @@ export const query = graphql`
       fields {
         slug
       }
+    }
+    journalFooter: markdownRemark(
+      fileAbsolutePath: { regex: "/journalFooter/" }
+    ) {
+      html
     }
   }
 `
@@ -50,6 +55,8 @@ const PostContent = styled.div`
   }
 `
 
+const PostFooter = styled.div``
+
 const PostTagsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -65,11 +72,14 @@ const PostTagsWrapper = styled.div`
 `
 
 export default ({ data, location }) => {
-  const post = data.markdownRemark
+  const { post, journalFooter } = data
   const siteUrl = data.site.siteMetadata.url
   const postUrl = `${siteUrl}/${post.fields.slug}`
   const { title, tags } = post.frontmatter
-  console.log('Tags', tags)
+  const footerHtml = post.fields.slug.includes('journal-')
+    ? journalFooter.html
+    : null
+
   return (
     <Layout location={location}>
       <Helmet
@@ -91,6 +101,7 @@ export default ({ data, location }) => {
       <div>
         <PostTitle>{title}</PostTitle>
         <PostContent dangerouslySetInnerHTML={{ __html: post.html }} />
+        <PostFooter dangerouslySetInnerHTML={{ __html: footerHtml }} />
         <SocialShare title={title} url={postUrl} excerpt={post.excerpt} />
         {tags && (
           <PostTagsWrapper>

@@ -82,7 +82,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(limit: 2000) {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "//posts//" } }
+      limit: 2000
+    ) {
       group(field: frontmatter___tags) {
         fieldValue
         totalCount
