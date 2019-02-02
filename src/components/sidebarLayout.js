@@ -124,8 +124,9 @@ const SidebarLayout = ({ children, location }) => {
             }
           }
           allMarkdownRemark(
-            limit: 4
+            filter: { fileAbsolutePath: { regex: "//posts//" } }
             sort: { fields: [fields___postDate], order: DESC }
+            limit: 4
           ) {
             edges {
               node {

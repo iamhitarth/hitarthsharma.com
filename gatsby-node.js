@@ -1,16 +1,18 @@
 const path = require('path')
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+const isAPost = node =>
+  node && node.fileAbsolutePath && node.fileAbsolutePath.includes('/posts/')
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === `MarkdownRemark` && isAPost(node)) {
     const slug = createFilePath({ node, getNode, basePath: `posts` })
     createNodeField({
       node,
       name: `slug`,
       value: slug.split('--')[1],
     })
-
     const dateRegex = '(\\d{4}-\\d{2}-\\d{2})--'
     const postDate = slug.match(dateRegex) ? slug.match(dateRegex)[1] : null
     createNodeField({
@@ -30,7 +32,9 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     graphql(`
       {
-        allMarkdownRemark {
+        allMarkdownRemark(
+          filter: { fileAbsolutePath: { regex: "//posts//" } }
+        ) {
           edges {
             node {
               frontmatter {
@@ -67,7 +71,7 @@ exports.createPages = ({ graphql, actions }) => {
           }
         })
 
-        // Collec it's categories
+        // Collect it's categories
         const postCategories = node.frontmatter.categories
           ? node.frontmatter.categories
           : []

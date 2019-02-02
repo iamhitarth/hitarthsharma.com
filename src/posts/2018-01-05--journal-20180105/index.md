@@ -47,13 +47,3 @@ One Master who's example stood out to me quite starkly was that of <a href="http
 <img src="dexter.jpg" alt="Dexter season 1 poster" title="Dexter - the serial killer"/>
 
 I can relate to that quite strongly as that is exactly how I feel a lot of the time and it's a feeling that has always been very hard to shake off. Guess it's just another one of those things that I can go on about for hours.
-
----
-
-📖 Journal posts like this one look back and reflect on what I was reading, learning and writing on the exact date of this post.
-
-It's a great way for me to re-learn the lessons I ~~most probably have~~ might've forgotten and get a chance to share them with you as well.
-
-See more of these <a href="https://hitarthsharma.com/tags/journal/">here</a>.
-
----

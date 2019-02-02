@@ -18,7 +18,10 @@ const IndexPage = ({ data, location }) => {
 
 export const query = graphql`
   {
-    allMarkdownRemark(sort: { fields: [fields___postDate], order: DESC }) {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "//posts//" } }
+      sort: { fields: [fields___postDate], order: DESC }
+    ) {
       totalCount
       edges {
         node {
