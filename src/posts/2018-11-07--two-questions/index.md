@@ -10,7 +10,7 @@ tags:
     motivation,
     lost,
     impact theory,
-    ryna holiday,
+    ryan holiday,
     tom bilyeu,
   ]
 ---
