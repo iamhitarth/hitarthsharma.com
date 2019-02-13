@@ -58,3 +58,5 @@ And the result is always the same. We resist while we have the willpower - but o
 > Secret to success is learning how to use pain and pleasure, instead of having pain and pleasure use you.
 >
 > Anthony Robbins
+
+To be continued...
