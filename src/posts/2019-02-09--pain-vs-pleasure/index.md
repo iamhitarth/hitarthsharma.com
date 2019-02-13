@@ -45,7 +45,7 @@ The same thing applies with the Pain Pleasure principle.
 
 **While we might work hard to gain pleasure, we will work _even_ harder to avoid pain.**
 
-So you might go have an ice cream from time to time, but you will definitely turn up to a job that you hate, every morning because, the pain of being out of a job is much greater than the pleasure of eating something sweet.
+This is why we consistently turn up to a job we might not enjoy but struggle to make time to work on that startup or book or blog. Because, the pain of being deprived of everything job affords us is much greater than the pleasure of a successful startup/book/blog of our own.
 
 ## Control Your Pain & Pleasure
 
@@ -58,37 +58,3 @@ And the result is always the same. We resist while we have the willpower - but o
 > Secret to success is learning how to use pain and pleasure, instead of having pain and pleasure use you.
 >
 > Anthony Robbins
-
-Well, its not that simple.
-
-Well, if we accept all this then that means that if we want to stop doing something or start doing something, we simply have to make the alternative seem more painful that what we want to do.
-
-The sooner we can accept this, the sooner we can realize two things.
-
-1. We can change our behavior armed with this knowledge.
-
-2. We can manipulate others armed with this knowledge.
-
-that if these two basic needs - avoiding pain, gaining pleasure - are what drive us, then manipulating ourselves into changing our behaviours is actually quite a manageable task.
-
-How you ask?
-
-Well you can try to stop eating those delicious fries - but if you still keep craving them, you will try to resist till your willpower holds up. Once it runs out though, you will end up right back where you started.
-
-The same applies for things that are painful. We can force ourselves to do them once, twice, thrice... but if it keeps being painful then eventually we will have a bad day and just give up on it.
-
-The key things to keep in mind are.
-
-They drive us.
-
-Either we're running towards something because its pleasurable.
-
-Or, we're running away from something because its painful.
-
-More often than not, its the latter (see negativity bias).
-
-So what does that mean?
-
-Well its simple. We can try to change our behaviour about something. But if we still get pleasure from the behaviour, we will resist till we run out of willpower and then end up right back where we started.
-
-The same applies for something that seems painful. We might be able to force ourself to do it once, twice, thrice - but if it keeps being painful, eventually we will have a bad day and we will give up on it.
