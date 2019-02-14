@@ -60,3 +60,14 @@ And the result is always the same. We resist while we have the willpower - but o
 > Anthony Robbins
 
 To be continued...
+
+TODOs
+Relate pain and pleasure to needs and wants
+Pleasure is feeling good, feeling joyful and pain is feeling sad, uncomfy, physical pain
+Explain using examples of famous people in the past
+Emphasize that there are a wide range of pains and pleasures
+Maybe use the phrases "the joy of" and the "the sorrow of"
+Next point is about different time ranges of pains and pleasures - short vs long term
+What do most of us prefer to do? Unknowingly choose short term pleasure over long term pleasure
+Point out that we might think that people did something super painful but they do it because they get some sort of pleasure from it
+So what does that mean? That means that if you can find a source of pleasure in your work - no matter how painful it seems. Like having a coffee after a workout. Then you will be well on your way to be able to do it consistently.
