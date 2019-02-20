@@ -21,7 +21,7 @@ From a newborn to the President of the United States - we are either trying to a
 
 Think about it - the pleasure of making more money, buying a better phone, traveling to new places, providing for your family, feeling successful. That's what a lot of us are working for.
 
-The pain of not being able to pay your bills, being perceived as a failure, being mocked by your peers, feeling like a failure. These are the things that we work to avoid.
+The pain of not being able to pay your bills, having broken relationships, being mocked by your peers, feeling like a failure. These are the things that we work to avoid.
 
 Everything we do is driven by pain or pleasure. That is the **Pain Pleasure principle**.
 
