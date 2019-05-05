@@ -1,5 +1,5 @@
 ---
-title: School Is A Waste
+title: School Was A Waste
 categories: [inspiration]
 tags:
   [journal, diary, purpose, direction, motivation, books, psychology, learning]
