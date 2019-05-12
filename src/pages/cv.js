@@ -6,6 +6,12 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { PostTitle } from '../templates/blogPost'
 import me from '../assets/images/me.jpg'
 
+/* TODO:
+Add primary skills with description e.g. JS with TypeScript and C# using DDD
+Add education section
+Add Personal Projects section with new sections for this site and coaching
+Add professional experience section 
+*/
 const techSkillsObj = {
   Frontend: {
     'React.js': 4,
