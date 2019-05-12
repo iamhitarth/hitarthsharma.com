@@ -6,6 +6,63 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { PostTitle } from '../templates/blogPost'
 import me from '../assets/images/me.jpg'
 
+const techSkillsObj = {
+  Frontend: {
+    'React.js': 4,
+    'React Native': 4,
+    Redux: 4,
+    'Redux Sagas': 4,
+    'Javascript (Vanilla)': 4,
+    'Styled Components': 3,
+  },
+  Backend: {
+    'ASP.Net (Core 1.0)': 4,
+    'ASP.Net Web API': 4,
+    'ASP.Net MVC': 4,
+    'Node.js': 3,
+    MongoDB: 3,
+    'SQL Server': 3,
+    Firebase: 4,
+  },
+  Tooling: {
+    Git: 4,
+    TypeScript: 4,
+    Webpack: 3,
+    'VS Code': 4,
+    AWS: 3,
+    Azure: 3,
+  },
+  Other: {
+    Jest: 4,
+    Storybook: 4,
+    'Socket.io': 4,
+    'Entity Framework': 3,
+  },
+}
+
+const skillCategoryNames = Object.keys(techSkillsObj)
+const skillCategories = Object.values(techSkillsObj)
+
+const renderSkillsForCategory = skill => {
+  const skillNames = Object.keys(skill)
+  const skillValues = Object.values(skill)
+
+  return skillNames.map((skillName, index) => (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        borderTop: 'solid 1px black',
+        paddingTop: '0.25rem',
+      }}
+    >
+      <span>{skillName}</span>
+      <span style={{ textAlign: 'right' }}>{skillValues[index]}</span>
+    </div>
+  ))
+}
+
 const CVPage = ({ location }) => (
   <Layout location={location}>
     <div style={{ display: 'flex', flexDirection: 'row', fontSize: '1em' }}>
@@ -27,18 +84,54 @@ const CVPage = ({ location }) => (
           background and contracting experience have equipped me to comfortably
           pick up new tools/technologies - even in pressure situations.
         </p>
-        <h1 style={{ textAlign: 'right' }}>
+        <h1 style={{ fontSize: '3.5rem', textAlign: 'right' }}>
           Problem Solver.
           <br />
           Astute
           <br /> (Cheer) Leader.
         </h1>
-        <p style={{ textAlign: 'right' }}>
-          Sydney, NSW, Australia (+61) 43 401 8846 hitarth.sharma@outlook.com
-        </p>
+        <br />
+        <small style={{ textAlign: 'right', display: 'block' }}>
+          Sydney, NSW, Australia <br />
+          (+61) 43 401 8846
+          <br />
+          hitarth.sharma@outlook.com
+        </small>
       </div>
       <div style={{ width: '65%', paddingLeft: '2.5%' }}>
-        <h1>Hitarth Sharma</h1>
+        <h1 style={{ fontSize: '3.5rem', marginTop: 'none' }}>
+          Hitarth Sharma
+        </h1>
+        <div>
+          <h3>Technical Skills (Out of 5)</h3>
+          <div
+            style={{
+              width: '100%',
+              display: 'flex',
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              marginBottom: '0.5rem',
+            }}
+          >
+            {skillCategories.map((skillCategory, index) => {
+              return (
+                <div
+                  style={{
+                    width: '50%',
+                    padding: '0.5rem',
+                    paddingRight: '1.5rem',
+                    border: 'solid 1px black',
+                  }}
+                >
+                  <div style={{ fontWeight: 'bold' }}>
+                    {skillCategoryNames[index]}
+                  </div>
+                  {renderSkillsForCategory(skillCategory)}
+                </div>
+              )
+            })}
+          </div>
+        </div>
         <p>
           Javascript - Very comfortable with React and React Native. Used
           Node.js in places where we needed JS libraries running on the server
