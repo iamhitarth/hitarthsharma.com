@@ -14,6 +14,8 @@ tags:
   ]
 ---
 
+<img src='baseball.jpg' alt='Baseball' title='Photo by Eduardo Balderas on Unsplash' />
+
 Think about how to do better. But don't put pressure on yourself.
 
 Expect things to go wrong. Suggestions to get turned down. Projects to fall through. People to get annoyed.
