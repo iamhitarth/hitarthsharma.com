@@ -72,7 +72,7 @@ const renderSkillsForCategory = skill => {
 const CVPage = ({ location }) => (
   <Layout location={location}>
     <div style={{ display: 'flex', flexDirection: 'row', fontSize: '1em' }}>
-      <div style={{ width: '35%', paddingRight: '2.5%' }}>
+      <aside style={{ width: '35%', paddingRight: '2.5%' }}>
         <p>
           A 28-year-old lead engineer who likes taking charge and delivering
           outcomes. For me, the most satisfying problems to solve are the ones
@@ -103,13 +103,11 @@ const CVPage = ({ location }) => (
           <br />
           hitarth.sharma@outlook.com
         </small>
-      </div>
+      </aside>
       <div style={{ width: '65%', paddingLeft: '2.5%' }}>
-        <h1 style={{ fontSize: '3.5rem', marginTop: 'none' }}>
-          Hitarth Sharma
-        </h1>
+        <h1 style={{ fontSize: '3.5rem', marginTop: '0' }}>Hitarth Sharma</h1>
         <div>
-          <h3>Technical Skills (Out of 5)</h3>
+          <h3 style={{ marginTop: '0' }}>Technical Skills (Out of 5)</h3>
           <div
             style={{
               width: '100%',
@@ -138,20 +136,42 @@ const CVPage = ({ location }) => (
             })}
           </div>
         </div>
-        <p>
-          Javascript - Very comfortable with React and React Native. Used
-          Node.js in places where we needed JS libraries running on the server
-          side. Appreciate JavaScript’s syntactical similarity to C# while
-          providing functions as first-class objects. Excited about newer
-          features such as promises, template strings and generators.
-        </p>
-        <p>
-          C# - Bread and butter of my server side work. Due to its ability to
-          abstract away some of the more complex concepts (e.g. pointers) while
-          being backed by a solid development environment (VS2017) and
-          frameworks, it allows me to focus on solving the business problems at
-          hand instead of struggling with the syntax or tools.
-        </p>
+        <div>
+          <p>
+            <strong>Javascript</strong> - Very comfortable with React and React
+            Native. Used Node.js in places where we needed JS libraries running
+            on the server side. Appreciate JavaScript’s syntactical similarity
+            to C# while providing functions as first-class objects. Now in
+            combination with TypeScript, Javascript has become better than ever.
+          </p>
+          <p>
+            <strong>C#</strong> - Bread and butter of my server side work. Due
+            to its ability to abstract away some of the more complex concepts
+            (e.g. pointers) while being backed by a solid development
+            environment (VS2017) and frameworks, it allows me to focus on
+            solving the business problems at hand instead of struggling with the
+            syntax or tools.
+          </p>
+        </div>
+        <div>
+          <h3 style={{ marginTop: '0' }}>Education</h3>
+          <p>
+            <strong>Bachelor of Engineering (Honours)</strong>
+            <br />
+            University of Auckland, Auckland, NZ
+            <br />
+            2009 – 2012, majoring in Software Engineering
+          </p>
+          <p>
+            <strong>
+              Programming with HTML5 with JavaScript and CSS3 Specialist
+            </strong>
+            <br />
+            Microsoft
+            <br />
+            2013
+          </p>
+        </div>
       </div>
     </div>
   </Layout>
