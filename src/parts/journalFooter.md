@@ -8,6 +8,6 @@ title: Journal Footer
 
 It's a great way for me to re-learn the lessons I ~~most probably have~~ might've forgotten and get a chance to share them with you as well.
 
-See more of these <a href="https://hitarthsharma.com/tags/journal/">here</a>.
+See more of these <a href="/tags/journal/">here</a>.
 
 ---
