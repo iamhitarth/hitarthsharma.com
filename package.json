@@ -5,31 +5,31 @@
   "author": "Hitarth Sharma <hitarth.sharma@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.8.0",
-    "gatsby": "^2.0.0-beta.106",
+    "gatsby": "^2.20.3",
     "gatsby-plugin-google-analytics": "^2.0.7",
     "gatsby-plugin-react-helmet": "^3.0.0-beta.4",
     "gatsby-plugin-sharp": "^2.0.0-beta.9",
     "gatsby-plugin-styled-components": "^3.0.0",
     "gatsby-plugin-typography": "^2.2.0-beta.3",
-    "gatsby-remark-copy-linked-files": "^1.5.37",
-    "gatsby-remark-embed-video": "^1.4.0",
-    "gatsby-remark-images": "^2.0.1-beta.11",
-    "gatsby-remark-responsive-iframe": "^1.4.20",
+    "gatsby-remark-copy-linked-files": "^2.2.1",
+    "gatsby-remark-embed-video": "^2.0.1",
+    "gatsby-remark-images": "^3.2.1",
+    "gatsby-remark-responsive-iframe": "^2.3.1",
     "gatsby-source-filesystem": "^2.0.1-beta.10",
     "gatsby-transformer-remark": "^2.1.1-beta.6",
-    "graphql-tools": "^3.1.1",
+    "graphql-tools": "^4.0.7",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
-    "react-social-icons": "^3.0.0",
+    "react-social-icons": "^4.1.0",
     "react-typography": "^0.16.13",
-    "styled-components": "^4.0.2",
+    "styled-components": "^5.0.1",
     "typography": "^0.16.17",
-    "typography-theme-alton": "^0.15.10",
-    "typography-theme-fairy-gates": "^0.15.11",
-    "typography-theme-irving": "^0.15.10",
-    "typography-theme-noriega": "^0.15.10",
-    "typography-theme-sutro": "^0.15.10"
+    "typography-theme-alton": "^0.16.19",
+    "typography-theme-fairy-gates": "^0.16.19",
+    "typography-theme-irving": "^0.16.19",
+    "typography-theme-noriega": "^0.16.19",
+    "typography-theme-sutro": "^0.16.19"
   },
   "keywords": [
     "gatsby",
@@ -55,15 +55,15 @@
     "@babel/plugin-proposal-optional-chaining": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/react": "^10.0.1",
     "babel-core": "^7.0.0-0",
-    "babel-jest": "^23.6.0",
-    "husky": "^1.1.2",
-    "jest": "^23.6.0",
-    "jest-dom": "^2.1.0",
-    "jest-styled-components": "^6.2.2",
-    "prettier": "^1.12.0",
-    "react-testing-library": "^5.2.0",
-    "yarnhook": "^0.3.0"
+    "babel-jest": "^25.1.0",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "jest-styled-components": "^7.0.0",
+    "prettier": "^2.0.2",
+    "yarnhook": "^0.4.3"
   },
   "repository": {
     "type": "git",
@@ -91,7 +91,9 @@
     "setupFiles": [
       "<rootDir>/config/loaderShim.js"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>/config/testsSetup.js"
+    "setupFilesAfterEnv": [
+      "<rootDir>/config/testsSetup.js"
+    ]
   },
   "husky": {
     "hooks": {
