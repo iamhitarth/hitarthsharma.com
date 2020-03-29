@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import SidebarLayout from '../components/sidebarLayout'
 import PostListItem from '../components/postListItem'
 
-const IndexPage = ({ data, location }) => {
+const DraftsPage = ({ data, location }) => {
   return (
     <SidebarLayout location={location}>
       <div>
@@ -21,7 +21,7 @@ export const query = graphql`
     allMarkdownRemark(
       filter: {
         fileAbsolutePath: { regex: "//posts//" }
-        frontmatter: { isDraft: { ne: true } }
+        frontmatter: { isDraft: { eq: true } }
       }
       sort: { fields: [fields___postDate], order: DESC }
     ) {
@@ -45,4 +45,4 @@ export const query = graphql`
   }
 `
 
-export default IndexPage
+export default DraftsPage

@@ -43,7 +43,7 @@ const TagsPage = ({
     <div>
       <TagsHeading>Tags</TagsHeading>
       <TagsList>
-        {group.map(tag => (
+        {group.map((tag) => (
           <li key={tag.fieldValue}>
             <TagLink to={`/tags/${getURLFormattedTag(tag.fieldValue)}/`}>
               {tag.fieldValue} ({tag.totalCount})
@@ -83,7 +83,10 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//posts//" } }
+      filter: {
+        fileAbsolutePath: { regex: "//posts//" }
+        frontmatter: { isDraft: { ne: true } }
+      }
       limit: 2000
     ) {
       group(field: frontmatter___tags) {

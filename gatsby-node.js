@@ -1,7 +1,7 @@
 const path = require('path')
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-const isAPost = node =>
+const isAPost = (node) =>
   node && node.fileAbsolutePath && node.fileAbsolutePath.includes('/posts/')
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -40,6 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
               frontmatter {
                 tags
                 categories
+                isDraft
               }
               fields {
                 slug
@@ -48,10 +49,11 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
-    `).then(result => {
+    `).then((result) => {
       let allTags = []
       let allCategories = []
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+        const isDraft = node.frontmatter.isDraft
         // Create blog post page
         createPage({
           path: node.fields.slug,
@@ -62,29 +64,32 @@ exports.createPages = ({ graphql, actions }) => {
           },
         })
 
-        // Collect it's tags
-        const postTags = node.frontmatter.tags ? node.frontmatter.tags : []
-        postTags.forEach(postTag => {
-          const trimmedTag = postTag.trim()
-          if (allTags.indexOf(trimmedTag) < 0) {
-            allTags.push(trimmedTag)
-          }
-        })
+        if (!isDraft) {
+          // If post is not a draft
+          // Collect it's tags
+          const postTags = node.frontmatter.tags ? node.frontmatter.tags : []
+          postTags.forEach((postTag) => {
+            const trimmedTag = postTag.trim()
+            if (allTags.indexOf(trimmedTag) < 0) {
+              allTags.push(trimmedTag)
+            }
+          })
 
-        // Collect it's categories
-        const postCategories = node.frontmatter.categories
-          ? node.frontmatter.categories
-          : []
-        postCategories.forEach(postCategory => {
-          const trimmedCategory = postCategory.trim()
-          if (allCategories.indexOf(trimmedCategory) < 0) {
-            allCategories.push(trimmedCategory)
-          }
-        })
+          // Collect it's categories
+          const postCategories = node.frontmatter.categories
+            ? node.frontmatter.categories
+            : []
+          postCategories.forEach((postCategory) => {
+            const trimmedCategory = postCategory.trim()
+            if (allCategories.indexOf(trimmedCategory) < 0) {
+              allCategories.push(trimmedCategory)
+            }
+          })
+        }
       })
 
       // Create tag pages
-      allTags.forEach(tag => {
+      allTags.forEach((tag) => {
         const urlTag = tag.indexOf(' ') > -1 ? tag.split(' ').join('-') : tag
         createPage({
           path: `/tags/${urlTag}/`,
@@ -98,7 +103,7 @@ exports.createPages = ({ graphql, actions }) => {
       })
 
       // Create category pages
-      allCategories.forEach(category => {
+      allCategories.forEach((category) => {
         const urlCategory =
           category.indexOf(' ') > -1 ? category.split(' ').join('-') : category
         createPage({

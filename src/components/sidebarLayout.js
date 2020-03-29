@@ -124,7 +124,10 @@ const SidebarLayout = ({ children, location }) => {
             }
           }
           allMarkdownRemark(
-            filter: { fileAbsolutePath: { regex: "//posts//" } }
+            filter: {
+              fileAbsolutePath: { regex: "//posts//" }
+              frontmatter: { isDraft: { ne: true } }
+            }
             sort: { fields: [fields___postDate], order: DESC }
             limit: 4
           ) {
@@ -142,7 +145,7 @@ const SidebarLayout = ({ children, location }) => {
           }
         }
       `}
-      render={data => (
+      render={(data) => (
         <div>
           <Helmet
             title={data.site.siteMetadata.title}
@@ -176,7 +179,7 @@ const SidebarLayout = ({ children, location }) => {
 
               <NavList>
                 {NavItems.map(
-                  navItem =>
+                  (navItem) =>
                     navItem.isShown && (
                       <NavItem key={navItem.displayName}>
                         <Link to={navItem.href}>{navItem.displayName}</Link>
