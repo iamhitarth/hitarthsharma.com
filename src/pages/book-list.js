@@ -11,6 +11,9 @@ Links to Amazon for each book in the list maybe
 Use something like OpenLibrary to pull through thumbnail and summary etc.
  */
 
+const STATUS_COMPLETED = 'x'
+const STATUS_INCOMPLETE = '0'
+
 const MyBooks = styled.div`
   input[type='radio'] {
     position: absolute;
@@ -66,30 +69,22 @@ class BookList extends React.Component {
   }
 
   componentDidMount() {
-    const readingListUrl = 'https://runkit.io/iamhitarth/reading-list-api/4.0.0'
+    const readingListUrl = 'https://runkit.io/iamhitarth/reading-list-api/5.1.0'
     let booksComplete = 0
     let booksIncomplete = 0
 
     get(readingListUrl, this)
       .then(JSON.parse)
-      .then(items => {
-        const sorted = items.sort(
-          (a, b) =>
-            a.state > b.state
-              ? -1
-              : b.state > a.state
-                ? 1
-                : a.name > b.name
-                  ? -1
-                  : 1
-        )
-        sorted.forEach(
-          book =>
-            book.state === 'complete' ? booksComplete++ : booksIncomplete++
+      .then((items) => {
+        const books = items.rows
+        books.forEach((book) =>
+          book.completed === STATUS_COMPLETED
+            ? booksComplete++
+            : booksIncomplete++
         )
 
         this.setState({
-          books: [...sorted],
+          books: [...books],
           complete: booksComplete,
           incomplete: booksIncomplete,
         })
@@ -102,7 +97,7 @@ class BookList extends React.Component {
     }
   }
 
-  handleFilterChange = event => {
+  handleFilterChange = (event) => {
     this.setState({
       filterBy: event.target.value,
     })
@@ -127,26 +122,26 @@ class BookList extends React.Component {
         </label>{' '}
         <label
           className={`radio-label${
-            filterBy === 'complete' ? ' radio-active' : ''
+            filterBy === STATUS_COMPLETED ? ' radio-active' : ''
           }`}
         >
           <input
             type="radio"
-            value="complete"
-            checked={filterBy === 'complete'}
+            value={STATUS_COMPLETED}
+            checked={filterBy === STATUS_COMPLETED}
             onChange={this.handleFilterChange}
           />
           {`Read (${complete})`}
         </label>{' '}
         <label
           className={`radio-label${
-            filterBy === 'incomplete' ? ' radio-active' : ''
+            filterBy === STATUS_INCOMPLETE ? ' radio-active' : ''
           }`}
         >
           <input
             type="radio"
-            value="incomplete"
-            checked={filterBy === 'incomplete'}
+            value={STATUS_INCOMPLETE}
+            checked={filterBy === STATUS_INCOMPLETE}
             onChange={this.handleFilterChange}
           />
           {`Unread (${incomplete})`}
@@ -158,9 +153,16 @@ class BookList extends React.Component {
   renderBooks() {
     const { filterBy } = this.state
     return this.state.books
-      .filter(book => filterBy === 'all' || filterBy === book.state)
-      .map(book => (
-        <li key={book.id} className={`book book-${book.state}`}>
+      .filter((book) => filterBy === 'all' || filterBy === book.completed)
+      .map((book) => (
+        <li
+          key={book.name}
+          className={`book book-${
+            book.completed === STATUS_COMPLETED && filterBy !== STATUS_COMPLETED
+              ? 'complete'
+              : 'incomplete'
+          }`}
+        >
           {book.name}
         </li>
       ))
