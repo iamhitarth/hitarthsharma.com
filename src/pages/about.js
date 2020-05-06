@@ -47,15 +47,21 @@ const AboutPage = ({ location }) => (
           </span>
         </p>
         <p>
-          <OutboundLink href="https://www.instagram.com/disruptive.kiwi/">
+          <OutboundLink
+            href="https://www.instagram.com/disruptive.kiwi/"
+            target="_blank"
+          >
             Instagram
           </OutboundLink>{' '}
           |{' '}
-          <OutboundLink href="https://www.linkedin.com/in/hitarthsharma/">
+          <OutboundLink
+            href="https://www.linkedin.com/in/hitarthsharma/"
+            target="_blank"
+          >
             LinkedIn
           </OutboundLink>{' '}
           |{' '}
-          <OutboundLink href="https://twitter.com/iamhitarth">
+          <OutboundLink href="https://twitter.com/iamhitarth" target="_blank">
             Twitter
           </OutboundLink>
         </p>
