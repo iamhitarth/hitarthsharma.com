@@ -1,10 +1,15 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { Link } from 'gatsby'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import styled from 'styled-components'
 
 import { PostTitle } from '../templates/blogPost'
 import coachingPic from '../assets/images/coaching-pic.jpg'
+
+const SubHeading = styled.h2`
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+`
 
 const CoachingPage = ({ location }) => (
   <Layout location={location}>
@@ -56,17 +61,15 @@ const CoachingPage = ({ location }) => (
           🤯⁣⁣⁣
         </p>
         <p>
-          If you're not satisfied with where you are, you <em>must</em> take
-          charge of your future.
+          If you're not satisfied with where you are,{' '}
+          <strong>
+            you <em>must</em> take charge of your future.
+          </strong>
         </p>
         <p>
-          The question is, how? How can you take charge of the future? And the
-          answer can be a tough one to find - but that’s where I come in as a
-          coach.
-        </p>
-        <p>
-          The answer can be a tough one to find - and that’s where I come in as
-          a coach.
+          The question is, how? How can you take charge of the future? The
+          answer can be a tough one to find - but{' '}
+          <strong>that’s where I come in as a coach.</strong>
         </p>
         <p>Are you ready to take control?</p>
         <p>
@@ -78,17 +81,7 @@ const CoachingPage = ({ location }) => (
             get in touch 👋
           </OutboundLink>
         </p>
-        <h2>What is coaching?</h2>
-        <p>
-          There are many types of coaches and many types of coaching. The
-          general idea of coaching is that it's not about telling you what you
-          need to do - rather it's about asking the right questions so that you
-          can figure out on your own what it is that you need to do. Why? Two
-          reason. First, you're a lot more likely to stay the course and be
-          persistent with something if you came up with the answer yourself - as
-          opposed to someone spoon feeding it to you. And second, plausible
-          deniability.
-        </p>
+        <p>Alternatively, reach out to me on:</p>
         <p>
           <OutboundLink
             href="https://www.instagram.com/disruptive.kiwi/"
