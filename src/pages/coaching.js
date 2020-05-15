@@ -163,7 +163,14 @@ const CoachingPage = ({ location }) => (
           the price and the payment method, if we decide to continue. If not,
           then you can reach out to me again whenever you're ready.
         </p>
-        <p>Get started!</p>
+        <p>
+          <OutboundLink
+            href="https://forms.gle/pQNgyBujuwZbMTiFA/"
+            target="_blank"
+          >
+            Get started!
+          </OutboundLink>
+        </p>
         <p>Alternatively, reach out to me with any questions on:</p>
         <p>
           <OutboundLink
