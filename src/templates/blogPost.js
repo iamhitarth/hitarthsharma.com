@@ -92,7 +92,7 @@ export default ({ data, location }) => {
           { name: 'description', content: "Hitarth Sharma's site" },
           {
             name: 'keywords',
-            content: `hitarth, sharma, blog, software, engineer${
+            content: `hitarth, sharma, coach, blog, software, engineer${
               tags && tags.length > 0 ? `, ${tags.join(', ')}` : ''
             }`,
           },

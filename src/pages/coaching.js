@@ -47,7 +47,6 @@ const CoachingPage = ({ location }) => (
             🚀
           </li>
         </ol>
-
         <p>
           A therapist can help you deal with the <em>past</em> and make sense of
           it.⁣⁣⁣ Your current circumstances dictate how you feel in the{' '}
@@ -81,7 +80,91 @@ const CoachingPage = ({ location }) => (
             get in touch 👋
           </OutboundLink>
         </p>
-        <p>Alternatively, reach out to me on:</p>
+        <SubHeading>How does it work?</SubHeading>
+        <p>
+          When it comes to you and your life,{' '}
+          <strong>YOU are the subject matter expert.</strong>
+        </p>
+        <p>
+          However, over the years, the external pressures, the failures, the
+          heartbreaks and the noise eventually bury this expertise of yours.
+        </p>
+        <p>
+          They bury it so deep that the voice that used to be a roar, is barely
+          a whisper now.
+        </p>
+        <p>
+          <em>This</em> is where we want to turn up the volume.
+        </p>
+        <p>
+          Unfortunately, everyone is different and this means that there is no
+          silver bullet.
+        </p>
+        <p>
+          But foturnately, with me as your coach,{' '}
+          <strong>
+            we will use tools and techniques that would be most effective{' '}
+            <em>for you</em>.
+          </strong>
+        </p>
+        <blockquote style={{ lineHeight: '1.45' }}>
+          Give a man a fish and you feed him for a day; teach a man to fish and
+          you feed him for a lifetime.
+        </blockquote>
+        <p>
+          However, nothing worth having comes easy. So while I can be the fuel,{' '}
+          <em>you</em> have to bring the fire.
+        </p>
+        <p>
+          This means{' '}
+          <strong>committing to one 2-hour session every month</strong> - over
+          Zoom or face to face.
+        </p>
+        <p>Two hours might seem a bit long, but that's what it will take to:</p>
+        <ul style={{ textAlign: 'left' }}>
+          <li>create the time and space for you to dig deep</li>
+          <li>break out of your habitual thinking patterns</li>
+          <li>find the direction and guidance you've been looking for</li>
+        </ul>
+        <p>
+          If you're looking for a friendly chat to give you the warm fuzzies,
+          then you're looking for a friend, not a coach.
+        </p>
+        <p>
+          However, if you're willing to challenge yourself and work with me to
+          push yourself, then <strong>here are the next steps:</strong>
+        </p>
+        <ol style={{ textAlign: 'left' }}>
+          <li>
+            Answer these{' '}
+            <OutboundLink
+              href="https://forms.gle/pQNgyBujuwZbMTiFA/"
+              target="_blank"
+            >
+              four questions
+            </OutboundLink>
+            .
+          </li>
+          <li>
+            We schedule the <em>free first session</em> within 24 hours.⁣⁣⁣
+          </li>
+          <li>We have a deep, life-changing coaching session.</li>
+          <li>We decide if we carry on working together.</li>
+        </ol>
+        <p>
+          Yes, the <strong>first session is free with no obligations.</strong>
+        </p>
+        <p>
+          My philosophy is
+          let's-work-together-and-if-we-like-the-results-then-we-can-keep-working-together.
+        </p>
+        <p>
+          After our first session, we can discuss the term of our engagement,
+          the price and the payment method, if we decide to continue. If not,
+          then you can reach out to me again whenever you're ready.
+        </p>
+        <p>Get started!</p>
+        <p>Alternatively, reach out to me with any questions on:</p>
         <p>
           <OutboundLink
             href="https://www.instagram.com/disruptive.kiwi/"
