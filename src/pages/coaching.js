@@ -11,6 +11,15 @@ const SubHeading = styled.h2`
   margin-bottom: 1.5rem;
 `
 
+const OutboundLinkButton = styled(OutboundLink)`
+  border: solid 1px #82beed;
+  border-radius: 0.25rem;
+  padding: 8px 12px;
+  background: none;
+  text-decoration: none;
+  text-shadow: none;
+`
+
 const CoachingPage = ({ location }) => (
   <Layout location={location}>
     <div>
@@ -72,13 +81,12 @@ const CoachingPage = ({ location }) => (
         </p>
         <p>Are you ready to take control?</p>
         <p>
-          Then,{' '}
-          <OutboundLink
+          <OutboundLinkButton
             href="https://forms.gle/pQNgyBujuwZbMTiFA/"
             target="_blank"
           >
-            get in touch 👋
-          </OutboundLink>
+            Yes! Let's go 🙌
+          </OutboundLinkButton>
         </p>
         <SubHeading>How does it work?</SubHeading>
         <p>
@@ -112,8 +120,8 @@ const CoachingPage = ({ location }) => (
           you feed him for a lifetime.
         </blockquote>
         <p>
-          However, nothing worth having comes easy. So while I can be the fuel,{' '}
-          <em>you</em> have to bring the fire.
+          However, nothing worth having comes easy. So while I'll be the fuel,{' '}
+          <em>you</em> have to bring the fire 🔥
         </p>
         <p>
           This means{' '}
@@ -122,9 +130,9 @@ const CoachingPage = ({ location }) => (
         </p>
         <p>Two hours might seem a bit long, but that's what it will take to:</p>
         <ul style={{ textAlign: 'left' }}>
-          <li>create the time and space for you to dig deep</li>
-          <li>break out of your habitual thinking patterns</li>
-          <li>find the direction and guidance you've been looking for</li>
+          <li>create the time and space for you to dig deep 👨‍🚀</li>
+          <li>break out of your habitual thinking patterns ⚒️</li>
+          <li>find the direction and guidance you've been looking for 🎯</li>
         </ul>
         <p>
           If you're looking for a friendly chat to give you the warm fuzzies,
@@ -132,7 +140,8 @@ const CoachingPage = ({ location }) => (
         </p>
         <p>
           However, if you're willing to challenge yourself and work with me to
-          push yourself, then <strong>here are the next steps:</strong>
+          take control of your future, then{' '}
+          <strong>here are the next steps 💪🏼</strong>
         </p>
         <ol style={{ textAlign: 'left' }}>
           <li>
@@ -164,12 +173,12 @@ const CoachingPage = ({ location }) => (
           then you can reach out to me again whenever you're ready.
         </p>
         <p>
-          <OutboundLink
+          <OutboundLinkButton
             href="https://forms.gle/pQNgyBujuwZbMTiFA/"
             target="_blank"
           >
-            Get started!
-          </OutboundLink>
+            Get started ✈️
+          </OutboundLinkButton>
         </p>
         <p>Alternatively, reach out to me with any questions on:</p>
         <p>
