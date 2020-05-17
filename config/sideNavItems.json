@@ -10,9 +10,14 @@
     "isShown": true
   },
   {
+    "displayName": "🖖🏼 Coaching",
+    "href": "/coaching",
+    "isShown": true
+  },
+  {
     "displayName": "👨🏻‍💻 Tech",
     "href": "/category/tech",
-    "isShown": true
+    "isShown": false
   },
   {
     "displayName": "📈 Productivity",
