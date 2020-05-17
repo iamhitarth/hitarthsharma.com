@@ -12,12 +12,17 @@ const SubHeading = styled.h2`
 `
 
 const OutboundLinkButton = styled(OutboundLink)`
-  border: solid 1px #82beed;
+  color: hsla(0, 0%, 0%, 0.8);
   border-radius: 0.25rem;
   padding: 8px 12px;
-  background: none;
+  background: #ff9800;
   text-decoration: none;
   text-shadow: none;
+
+  &:hover {
+    color: #ff9800;
+    background: black;
+  }
 `
 
 const CoachingPage = ({ location }) => (
