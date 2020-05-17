@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import { PostTitle } from '../../templates/blogPost'
 
 /* TODOs
-Edit items
 Export as PDF
 */
 
@@ -112,10 +111,12 @@ class ControlSpectrumTool extends React.Component {
     return (
       <Layout location={location}>
         <div>
-          <PostTitle>The Control Spectrum</PostTitle>
-          <p>
-            Use this tool when you have a lot of things that you want to and{' '}
-            <em>can</em> do but aren't sure of where to begin.
+          <PostTitle>Use this to figure out where to begin</PostTitle>
+          <p style={{ textAlign: 'center' }}>
+            This tool helps you identify things that you have relatively more
+            control over so that you can focus your energies on them instead of
+            wasting them on things that sit at the other end of your "control
+            spectrum" 🤓
           </p>
           <form onSubmit={this.handleItemAdd} style={{ display: 'flex' }}>
             <input
