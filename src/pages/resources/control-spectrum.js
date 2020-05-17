@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import { PostTitle } from '../../templates/blogPost'
 
 /* TODOs
+Edit items
 Export as PDF
 */
 
@@ -21,7 +22,7 @@ class ControlSpectrumTool extends React.Component {
     localStorage.setItem(CONTROL_SPECTRUM_KEY, JSON.stringify(this.state))
   }
 
-  handleItemTextChange = (e) => {
+  handleCurrentItemNameChange = (e) => {
     this.setState({ currentItemText: e.target.value }, () =>
       this.saveStateToLocalStorage()
     )
@@ -42,10 +43,11 @@ class ControlSpectrumTool extends React.Component {
     })
   }
 
-  handleItemValueChange = (itemId, value) => {
+  handleItemChange = (e, itemId) => {
+    const propertyName = e.target.name
+    const value = e.target.value
     const item = this.state.items[itemId]
-    const updatedItem = { ...item, value }
-    console.log(updatedItem)
+    const updatedItem = { ...item, [propertyName]: value }
     this.setState(
       { items: { ...this.state.items, [itemId]: updatedItem } },
       () => this.saveStateToLocalStorage()
@@ -75,24 +77,28 @@ class ControlSpectrumTool extends React.Component {
               padding: '5px 10px',
             }}
           >
-            <div
+            <input
+              name="name"
+              type="text"
               style={{
                 flex: 1,
                 marginRight: '15px',
+                background: `transparent`,
+                border: 'none',
+                outline: 'none',
               }}
-            >
-              {item.name}
-            </div>
+              value={item.name}
+              onChange={(e) => this.handleItemChange(e, item.id)}
+            />
             <input
+              name="value"
               type="range"
               min="1"
               max="100"
               defaultValue={1}
               style={{ flex: 1 }}
               value={item.value}
-              onChange={(e) =>
-                this.handleItemValueChange(item.id, e.target.value)
-              }
+              onChange={(e) => this.handleItemChange(e, item.id)}
             />
           </li>
         ))}
@@ -116,11 +122,11 @@ class ControlSpectrumTool extends React.Component {
               type="text"
               placeholder="Thing you want to do.."
               value={this.state.currentItemText}
-              onChange={this.handleItemTextChange}
+              onChange={this.handleCurrentItemNameChange}
               ref={this.itemTextInput}
-              style={{ flex: 1 }}
+              style={{ flex: 1, outline: 'none', padding: '5px' }}
             />
-            <input type="submit" value="Add item" />
+            <input type="submit" value="Add thing" />
           </form>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             {items.length > 0 && (
@@ -130,10 +136,11 @@ class ControlSpectrumTool extends React.Component {
                   width: '50%',
                   display: 'flex',
                   justifyContent: 'space-between',
+                  paddingBottom: '10px',
                 }}
               >
                 <span>In my control</span>
-                <span>Out of my control</span>
+                <span style={{ textAlign: 'right' }}>Out of my control</span>
               </div>
             )}
 
