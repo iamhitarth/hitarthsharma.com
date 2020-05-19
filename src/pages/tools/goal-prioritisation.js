@@ -22,6 +22,8 @@ const EmojiSlider = styled.input`
   border-radius: 5px;
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
+    outline: none;
+    border: none;
     width: 18px;
     height: 18px;
     border-radius: 50%;
@@ -47,7 +49,7 @@ const EmojiSlider = styled.input`
   }
 `
 
-class ControlSpectrumTool extends React.Component {
+class GoalPrioritisationTool extends React.Component {
   state = {
     currentItemText: '',
     items: {},
@@ -161,15 +163,26 @@ class ControlSpectrumTool extends React.Component {
         <div>
           <PostTitle>Use this to figure out where to begin</PostTitle>
           <p style={{ textAlign: 'center' }}>
-            This tool helps you identify things that you have relatively more
-            control over so that you can focus your energies on them instead of
-            wasting them on things that sit at the other end of your "control
-            spectrum" 🤓
+            This is NOT a todo list. It's a "to-achieve" list.
+          </p>{' '}
+          <p style={{ textAlign: 'center' }}>
+            A tool to help you prioritze your goals -{' '}
+            <em>
+              based on how much control you have over whether you'll achieve it
+              or not
+            </em>{' '}
+            - so you can focus on the right ones 😎
+          </p>
+          <p style={{ textAlign: 'center' }}>
+            E.g. you don't have much control over getting a million YouTube
+            subscribers. However, posting a video a week is a lot more "in your
+            control". So in this case, that would be a better goal to prioritise
+            and focus on.
           </p>
           <form onSubmit={this.handleItemAdd} style={{ display: 'flex' }}>
             <input
               type="text"
-              placeholder="Thing you want to do.."
+              placeholder="Thing you want to achieve.."
               value={this.state.currentItemText}
               onChange={this.handleCurrentItemNameChange}
               ref={this.itemTextInput}
@@ -200,4 +213,4 @@ class ControlSpectrumTool extends React.Component {
     )
   }
 }
-export default ControlSpectrumTool
+export default GoalPrioritisationTool
