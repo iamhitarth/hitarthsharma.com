@@ -3,12 +3,49 @@ import Layout from '../../components/layout'
 import styled from 'styled-components'
 
 import { PostTitle } from '../../templates/blogPost'
+import confusedEmoji from '../../assets/images/emoji-confused-face.png'
+import smilingSweatEmoji from '../../assets/images/emoji-smiling-with-sweat.png'
+import sunglassesEmoji from '../../assets/images/emoji-sunglasses.png'
 
 /* TODOs
-Export as PDF
+Make the list items sortable
+Export as PDF/image - probably not going to do this
 */
 
 const CONTROL_SPECTRUM_KEY = 'controlSpectrumData'
+
+const EmojiSlider = styled.input`
+  -webkit-appearance: none;
+  outline: none;
+  background: ${(props) => props.backgroundColor};
+  height: 6px;
+  border-radius: 5px;
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: url(${(props) => props.emojiImageUrl});
+    background-size: contain;
+  }
+
+  &::-moz-range-thumb {
+    border: none;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: ${(props) => props.backgroundColor};
+    cursor: pointer;
+  }
+
+  &::-moz-range-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background: ${(props) => props.backgroundColor};
+    border-radius: 5px;
+  }
+`
 
 class ControlSpectrumTool extends React.Component {
   state = {
@@ -53,6 +90,13 @@ class ControlSpectrumTool extends React.Component {
     )
   }
 
+  getEmojiUrlBasedOnValue = (value) =>
+    value < 30
+      ? sunglassesEmoji
+      : value < 50
+      ? smilingSweatEmoji
+      : confusedEmoji
+
   componentDidMount = () => {
     this.itemTextInput.current.focus()
     const controlSpectrumDataString = localStorage.getItem(CONTROL_SPECTRUM_KEY)
@@ -74,6 +118,7 @@ class ControlSpectrumTool extends React.Component {
               }`,
               listStyleType: 'none',
               padding: '5px 10px',
+              alignItems: 'center',
             }}
           >
             <input
@@ -89,15 +134,18 @@ class ControlSpectrumTool extends React.Component {
               value={item.name}
               onChange={(e) => this.handleItemChange(e, item.id)}
             />
-            <input
+            <EmojiSlider
               name="value"
               type="range"
               min="1"
               max="100"
-              defaultValue={1}
               style={{ flex: 1 }}
+              backgroundColor={`${
+                i % 2 === 0 ? 'white' : 'rgba(130, 190, 237, 0.3)'
+              }`}
               value={item.value}
               onChange={(e) => this.handleItemChange(e, item.id)}
+              emojiImageUrl={this.getEmojiUrlBasedOnValue(item.value)}
             />
           </li>
         ))}
