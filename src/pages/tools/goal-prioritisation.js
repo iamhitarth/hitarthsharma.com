@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from '../../components/layout'
 import styled from 'styled-components'
-import { ReactSortable } from 'react-sortablejs'
 
 import { PostTitle } from '../../templates/blogPost'
 import confusedEmoji from '../../assets/images/emoji-confused-face.png'
@@ -9,6 +8,7 @@ import smilingSweatEmoji from '../../assets/images/emoji-smiling-with-sweat.png'
 import sunglassesEmoji from '../../assets/images/emoji-sunglasses.png'
 
 /* TODOs
+Make the list items sortable
 Export as PDF/image - probably not going to do this
 */
 
@@ -99,11 +99,6 @@ class GoalPrioritisationTool extends React.Component {
       ? smilingSweatEmoji
       : confusedEmoji
 
-  updateItemsOrder = (items) =>
-    this.setState({ items }, () => {
-      this.saveStateToLocalStorage()
-    })
-
   componentDidMount = () => {
     this.itemTextInput.current.focus()
     const controlSpectrumDataString = localStorage.getItem(CONTROL_SPECTRUM_KEY)
@@ -114,11 +109,7 @@ class GoalPrioritisationTool extends React.Component {
 
   renderItems = (items) => {
     return (
-      <ReactSortable
-        list={items}
-        setList={this.updateItemsOrder}
-        style={{ marginLeft: '0' }}
-      >
+      <ul style={{ marginLeft: '0' }}>
         {items.map((item, i) => (
           <li
             key={item.id}
@@ -160,7 +151,7 @@ class GoalPrioritisationTool extends React.Component {
             />
           </li>
         ))}
-      </ReactSortable>
+      </ul>
     )
   }
 
