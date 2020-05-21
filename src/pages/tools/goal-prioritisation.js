@@ -92,11 +92,14 @@ class GoalPrioritisationTool extends React.Component {
     )
   }
 
-  clearAllItems = () =>
-    this.setState({ items: {} }, () => {
-      this.itemTextInput.current.focus()
-      this.saveStateToLocalStorage()
-    })
+  deleteAllItems = () => {
+    if (window.confirm('Are you sure you want to DELETE all items?')) {
+      this.setState({ items: {} }, () => {
+        this.itemTextInput.current.focus()
+        this.saveStateToLocalStorage()
+      })
+    }
+  }
 
   getEmojiUrlBasedOnValue = (value) =>
     value < 30
@@ -198,8 +201,8 @@ class GoalPrioritisationTool extends React.Component {
             <input
               type="button"
               style={{ marginLeft: '5px' }}
-              value="Clear all"
-              onClick={this.clearAllItems}
+              value="Delete all"
+              onClick={this.deleteAllItems}
             />
           </form>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
