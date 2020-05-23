@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../../components/layout'
 import styled from 'styled-components'
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd'
 
 import { PostTitle } from '../../templates/blogPost'
 import confusedEmoji from '../../assets/images/emoji-confused-face.png'
@@ -49,10 +50,31 @@ const EmojiSlider = styled.input`
   }
 `
 
+const GoalsList = styled.ul`
+  margin-left: 0px;
+`
+
+const GoalItem = styled.li`
+  display: flex;
+  background-color: ${(props) => props.background};
+  list-style-type: none;
+  padding: 5px 10px;
+  align-items: center;
+`
+
+const DragHandle = styled.div`
+  margin-right: 8px;
+
+  &:hover {
+    cursor: move;
+  }
+`
+
 class GoalPrioritisationTool extends React.Component {
   state = {
     currentItemText: '',
     items: {},
+    itemsOrder: [],
   }
   itemTextInput = React.createRef()
 
@@ -75,10 +97,18 @@ class GoalPrioritisationTool extends React.Component {
       name: this.state.currentItemText,
       value: 1,
     }
-    this.setState({ items: updatedItems, currentItemText: '' }, () => {
-      this.itemTextInput.current.focus()
-      this.saveStateToLocalStorage()
-    })
+    const updatedItemsOrder = [...this.state.itemsOrder, newItemId]
+    this.setState(
+      {
+        items: updatedItems,
+        currentItemText: '',
+        itemsOrder: updatedItemsOrder,
+      },
+      () => {
+        this.itemTextInput.current.focus()
+        this.saveStateToLocalStorage()
+      }
+    )
   }
 
   handleItemChange = (e, itemId) => {
@@ -94,11 +124,30 @@ class GoalPrioritisationTool extends React.Component {
 
   deleteAllItems = () => {
     if (window.confirm('Are you sure you want to DELETE all items?')) {
-      this.setState({ items: {} }, () => {
+      this.setState({ items: {}, itemsOrder: [] }, () => {
         this.itemTextInput.current.focus()
         this.saveStateToLocalStorage()
       })
     }
+  }
+
+  onDragEnd = ({ source, destination, draggableId }) => {
+    if (!destination) return
+
+    if (
+      source.droppableId === destination.droppableId &&
+      source.index === destination.index
+    ) {
+      return
+    }
+
+    const updatedItemsOrder = [...this.state.itemsOrder]
+    updatedItemsOrder.splice(source.index, 1)
+    updatedItemsOrder.splice(destination.index, 0, draggableId)
+
+    this.setState({ itemsOrder: [...updatedItemsOrder] }, () =>
+      this.saveStateToLocalStorage()
+    )
   }
 
   getEmojiUrlBasedOnValue = (value) =>
@@ -116,57 +165,66 @@ class GoalPrioritisationTool extends React.Component {
     }
   }
 
-  renderItems = (items) => {
+  renderItems = (items, itemsOrder) => {
     return (
-      <ul style={{ marginLeft: '0' }}>
-        {items.map((item, i) => (
-          <li
-            key={item.id}
-            style={{
-              display: 'flex',
-              background: `${
-                i % 2 === 0 ? 'rgba(130, 190, 237, 0.3)' : 'none'
-              }`,
-              listStyleType: 'none',
-              padding: '5px 10px',
-              alignItems: 'center',
-            }}
-          >
-            <input
-              name="name"
-              type="text"
-              style={{
-                flex: 1,
-                marginRight: '15px',
-                background: `transparent`,
-                border: 'none',
-                outline: 'none',
-              }}
-              value={item.name}
-              onChange={(e) => this.handleItemChange(e, item.id)}
-            />
-            <EmojiSlider
-              name="value"
-              type="range"
-              min="1"
-              max="100"
-              style={{ flex: 1 }}
-              backgroundColor={`${
-                i % 2 === 0 ? 'white' : 'rgba(130, 190, 237, 0.3)'
-              }`}
-              value={item.value}
-              onChange={(e) => this.handleItemChange(e, item.id)}
-              emojiImageUrl={this.getEmojiUrlBasedOnValue(item.value)}
-            />
-          </li>
-        ))}
-      </ul>
+      <Droppable droppableId={'mainList'}>
+        {(provided) => (
+          <GoalsList ref={provided.innerRef} {...provided.droppableProps}>
+            {itemsOrder.map((itemId, i) => {
+              const item = items[itemId]
+              return (
+                <Draggable key={itemId} draggableId={itemId} index={i}>
+                  {(provided) => (
+                    <GoalItem
+                      background={
+                        i % 2 === 0 ? 'rgba(130, 190, 237, 0.3)' : 'none'
+                      }
+                      {...provided.draggableProps}
+                      ref={provided.innerRef}
+                    >
+                      <DragHandle {...provided.dragHandleProps}>↕️</DragHandle>
+                      <input
+                        name="name"
+                        type="text"
+                        style={{
+                          flex: 1,
+                          marginRight: '15px',
+                          background: `transparent`,
+                          border: 'none',
+                          outline: 'none',
+                        }}
+                        value={item.name}
+                        onChange={(e) => this.handleItemChange(e, itemId)}
+                      />
+                      <EmojiSlider
+                        name="value"
+                        type="range"
+                        min="1"
+                        max="100"
+                        style={{ flex: 1 }}
+                        backgroundColor={`${
+                          i % 2 === 0 ? 'white' : 'rgba(130, 190, 237, 0.3)'
+                        }`}
+                        value={item.value}
+                        onChange={(e) => this.handleItemChange(e, itemId)}
+                        emojiImageUrl={this.getEmojiUrlBasedOnValue(item.value)}
+                      />
+                    </GoalItem>
+                  )}
+                </Draggable>
+              )
+            })}
+            {provided.placeholder}
+          </GoalsList>
+        )}
+      </Droppable>
     )
   }
 
   render() {
     const { location } = this.props
-    const items = Object.values(this.state.items)
+    const { items, itemsOrder } = this.state
+
     return (
       <Layout location={location}>
         <div>
@@ -206,7 +264,7 @@ class GoalPrioritisationTool extends React.Component {
             />
           </form>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            {items.length > 0 && (
+            {itemsOrder.length > 0 && (
               <div
                 style={{
                   alignSelf: 'flex-end',
@@ -220,8 +278,9 @@ class GoalPrioritisationTool extends React.Component {
                 <span style={{ textAlign: 'right' }}>Out of my control</span>
               </div>
             )}
-
-            {this.renderItems(items)}
+            <DragDropContext onDragEnd={this.onDragEnd}>
+              {this.renderItems(items, itemsOrder)}
+            </DragDropContext>
           </div>
         </div>
       </Layout>

@@ -19,6 +19,7 @@
     "gatsby-transformer-remark": "^2.1.1-beta.6",
     "graphql-tools": "^4.0.7",
     "react": "^16.4.1",
+    "react-beautiful-dnd": "^13.0.0",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
     "react-social-icons": "^4.1.0",
