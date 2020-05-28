@@ -19,7 +19,8 @@ const SubHeading = styled.h2`
 const OutboundLinkButton = styled(OutboundLink)`
   color: hsla(0, 0%, 0%, 0.8);
   border-radius: 0.25rem;
-  padding: 8px 12px;
+  padding: 14px 20px;
+  font-weight: bold;
   background: #ff9800;
   text-decoration: none;
   text-shadow: none;
@@ -53,7 +54,7 @@ const CoachingPage = ({ location }) => (
             href="https://forms.gle/pQNgyBujuwZbMTiFA/"
             target="_blank"
           >
-            Yes, let's do it
+            Book your free coaching session
           </OutboundLinkButton>
         </p>
 
@@ -75,8 +76,8 @@ const CoachingPage = ({ location }) => (
           <li>
             We schedule the <em>free first session</em> within 24 hours.⁣⁣⁣
           </li>
-          <li>We have a deep, life-changing coaching session.</li>
-          <li>We decide if we carry on working together.</li>
+          <li>Have a deep, life-changing coaching session.</li>
+          <li>Decide if we want to carry on working together.</li>
         </ol>
         <p>
           Pricing and the term of our engagement will be discussed if we decide
