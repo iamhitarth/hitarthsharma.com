@@ -34,7 +34,7 @@ const OutboundLinkButton = styled(OutboundLink)`
 const CoachingPage = ({ location }) => (
   <Layout location={location}>
     <div>
-      <PostTitle>Helping You Be The Leader of Your Own Life</PostTitle>
+      <PostTitle>Helping You Break Out of Your Dull Corporate Life</PostTitle>
       <div
         style={{
           display: 'flex',
@@ -62,22 +62,11 @@ const CoachingPage = ({ location }) => (
         <p>
           Your <strong>first session is free</strong> with no obligations.
         </p>
+        <p>To get started:</p>
         <ol style={{ textAlign: 'left' }}>
-          <li>
-            Answer these{' '}
-            <OutboundLink
-              href="https://forms.gle/pQNgyBujuwZbMTiFA/"
-              target="_blank"
-            >
-              four questions
-            </OutboundLink>
-            .
-          </li>
-          <li>
-            We schedule the <em>free first session</em> within 24 hours.⁣⁣⁣
-          </li>
-          <li>Have a deep, life-changing coaching session.</li>
-          <li>Decide if we want to carry on working together.</li>
+          <li>Have your free, powerful coaching session with me.</li>
+          <li>Decide if we want to keep working together.</li>
+          <li>Break out of your soulless corporate life.</li>
         </ol>
         <p>
           Pricing and the term of our engagement will be discussed if we decide
