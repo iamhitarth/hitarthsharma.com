@@ -7,6 +7,7 @@ import { PostTitle } from '../templates/blogPost'
 import coachingPic from '../assets/images/coaching-pic.jpg'
 
 const CenteredContainer = styled.div`
+  position: relative;
   @media (max-width: 900px) {
     display: flex;
     flex-direction: column;
@@ -31,18 +32,28 @@ const SubHeading = styled.h2`
   margin-bottom: 1.5rem;
 `
 
-const OutboundLinkButton = styled(OutboundLink)`
+const ResetButton = styled.button`
   color: hsla(0, 0%, 0%, 0.8);
+  border-color: transparent;
   border-radius: 0.25rem;
   padding: 14px 20px;
   font-weight: bold;
   background: #ff9800;
   text-decoration: none;
   text-shadow: none;
+  position: absolute;
+  right: 0;
+  top: -14px;
 
   &:hover {
     color: #ff9800;
     background: black;
+  }
+
+  @media (max-width: 900px) {
+    width: 100%;
+    position: static;
+    margin-bottom: 1rem;
   }
 `
 
@@ -72,47 +83,106 @@ const renderFooter = () => (
   </p>
 )
 
-const TODAY_KEY = 'today'
-const BLOCKERS_KEY = 'blockers'
-const PREVIOUSLY_KEY = 'previously'
-const LAST_EDITED_ON_KEY = 'lastEditedOn'
+const STANDUP_STATE_KEY = 'standupState'
+const TODAY_KEY = 'standupToday'
+const BLOCKERS_KEY = 'standupBlockers'
+const PREVIOUSLY_KEY = 'standupPreviously'
+const LAST_EDITED_ON_KEY = 'standupLastEditedOn'
 
-const useStateWithLocalStorage = (localStorageKey) => {
-  const [value, setValue] = React.useState(
-    localStorage.getItem(localStorageKey) || ''
-  )
+const getUpdatedPreviousData = (parsed) => {
+  return `[${parsed[LAST_EDITED_ON_KEY]}]\n${parsed[TODAY_KEY]}${
+    parsed[BLOCKERS_KEY] ? `\n|Blockers|\n${parsed[BLOCKERS_KEY]}` : ''
+  }\n\n${parsed[PREVIOUSLY_KEY]}`
+}
 
-  //new Date("Fri Jun 19 2020") > new Date() = false when current date was 20 Jun
+// Can turn this into a one time effect that fires reset action
+const getUpdatedState = (rawState) => {
+  const parsed = JSON.parse(rawState)
+  if (!parsed) return parsed
 
-  React.useEffect(() => {
-    localStorage.setItem(localStorageKey, value)
-    localStorage.setItem(`ds-${LAST_EDITED_ON_KEY}`, new Date().toDateString())
-  }, [localStorageKey, value])
+  const lastEditedOnDate = new Date(parsed[LAST_EDITED_ON_KEY])
+  const todayDate = new Date(new Date().toDateString())
+  const isTodayDataOutdated = todayDate > lastEditedOnDate
 
-  return [value, setValue]
+  if (isTodayDataOutdated && parsed[TODAY_KEY]) {
+    return {
+      ...parsed,
+      [PREVIOUSLY_KEY]: getUpdatedPreviousData(parsed),
+      [TODAY_KEY]: '',
+      [BLOCKERS_KEY]: '',
+      [LAST_EDITED_ON_KEY]: new Date().toDateString(),
+    }
+  }
+
+  return parsed
+}
+
+const initialState = {
+  [TODAY_KEY]: '',
+  [BLOCKERS_KEY]: '',
+  [PREVIOUSLY_KEY]: '',
+  [LAST_EDITED_ON_KEY]: new Date().toDateString(),
+}
+
+const updatedStateFromLocalStorage =
+  getUpdatedState(localStorage.getItem(STANDUP_STATE_KEY)) || initialState
+
+const standupReducer = (state, action) => {
+  switch (action.type) {
+    case 'update':
+      return { ...state, [action.name]: action.value }
+    case 'reset':
+      return initialState
+    default:
+      return state
+  }
 }
 
 const DailyStandupPage = ({ location }) => {
-  const [data] = React.useState({})
+  const [state, dispatch] = React.useReducer(
+    standupReducer,
+    updatedStateFromLocalStorage
+  )
+  React.useEffect(() => {
+    localStorage.setItem(STANDUP_STATE_KEY, JSON.stringify(state))
+  }, [state])
 
-  data[TODAY_KEY] = useStateWithLocalStorage(`ds-${TODAY_KEY}`)
-  data[BLOCKERS_KEY] = useStateWithLocalStorage(`ds-${BLOCKERS_KEY}`)
+  const isScreenWidthLessThan900 = window.matchMedia('(max-width: 900px)')
+    .matches
 
   const onChangeTextBox = (event) => {
-    const [value, setValue] = data[event.target.name]
-    setValue(event.target.value)
+    const name = event.target.name
+    const value = event.target.value
+    dispatch({ type: 'update', name, value })
   }
 
+  const onResetAll = () => {
+    if (
+      window.confirm(
+        'This will reset everything. Are you sure you want to do this?'
+      )
+    ) {
+      dispatch({ type: 'reset' })
+    }
+  }
+
+  const renderResetButton = () => (
+    <ResetButton onClick={onResetAll}>Reset all</ResetButton>
+  )
+
+  console.log('less than 900', isScreenWidthLessThan900)
   return (
     <Layout location={location}>
       <div>
         <CenteredContainer>
           <SubHeading>What do you want to do today?</SubHeading>
+          {!isScreenWidthLessThan900 && renderResetButton()}
           <TextBox
             name={TODAY_KEY}
             style={{ height: '300px' }}
             onChange={onChangeTextBox}
-            value={data[TODAY_KEY][0]}
+            value={state[TODAY_KEY]}
+            placeholder={'Thing I want to get done today'}
           />
 
           <SubHeading>Any blockers?</SubHeading>
@@ -120,12 +190,18 @@ const DailyStandupPage = ({ location }) => {
             name={BLOCKERS_KEY}
             style={{ height: '150px' }}
             onChange={onChangeTextBox}
-            value={data[BLOCKERS_KEY][0]}
+            value={state[BLOCKERS_KEY]}
+            placeholder={'Things that could get in the way today'}
           />
 
-          <SubHeading>What you did yesterday.</SubHeading>
-          <p>Not much...</p>
+          {isScreenWidthLessThan900 && renderResetButton()}
 
+          {state[PREVIOUSLY_KEY] && (
+            <>
+              <SubHeading>What you did yesterday.</SubHeading>
+              <p style={{ whiteSpace: 'pre-line' }}>{state[PREVIOUSLY_KEY]}</p>
+            </>
+          )}
           {renderFooter()}
         </CenteredContainer>
       </div>
