@@ -95,7 +95,6 @@ const getUpdatedPreviousData = (parsed) => {
   }\n\n${parsed[PREVIOUSLY_KEY]}`
 }
 
-// Can turn this into a one time effect that fires reset action
 const getUpdatedState = (rawState) => {
   const parsed = JSON.parse(rawState)
   if (!parsed) return parsed
@@ -103,7 +102,7 @@ const getUpdatedState = (rawState) => {
   const lastEditedOnDate = new Date(parsed[LAST_EDITED_ON_KEY])
   const todayDate = new Date(new Date().toDateString())
   const isTodayDataOutdated = todayDate > lastEditedOnDate
-
+  console.log(parsed)
   if (isTodayDataOutdated && parsed[TODAY_KEY]) {
     return {
       ...parsed,
@@ -124,26 +123,32 @@ const initialState = {
   [LAST_EDITED_ON_KEY]: new Date().toDateString(),
 }
 
-const updatedStateFromLocalStorage =
-  getUpdatedState(localStorage.getItem(STANDUP_STATE_KEY)) || initialState
-
 const standupReducer = (state, action) => {
   switch (action.type) {
     case 'update':
       return { ...state, [action.name]: action.value }
     case 'reset':
-      return initialState
+      return action.toState || initialState
     default:
       return state
   }
 }
 
 const DailyStandupPage = ({ location }) => {
-  const [state, dispatch] = React.useReducer(
-    standupReducer,
-    updatedStateFromLocalStorage
-  )
+  const [state, dispatch] = React.useReducer(standupReducer, initialState)
+  /* Note:
+  It looks like the order of the effects matters and so setting intial state in localstorage before retrieving 
+  state previously saved in localstorage will overwrite it (obv)
+  */
   React.useEffect(() => {
+    const updatedState = getUpdatedState(
+      localStorage.getItem(STANDUP_STATE_KEY)
+    )
+    console.log('Got state from localstorage', updatedState)
+    dispatch({ type: 'reset', toState: updatedState })
+  }, [dispatch])
+  React.useEffect(() => {
+    console.log('storing state in localstorage')
     localStorage.setItem(STANDUP_STATE_KEY, JSON.stringify(state))
   }, [state])
 
@@ -170,7 +175,6 @@ const DailyStandupPage = ({ location }) => {
     <ResetButton onClick={onResetAll}>Reset all</ResetButton>
   )
 
-  console.log('less than 900', isScreenWidthLessThan900)
   return (
     <Layout location={location}>
       <div>
