@@ -152,10 +152,13 @@ const DailyStandupPage = ({ location }) => {
     localStorage.setItem(STANDUP_STATE_KEY, JSON.stringify(state))
   }, [state])
 
-  const isScreenWidthLessThan900 =
-    typeof window !== undefined
-      ? window.matchMedia('(max-width: 900px)').matches
-      : true
+  if (typeof window === 'undefined') {
+    global.window = {}
+  }
+
+  const isScreenWidthLessThan900 = window.matchMedia
+    ? window.matchMedia('(max-width: 900px)').matches
+    : true
 
   const onChangeTextBox = (event) => {
     const name = event.target.name
