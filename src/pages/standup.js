@@ -152,7 +152,7 @@ const DailyStandupPage = ({ location }) => {
     localStorage.setItem(STANDUP_STATE_KEY, JSON.stringify(state))
   }, [state])
 
-  const isScreenWidthLessThan900 = window
+  const isScreenWidthLessThan900 = !!window
     ? window.matchMedia('(max-width: 900px)').matches
     : true
 
