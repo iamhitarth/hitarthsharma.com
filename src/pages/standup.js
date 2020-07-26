@@ -1,4 +1,5 @@
 import React from 'react'
+import * as firebase from 'firebase'
 import Layout from '../components/layout'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import styled from 'styled-components'
@@ -115,6 +116,42 @@ const getUpdatedState = (rawState) => {
 
   return parsed
 }
+
+const firebaseConfig = {
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+}
+firebase.initializeApp(firebaseConfig)
+const db = firebase.firestore()
+
+const provider = new firebase.auth.GoogleAuthProvider()
+firebase
+  .auth()
+  .signInWithPopup(provider)
+  .then(function (result) {
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    var token = result.credential.accessToken
+    // The signed-in user info.
+    var user = result.user
+    console.log('### Token and user', token, user.uid)
+    const uid = result.user.uid
+  })
+  .catch(function (error) {
+    // Handle Errors here.
+    var errorCode = error.code
+    var errorMessage = error.message
+    // The email of the user's account used.
+    var email = error.email
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential
+    // ...
+    console.log(
+      `An error has occured for: ${email}. Error code: ${errorCode}. Error message: ${errorMessage}`
+    )
+  })
+
+console.log('firebase config', firebaseConfig)
 
 const initialState = {
   [TODAY_KEY]: '',
