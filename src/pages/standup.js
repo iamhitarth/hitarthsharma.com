@@ -151,6 +151,17 @@ firebase
     )
   })
 
+const onUserAuthStateChanged = (callback) =>
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      console.log('### User is logged in')
+      callback({ loggedIn: true })
+    } else {
+      console.log('### User isnt logged in')
+      callback({ loggedIn: false })
+    }
+  })
+
 console.log('firebase config', firebaseConfig)
 
 const initialState = {
@@ -173,10 +184,16 @@ const standupReducer = (state, action) => {
 
 const DailyStandupPage = ({ location }) => {
   const [state, dispatch] = React.useReducer(standupReducer, initialState)
+  const [user, setUser] = React.useState({ loggedIn: false })
   /* Note:
   It looks like the order of the effects matters and so setting intial state in localstorage before retrieving 
   state previously saved in localstorage will overwrite it (obv)
   */
+  React.useEffect(() => {
+    const unsubscribe = onUserAuthStateChanged(setUser)
+    return () => unsubscribe()
+  }, [])
+
   React.useEffect(() => {
     const updatedState = getUpdatedState(
       localStorage.getItem(STANDUP_STATE_KEY)
