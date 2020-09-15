@@ -75,9 +75,9 @@ exports[`Header matches snapshot 1`] = `
       >
         <link
           class="c3"
-          to="/"
+          to="/blog"
         >
-          Home
+          Blog
         </link>
       </li>
       <li

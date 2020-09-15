@@ -64,7 +64,7 @@ const SiteTitle = styled.h1`
   }
 `
 
-const NavList = styled.ul`
+export const NavList = styled.ul`
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -79,7 +79,7 @@ const NavList = styled.ul`
   }
 `
 
-const NavItem = styled.li`
+export const NavItem = styled.li`
   margin: 5px;
   border: solid 1px #82beed;
   border-radius: 0.25rem;
