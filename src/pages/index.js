@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { Link } from 'gatsby'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import Layout from '../components/layout'
@@ -8,7 +8,7 @@ import { NavList, NavItem } from '../components/sidebarLayout'
 import dp from '../assets/images/dp-bw.png'
 import HomePageNavItems from '../../config/homePageNavItems.json'
 
-const IndexPage = ({ data, location }) => {
+const IndexPage = ({ location }) => {
   return (
     <Layout location={location}>
       <div style={{ textAlign: 'center' }}>
@@ -37,34 +37,5 @@ const IndexPage = ({ data, location }) => {
     </Layout>
   )
 }
-
-export const query = graphql`
-  {
-    allMarkdownRemark(
-      filter: {
-        fileAbsolutePath: { regex: "//posts//" }
-        frontmatter: { isDraft: { ne: true } }
-      }
-      sort: { fields: [fields___postDate], order: DESC }
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-          }
-          excerpt
-          html
-          timeToRead
-          fields {
-            slug
-            postDate(formatString: "DD MMMM, YYYY")
-          }
-        }
-      }
-    }
-  }
-`
 
 export default IndexPage
