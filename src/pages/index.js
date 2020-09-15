@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import { NavList, NavItem } from '../components/sidebarLayout'
 
 import dp from '../assets/images/dp-bw.png'
-import HomePageNavItems from '../../config/homePageNavItems.json'
+import links from '../../config/links.json'
 
 const IndexPage = ({ location }) => {
   return (
@@ -18,16 +18,16 @@ const IndexPage = ({ location }) => {
           style={{ height: '10rem', width: '10rem', borderRadius: '50%' }}
         />
         <NavList>
-          {HomePageNavItems.map(
-            (navItem) =>
-              navItem.isShown && (
-                <NavItem key={navItem.displayName}>
-                  {navItem.isExternal ? (
-                    <OutboundLink href={navItem.href} target="_blank">
-                      {navItem.displayName}
+          {links.map(
+            (linkItem) =>
+              linkItem.isShownOnHome && (
+                <NavItem key={linkItem.displayName}>
+                  {linkItem.isExternal ? (
+                    <OutboundLink href={linkItem.href} target="_blank">
+                      {linkItem.displayName}
                     </OutboundLink>
                   ) : (
-                    <Link to={navItem.href}>{navItem.displayName}</Link>
+                    <Link to={linkItem.href}>{linkItem.displayName}</Link>
                   )}
                 </NavItem>
               )
