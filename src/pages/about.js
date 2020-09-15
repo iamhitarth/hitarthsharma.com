@@ -24,7 +24,7 @@ const AboutPage = ({ location }) => (
         </p>
         <p>I have just started setting things up here.</p>
         <p>
-          For now, you can read my older <Link to="/">blog posts</Link> and
+          For now, you can read my older <Link to="/blog">blog posts</Link> and
           check out my <Link to="/book-list">book list</Link>.
         </p>
         <p>

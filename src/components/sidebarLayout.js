@@ -3,10 +3,11 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import styled from 'styled-components'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
-import Avatar from '../assets/images/avatar.jpg'
+import dp from '../assets/images/dp-bw.png'
 import Favicon from '../assets/images/favicon.ico'
-import NavItems from '../../config/sideNavItems.json'
+import NavItems from '../../config/links.json'
 
 const Container = styled.div`
   margin: 0 auto;
@@ -64,7 +65,7 @@ const SiteTitle = styled.h1`
   }
 `
 
-const NavList = styled.ul`
+export const NavList = styled.ul`
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -79,10 +80,11 @@ const NavList = styled.ul`
   }
 `
 
-const NavItem = styled.li`
+export const NavItem = styled.li`
   margin: 5px;
-  border: solid 1px #82beed;
-  border-radius: 0.25rem;
+  border: solid 3px #312e2d;
+  //border: solid 1px #82beed;
+  //border-radius: 0.25rem;
   padding: 6px;
   color: hsla(0%, 0%, 0%, 1);
 
@@ -168,7 +170,7 @@ const SidebarLayout = ({ children, location }) => {
           <Container>
             <Sidebar>
               <AvatarWrapper>
-                <img src={Avatar} alt="Hitarth Sharma" />
+                <img src={dp} alt="Hitarth Sharma" />
               </AvatarWrapper>
 
               <SiteTitleWrapper>
@@ -180,9 +182,15 @@ const SidebarLayout = ({ children, location }) => {
               <NavList>
                 {NavItems.map(
                   (navItem) =>
-                    navItem.isShown && (
+                    navItem.isShownOnSidebar && (
                       <NavItem key={navItem.displayName}>
-                        <Link to={navItem.href}>{navItem.displayName}</Link>
+                        {navItem.isExternal ? (
+                          <OutboundLink href={navItem.href} target="_blank">
+                            {navItem.displayName}
+                          </OutboundLink>
+                        ) : (
+                          <Link to={navItem.href}>{navItem.displayName}</Link>
+                        )}
                       </NavItem>
                     )
                 )}

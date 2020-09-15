@@ -1,48 +1,41 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link } from 'gatsby'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
-import SidebarLayout from '../components/sidebarLayout'
-import PostListItem from '../components/postListItem'
+import Layout from '../components/layout'
+import { NavList, NavItem } from '../components/sidebarLayout'
 
-const IndexPage = ({ data, location }) => {
+import dp from '../assets/images/dp-bw.png'
+import links from '../../config/links.json'
+
+const IndexPage = ({ location }) => {
   return (
-    <SidebarLayout location={location}>
-      <div>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <PostListItem key={node.id} node={node} />
-        ))}
+    <Layout location={location}>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src={dp}
+          alt="hitarth sharma"
+          style={{ height: '10rem', width: '10rem', borderRadius: '50%' }}
+        />
+        <NavList>
+          {links.map(
+            (linkItem) =>
+              linkItem.isShownOnHome && (
+                <NavItem key={linkItem.displayName}>
+                  {linkItem.isExternal ? (
+                    <OutboundLink href={linkItem.href} target="_blank">
+                      {linkItem.displayName}
+                    </OutboundLink>
+                  ) : (
+                    <Link to={linkItem.href}>{linkItem.displayName}</Link>
+                  )}
+                </NavItem>
+              )
+          )}
+        </NavList>
       </div>
-    </SidebarLayout>
+    </Layout>
   )
 }
-
-export const query = graphql`
-  {
-    allMarkdownRemark(
-      filter: {
-        fileAbsolutePath: { regex: "//posts//" }
-        frontmatter: { isDraft: { ne: true } }
-      }
-      sort: { fields: [fields___postDate], order: DESC }
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-          }
-          excerpt
-          html
-          timeToRead
-          fields {
-            slug
-            postDate(formatString: "DD MMMM, YYYY")
-          }
-        }
-      }
-    }
-  }
-`
 
 export default IndexPage

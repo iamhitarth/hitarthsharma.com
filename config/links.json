@@ -1,0 +1,121 @@
+[
+  {
+    "displayName": "🗣 The Hit Show Episode 0 on YouTube",
+    "href": "https://www.youtube.com/watch?v=Li06mPsd7iQ",
+    "isExternal": true,
+    "isShownOnHome": true,
+    "isShownOnSidebar": false
+  },
+  {
+    "displayName": "😇 Improve your mental health",
+    "href": "https://sendfox.com/hs",
+    "isExternal": true,
+    "isShownOnHome": true,
+    "isShownOnSidebar": false
+  },
+  {
+    "displayName": "🎥 My latest video",
+    "href": "https://www.youtube.com/channel/UCr1IJAY40tbG4nKR0pu5rNQ",
+    "isExternal": true,
+    "isShownOnHome": true,
+    "isShownOnSidebar": false
+  },
+  {
+    "displayName": "✍🏼 My Blog",
+    "href": "/blog",
+    "isExternal": false,
+    "isShownOnHome": false,
+    "isShownOnSidebar": false
+  },
+  {
+    "displayName": "About",
+    "href": "/about",
+    "isExternal": false,
+    "isShownOnHome": false,
+    "isShownOnSidebar": true
+  },
+  {
+    "displayName": "📚 My Book List",
+    "href": "/book-list",
+    "isExternal": false,
+    "isShownOnHome": true,
+    "isShownOnSidebar": true
+  },
+  {
+    "displayName": "🖖🏼 Coaching",
+    "href": "/coaching",
+    "isExternal": false,
+    "isShownOnHome": false,
+    "isShownOnSidebar": false
+  },
+  {
+    "displayName": "👨🏻‍💻 Tech",
+    "href": "/category/tech",
+    "isExternal": false,
+    "isShownOnHome": false,
+    "isShownOnSidebar": true
+  },
+  {
+    "displayName": "📈 Productivity",
+    "href": "/category/productivity",
+    "isExternal": false,
+    "isShownOnHome": false,
+    "isShownOnSidebar": true
+  },
+  {
+    "displayName": "🚀 Inspiration",
+    "href": "/category/inspiration",
+    "isExternal": false,
+    "isShownOnHome": false,
+    "isShownOnSidebar": true
+  },
+  {
+    "displayName": "🧠 Psychology",
+    "href": "/category/psychology",
+    "isExternal": false,
+    "isShownOnHome": false,
+    "isShownOnSidebar": true
+  },
+  {
+    "displayName": "Quotes",
+    "href": "/",
+    "isExternal": false,
+    "isShownOnHome": false,
+    "isShownOnSidebar": false
+  },
+  {
+    "displayName": "Movies",
+    "href": "/",
+    "isExternal": false,
+    "isShownOnHome": false,
+    "isShownOnSidebar": false
+  },
+  {
+    "displayName": "TV Series",
+    "href": "/",
+    "isExternal": false,
+    "isShownOnHome": false,
+    "isShownOnSidebar": false
+  },
+  {
+    "displayName": "🎙 The Hit Show on Spotify",
+    "href": "https://open.spotify.com/show/112ntzGM5m0tHYcc27dAOF",
+    "isExternal": true,
+    "isShownOnHome": true,
+    "isShownOnSidebar": false
+  },
+  {
+    "displayName": "🍎 The Hit Show on Apple Podcasts",
+    "href": "https://podcasts.apple.com/us/podcast/the-hit-show/id1529499759",
+    "isExternal": true,
+    "isShownOnHome": true,
+    "isShownOnSidebar": false
+  },
+  {
+    "displayName": "🖖🏼 Book coaching session",
+    "href": "https://calendly.com/hitarth-sharma/90min",
+    "isExternal": true,
+    "isShownOnHome": true,
+    "isShownOnSidebar": true
+  }
+]

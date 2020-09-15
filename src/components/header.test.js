@@ -19,7 +19,7 @@ describe('Header', () => {
 
   it('has nav links', () => {
     const { getByText } = render(<Header siteTitle={siteTitle} />)
-    expect(getByText('Home')).not.toBeNull()
+    expect(getByText('Blog')).not.toBeNull()
     expect(getByText('About')).not.toBeNull()
   })
 })
