@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import { useRemarkForm } from 'gatsby-tinacms-remark'
 import { useForm, usePlugin } from 'tinacms'
 
 import Layout from '../components/layout'
@@ -17,6 +18,7 @@ export const query = graphql`
       }
     }
     post: markdownRemark(fields: { slug: { eq: $slug } }) {
+      ...TinaRemark
       html
       timeToRead
       excerpt
@@ -79,9 +81,9 @@ export default ({ data, location }) => {
     id: data.post.fields.slug,
     label: 'Blog Post',
     initialValues: data.post,
-    onSubmit: (values) => {
-      alert(`Submitting ${values.frontmatter.title}`)
-    },
+    // onSubmit: (values) => {
+    //   alert(`Submitting ${values.frontmatter.title}`)
+    // },
     fields: [
       {
         name: 'frontmatter.title',
@@ -94,6 +96,11 @@ export default ({ data, location }) => {
         component: 'toggle',
       },
       {
+        name: 'rawMarkdownBody',
+        label: 'Content',
+        component: 'markdown',
+      },
+      {
         name: 'frontmatter.tags',
         label: 'Tags',
         component: 'textarea',
@@ -101,9 +108,9 @@ export default ({ data, location }) => {
     ],
   }
   // Create the TinaCMS form and register it
-  const [post, form] = useForm(formConfig)
+  const [post, form] = useRemarkForm(data.post, formConfig)
   usePlugin(form)
-
+  console.log('### Post', post, form)
   // const { post, journalFooter } = data
   const { journalFooter } = data
   const siteUrl = data.site.siteMetadata.url
