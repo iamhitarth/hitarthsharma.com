@@ -1,19 +1,18 @@
 ---
 title: Two Questions
-isDraft: false
-categories: [inspiration]
+published: true
+categories:
+  - inspiration
 tags:
-  [
-    questions,
-    purpose,
-    right thing,
-    direction,
-    motivation,
-    lost,
-    impact theory,
-    ryan holiday,
-    tom bilyeu,
-  ]
+  - questions
+  - purpose
+  - right thing
+  - direction
+  - motivation
+  - lost
+  - impact theory
+  - ryan holiday
+  - tom bilyeu
 ---
 
 <img src='walking.jpg' alt="Person walking" title="Photo by Olia Gozha on Unsplash" />

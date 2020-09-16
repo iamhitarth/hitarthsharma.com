@@ -1,6 +1,7 @@
 ---
 title: How To Beat The S**t Out Of Stress According To Science
 cover: photo-1525680996651-0222228be6f0.jpeg
+published: true
 categories: [psychology, productivity, inspiration]
 tags: [productivity, psychology, science, stress, perception, hulk]
 ---

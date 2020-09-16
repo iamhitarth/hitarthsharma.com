@@ -1,5 +1,6 @@
 ---
 title: My first post back
+published: true
 categories: [general]
 tags: [fresh start, letting go, aiming high]
 ---

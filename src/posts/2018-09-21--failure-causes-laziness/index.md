@@ -1,5 +1,6 @@
 ---
 title: Failure Causes Laziness
+published: true
 categories:
   - productivity
   - psychology
@@ -10,8 +11,8 @@ tags:
   - grant cordone
   - break
   - procrastination
-isDraft: false
 ---
+
 <img src="plane-in-woods.jpg" alt="Plane stuck in the woods" title="Photo by David Kovalenko on Unsplash" />
 
 Why wouldn't you hustle if you were succeeding?

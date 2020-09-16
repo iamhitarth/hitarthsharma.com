@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { useRemarkForm } from 'gatsby-tinacms-remark'
-import { useForm, usePlugin } from 'tinacms'
+import { usePlugin } from 'tinacms'
 
 import Layout from '../components/layout'
 import SocialShare from '../components/socialShare'
@@ -24,7 +24,7 @@ export const query = graphql`
       excerpt
       frontmatter {
         title
-        isDraft
+        published
         tags
       }
       fields {
@@ -76,14 +76,10 @@ const PostTagsWrapper = styled.div`
 `
 
 export default ({ data, location }) => {
-  console.log('### Data', data)
   const formConfig = {
     id: data.post.fields.slug,
     label: 'Blog Post',
     initialValues: data.post,
-    // onSubmit: (values) => {
-    //   alert(`Submitting ${values.frontmatter.title}`)
-    // },
     fields: [
       {
         name: 'frontmatter.title',
@@ -91,8 +87,8 @@ export default ({ data, location }) => {
         component: 'text',
       },
       {
-        name: 'frontmatter.isDraft',
-        label: 'Draft?',
+        name: 'frontmatter.published',
+        label: 'Published?',
         component: 'toggle',
       },
       {
@@ -107,11 +103,11 @@ export default ({ data, location }) => {
       },
     ],
   }
+
   // Create the TinaCMS form and register it
   const [post, form] = useRemarkForm(data.post, formConfig)
   usePlugin(form)
-  console.log('### Post', post, form)
-  // const { post, journalFooter } = data
+
   const { journalFooter } = data
   const siteUrl = data.site.siteMetadata.url
   const postUrl = `${siteUrl}/${post.fields.slug}`

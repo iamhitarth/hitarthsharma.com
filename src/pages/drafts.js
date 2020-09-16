@@ -21,7 +21,7 @@ export const query = graphql`
     allMarkdownRemark(
       filter: {
         fileAbsolutePath: { regex: "//posts//" }
-        frontmatter: { isDraft: { eq: true } }
+        frontmatter: { published: { ne: true } }
       }
       sort: { fields: [fields___postDate], order: DESC }
     ) {

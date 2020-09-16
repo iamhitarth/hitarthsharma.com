@@ -1,6 +1,7 @@
 ---
 title: Get S**t Done With Laser-Like Focus, Whenever You Want
 cover: photo-1510925768022-7e72e7cbdef8.jpeg
+published: true
 categories: [productivity, tech]
 tags:
   [

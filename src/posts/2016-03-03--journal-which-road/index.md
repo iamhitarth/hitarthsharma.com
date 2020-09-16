@@ -1,5 +1,6 @@
 ---
 title: Which Road Will You Take?
+published: true
 categories: [psychology, inspiration]
 tags:
   [

@@ -1,6 +1,7 @@
 ---
 title: How To Make the Most Of Every Second You Got
 cover: photo-1485881697404-78678dbc4639.jpg
+published: true
 categories: [psychology, inspiration, productivity]
 tags:
   [

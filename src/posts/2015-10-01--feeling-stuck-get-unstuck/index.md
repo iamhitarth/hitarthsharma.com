@@ -1,6 +1,7 @@
 ---
 title: Feeling stuck? Here is how to get unstuck!
 cover: photo-1520462551646-bf2f6a00423b.jpeg
+published: true
 categories: [psychology, inspiration]
 tags:
   [

@@ -82,7 +82,7 @@ export const pageQuery = graphql`
       limit: 2000
       sort: { fields: [fields___postDate], order: DESC }
       filter: {
-        frontmatter: { tags: { regex: $tagRegex }, isDraft: { ne: true } }
+        frontmatter: { tags: { regex: $tagRegex }, published: { eq: true } }
       }
     ) {
       totalCount
