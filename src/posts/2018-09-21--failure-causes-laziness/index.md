@@ -1,5 +1,5 @@
 ---
-title: Failure Causes Laziness - Does it really?
+title: Failure Causes Laziness
 categories:
   - productivity
   - psychology
@@ -14,7 +14,7 @@ isDraft: false
 ---
 <img src="plane-in-woods.jpg" alt="Plane stuck in the woods" title="Photo by David Kovalenko on Unsplash" />
 
-Why wouldn't you hustle if you were succeeding? **Awesome! Dawesome!**
+Why wouldn't you hustle if you were succeeding?
 
 What reason would you have to sit around and procrastinate if you were hitting home runs all around?
 
