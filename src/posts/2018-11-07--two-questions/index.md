@@ -1,5 +1,6 @@
 ---
 title: Two Questions
+isDraft: false
 categories: [inspiration]
 tags:
   [

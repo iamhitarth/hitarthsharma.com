@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import { useForm, usePlugin } from 'tinacms'
 
 import Layout from '../components/layout'
 import SocialShare from '../components/socialShare'
@@ -21,6 +22,7 @@ export const query = graphql`
       excerpt
       frontmatter {
         title
+        isDraft
         tags
       }
       fields {
@@ -72,7 +74,38 @@ const PostTagsWrapper = styled.div`
 `
 
 export default ({ data, location }) => {
-  const { post, journalFooter } = data
+  console.log('### Data', data)
+  const formConfig = {
+    id: data.post.fields.slug,
+    label: 'Blog Post',
+    initialValues: data.post,
+    onSubmit: (values) => {
+      alert(`Submitting ${values.frontmatter.title}`)
+    },
+    fields: [
+      {
+        name: 'frontmatter.title',
+        label: 'Title',
+        component: 'text',
+      },
+      {
+        name: 'frontmatter.isDraft',
+        label: 'Draft?',
+        component: 'toggle',
+      },
+      {
+        name: 'frontmatter.tags',
+        label: 'Tags',
+        component: 'textarea',
+      },
+    ],
+  }
+  // Create the TinaCMS form and register it
+  const [post, form] = useForm(formConfig)
+  usePlugin(form)
+
+  // const { post, journalFooter } = data
+  const { journalFooter } = data
   const siteUrl = data.site.siteMetadata.url
   const postUrl = `${siteUrl}/${post.fields.slug}`
   const { title, tags } = post.frontmatter
