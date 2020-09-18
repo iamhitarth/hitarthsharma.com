@@ -36,6 +36,9 @@ export const query = graphql`
     ) {
       html
     }
+    categories: allMarkdownRemark {
+      distinct(field: frontmatter___categories)
+    }
   }
 `
 
@@ -97,9 +100,22 @@ export default ({ data, location }) => {
         component: 'markdown',
       },
       {
+        name: 'frontmatter.categories',
+        label: 'Categories',
+        component: 'list',
+        defaultItem: data.categories.distinct[0],
+        field: {
+          component: 'select',
+          options: data.categories.distinct,
+        },
+      },
+      {
         name: 'frontmatter.tags',
         label: 'Tags',
-        component: 'textarea',
+        component: 'list',
+        field: {
+          component: 'text',
+        },
       },
     ],
   }
