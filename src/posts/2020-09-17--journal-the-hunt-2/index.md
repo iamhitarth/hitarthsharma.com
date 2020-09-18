@@ -8,6 +8,8 @@ tags:
   - mine
   - meenie
   - eenie
+categories:
+  - general
 ---
 
 This looks pretty awesome to me. I like how this works. Gangsta styles.
