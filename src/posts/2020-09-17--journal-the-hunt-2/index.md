@@ -2,7 +2,9 @@
 title: Welcome to the hunt
 published: false
 tags:
+  - grant cordone
   - moe
+  - tony robbins
   - mine
   - meenie
   - eenie
