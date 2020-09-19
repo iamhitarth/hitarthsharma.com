@@ -1,5 +1,6 @@
 ---
 title: Finishing Mastery
+published: true
 categories: [psychology, inspiration]
 tags:
   [

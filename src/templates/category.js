@@ -65,7 +65,7 @@ export const pageQuery = graphql`
       filter: {
         frontmatter: {
           categories: { regex: $categoryRegex }
-          isDraft: { ne: true }
+          published: { eq: true }
         }
       }
     ) {

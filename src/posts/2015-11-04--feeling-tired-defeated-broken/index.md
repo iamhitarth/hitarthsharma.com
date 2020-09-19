@@ -1,6 +1,7 @@
 ---
 title: Feeling Tired? Defeated? Broken?
 cover: photo-1495427513693-3f40da04b3fd.jpeg
+published: true
 categories: [psychology, inspiration]
 tags: [persistence, psychology, video, winning, challenge, mindset]
 ---

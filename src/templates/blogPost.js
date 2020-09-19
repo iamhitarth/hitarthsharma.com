@@ -2,6 +2,8 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import { useRemarkForm, DeleteAction } from 'gatsby-tinacms-remark'
+import { usePlugin } from 'tinacms'
 
 import Layout from '../components/layout'
 import SocialShare from '../components/socialShare'
@@ -16,11 +18,13 @@ export const query = graphql`
       }
     }
     post: markdownRemark(fields: { slug: { eq: $slug } }) {
+      ...TinaRemark
       html
       timeToRead
       excerpt
       frontmatter {
         title
+        published
         tags
       }
       fields {
@@ -31,6 +35,9 @@ export const query = graphql`
       fileAbsolutePath: { regex: "/journalFooter/" }
     ) {
       html
+    }
+    categories: allMarkdownRemark {
+      distinct(field: frontmatter___categories)
     }
   }
 `
@@ -72,7 +79,53 @@ const PostTagsWrapper = styled.div`
 `
 
 export default ({ data, location }) => {
-  const { post, journalFooter } = data
+  const formConfig = {
+    actions: [DeleteAction],
+    id: data.post.fields.slug,
+    label: 'Blog Post',
+    initialValues: data.post,
+    fields: [
+      {
+        name: 'frontmatter.title',
+        label: 'Title',
+        component: 'text',
+      },
+      {
+        name: 'frontmatter.published',
+        label: 'Published?',
+        component: 'toggle',
+      },
+      {
+        name: 'rawMarkdownBody',
+        label: 'Content',
+        component: 'markdown',
+      },
+      {
+        name: 'frontmatter.categories',
+        label: 'Categories',
+        component: 'list',
+        defaultItem: data.categories.distinct[0],
+        field: {
+          component: 'select',
+          options: data.categories.distinct,
+        },
+      },
+      {
+        name: 'frontmatter.tags',
+        label: 'Tags',
+        component: 'list',
+        field: {
+          component: 'text',
+        },
+      },
+    ],
+  }
+
+  // Create the TinaCMS form and register it
+  const [post, form] = useRemarkForm(data.post, formConfig)
+  usePlugin(form)
+
+  const { journalFooter } = data
   const siteUrl = data.site.siteMetadata.url
   const postUrl = `${siteUrl}/${post.fields.slug}`
   const { title, tags } = post.frontmatter

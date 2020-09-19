@@ -1,7 +1,16 @@
 ---
 title: Failure Causes Laziness
-categories: [productivity, psychology]
-tags: [fear, failure, lazy, grant cordone, break, procrastination]
+published: true
+categories:
+  - productivity
+  - psychology
+tags:
+  - fear
+  - failure
+  - lazy
+  - grant cordone
+  - break
+  - procrastination
 ---
 
 <img src="plane-in-woods.jpg" alt="Plane stuck in the woods" title="Photo by David Kovalenko on Unsplash" />

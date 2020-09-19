@@ -1,5 +1,6 @@
 ---
 title: Sometimes You Win, Every Time You Learn
+published: true
 categories: [inspiration]
 tags:
   [

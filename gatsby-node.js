@@ -40,7 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
               frontmatter {
                 tags
                 categories
-                isDraft
+                published
               }
               fields {
                 slug
@@ -53,7 +53,7 @@ exports.createPages = ({ graphql, actions }) => {
       let allTags = []
       let allCategories = []
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        const isDraft = node.frontmatter.isDraft
+        const published = node.frontmatter.published
         // Create blog post page
         createPage({
           path: node.fields.slug,
@@ -64,8 +64,8 @@ exports.createPages = ({ graphql, actions }) => {
           },
         })
 
-        if (!isDraft) {
-          // If post is not a draft
+        if (published) {
+          // If post is published
           // Collect it's tags
           const postTags = node.frontmatter.tags ? node.frontmatter.tags : []
           postTags.forEach((postTag) => {

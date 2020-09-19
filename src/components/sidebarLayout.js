@@ -128,7 +128,7 @@ const SidebarLayout = ({ children, location }) => {
           allMarkdownRemark(
             filter: {
               fileAbsolutePath: { regex: "//posts//" }
-              frontmatter: { isDraft: { ne: true } }
+              frontmatter: { published: { eq: true } }
             }
             sort: { fields: [fields___postDate], order: DESC }
             limit: 4

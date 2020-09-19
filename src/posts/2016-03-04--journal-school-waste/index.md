@@ -1,5 +1,6 @@
 ---
 title: School Was A Waste
+published: true
 categories: [inspiration]
 tags:
   [journal, diary, purpose, direction, motivation, books, psychology, learning]

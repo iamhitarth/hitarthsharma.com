@@ -1,19 +1,18 @@
 ---
 title: What Makes Us Tick
-isDraft: true
-categories: [productivity]
+published: false
+categories:
+  - productivity
 tags:
-  [
-    productivity,
-    purpose,
-    goals,
-    direction,
-    motivation,
-    tactics,
-    tony robbins,
-    mindset,
-    habits,
-  ]
+  - productivity
+  - purpose
+  - goals
+  - direction
+  - motivation
+  - tactics
+  - tony robbins
+  - mindset
+  - habits
 ---
 
 <img src="pain-or-pleasure.jpg" title="Pain or pleasure?" alt="Moaning woman" />

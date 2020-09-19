@@ -85,7 +85,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       filter: {
         fileAbsolutePath: { regex: "//posts//" }
-        frontmatter: { isDraft: { ne: true } }
+        frontmatter: { published: { eq: true } }
       }
       limit: 2000
     ) {

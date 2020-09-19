@@ -1,9 +1,34 @@
+const REPO_ABSOLUTE_PATH = process.cwd()
+
 module.exports = {
   siteMetadata: {
     title: 'Hitarth Sharma',
     url: 'https://hitarthsharma.com',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-tinacms',
+      options: {
+        // The CMS will be disabled on your production site
+        enabled: process.env.NODE_ENV !== 'production',
+        sidebar: true,
+        plugins: [
+          {
+            resolve: 'gatsby-tinacms-git',
+            options: {
+              pathToRepo: REPO_ABSOLUTE_PATH,
+              pathToContent: '/',
+              defaultCommitMessage: 'Edited from CMS',
+              defaultCommitName: 'Hitarth CMS',
+              defaultCommitEmail: 'hitarth.sharma12+cms@gmail.com',
+              pushOnCommit: true,
+              sshKey: process.env.SSH_KEY,
+            },
+          },
+          'gatsby-tinacms-remark',
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
