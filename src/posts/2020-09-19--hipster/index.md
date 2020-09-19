@@ -1,8 +1,15 @@
 ---
 title: Why does everyone want to be hipster?
 published: false
+categories:
+  - psychology
+  - inspiration
+tags:
+  - content creation
+  - hipster
+  - community
 ---
-I always wondered. Why do people not just like pop stuff? Why do they have to try so hard to find things super obscure and then show off how _cool_ they are because they listen to something so obscure that no one else knows about it.
+Why do people not just like pop stuff? Why do they have to try so hard to find things super obscure and then show off how _cool_ they are because they listen to something so obscure that no one else knows about it.
 
 But I think I get it now.
 
@@ -24,8 +31,12 @@ Or maybe it doesn't just have to be good unexpected. It can be bad as well. As l
 
 That's surprising.
 
-Surprising liberating.
+Surprisingly liberating.
 
 As a content creator, that means it doesn't matter how good or bad your content is - what matter is how unpredictable it is.
 
-The unpredictability meter is the real metric
+The unpredictability meter is the real metric worth keeping an eye on.
+
+See your story as a series of steps. Focus on the step that you're at right now - and then figure out what's the next step.
+
+Then, _don't_ put that as the next step. Brainstorm. Figure out what would be an unpredictable step. Choose that as the next one. Then, rinse and repeat.
