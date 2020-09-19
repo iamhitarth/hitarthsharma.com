@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import { useRemarkForm } from 'gatsby-tinacms-remark'
+import { useRemarkForm, DeleteAction } from 'gatsby-tinacms-remark'
 import { usePlugin } from 'tinacms'
 
 import Layout from '../components/layout'
@@ -80,6 +80,7 @@ const PostTagsWrapper = styled.div`
 
 export default ({ data, location }) => {
   const formConfig = {
+    actions: [DeleteAction],
     id: data.post.fields.slug,
     label: 'Blog Post',
     initialValues: data.post,

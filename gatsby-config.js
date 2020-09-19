@@ -1,4 +1,3 @@
-const path = require('path')
 const REPO_ABSOLUTE_PATH = process.cwd()
 
 module.exports = {
@@ -23,6 +22,7 @@ module.exports = {
               defaultCommitName: 'Hitarth CMS',
               defaultCommitEmail: 'hitarth.sharma12+cms@gmail.com',
               pushOnCommit: true,
+              sshKey: process.env.SSH_KEY,
             },
           },
           'gatsby-tinacms-remark',
