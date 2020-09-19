@@ -79,6 +79,14 @@ const PostTagsWrapper = styled.div`
 `
 
 export default ({ data, location }) => {
+  if (!data.post) {
+    return (
+      <Layout location={location}>
+        <div>Loading post...</div>
+      </Layout>
+    )
+  }
+
   const formConfig = {
     actions: [DeleteAction],
     id: data.post.fields.slug,
