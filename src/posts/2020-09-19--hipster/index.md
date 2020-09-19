@@ -1,5 +1,5 @@
 ---
-title: Why does everyone want to be hipster?
+title: Why does everyone want to be a hipster?
 published: false
 categories:
   - psychology
@@ -13,7 +13,7 @@ Why do people not just like pop stuff? Why do they have to try so hard to find t
 
 But I think I get it now.
 
-I get how "pop stuff" while sounding good can be predictable. And predictable is boring.
+I get how "pop stuff" while _feeling_ good can be predictable. And predictable is boring.
 
 > Give people what they want. Not what they expect.
 >
@@ -21,7 +21,7 @@ I get how "pop stuff" while sounding good can be predictable. And predictable is
 
 And there's so much out there that no one has time for boring. Boring is a waste of time.
 
-What you want is something that gives you the happy ending you want - just not in the way that you think it's going to happen.
+What you want is something that gives you the happy ending you want - just not in the way that _you think you know_ it's going to happen.
 
 But how long can you keep that going for?
 
@@ -37,6 +37,8 @@ As a content creator, that means it doesn't matter how good or bad your content 
 
 The unpredictability meter is the real metric worth keeping an eye on.
 
-See your story as a series of steps. Focus on the step that you're at right now - and then figure out what's the next step.
+See your story as a series of steps. Focus on the step that you're at right now - and then figure out what's next.
 
-Then, _don't_ put that as the next step. Brainstorm. Figure out what would be an unpredictable step. Choose that as the next one. Then, rinse and repeat.
+Then, _don't_ put that as the next step. 
+
+Brainstorm. Figure out what would be an unpredictable step. Choose that as the next one. Then, rinse and repeat.
