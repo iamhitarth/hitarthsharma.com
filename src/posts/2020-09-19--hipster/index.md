@@ -9,9 +9,10 @@ tags:
   - hipster
   - community
 ---
-Why do people not just like pop stuff? Why do they have to try so hard to find things super obscure and then show off how _cool_ they are because they listen to something so obscure that no one else knows about it.
 
-But I think I get it now.
+Why do people try to be different? Why don't they just like the "pop" stuff? Why do they have to try so hard to find things super obscure and then show off how _cool_ they are because they listen to something so obscure that no one else knows about it.
+
+I _think_ I get it now.
 
 I get how "pop stuff" while _feeling_ good can be predictable. And predictable is boring.
 
@@ -39,6 +40,6 @@ The unpredictability meter is the real metric worth keeping an eye on.
 
 See your story as a series of steps. Focus on the step that you're at right now - and then figure out what's next.
 
-Then, _don't_ put that as the next step. 
+Then, _don't_ put that as the next step.
 
 Brainstorm. Figure out what would be an unpredictable step. Choose that as the next one. Then, rinse and repeat.
