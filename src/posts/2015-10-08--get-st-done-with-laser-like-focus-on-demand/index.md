@@ -1,22 +1,22 @@
 ---
-title: Get S**t Done With Laser-Like Focus, Whenever You Want
+title: 'Get S**t Done With Laser-Like Focus, Whenever You Want'
 cover: photo-1510925768022-7e72e7cbdef8.jpeg
 published: true
-categories: [productivity, tech]
+categories:
+  - productivity
+  - tech
 tags:
-  [
-    creativity,
-    deadlines,
-    performance,
-    productivity,
-    science,
-    software,
-    systems,
-    time management,
-    work smarter,
-    winning,
-    concentration,
-  ]
+  - creativity
+  - deadlines
+  - performance
+  - productivity
+  - science
+  - software
+  - systems
+  - time management
+  - work smarter
+  - winning
+  - concentration
 ---
 
 Can't focus? Got too much on your mind? Head buzzing with thoughts?
