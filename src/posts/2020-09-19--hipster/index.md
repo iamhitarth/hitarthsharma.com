@@ -1,6 +1,6 @@
 ---
 title: Why does everyone want to be a hipster?
-published: false
+published: true
 categories:
   - psychology
   - inspiration
