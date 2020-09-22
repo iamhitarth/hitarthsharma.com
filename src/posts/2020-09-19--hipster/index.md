@@ -8,8 +8,7 @@ tags:
   - content creation
   - hipster
   - community
-images:
-  - image: ''
+images: []
 ---
 
 Why do people try to be different? Why don't they just like the "pop" stuff? Why do they have to try so hard to find things super obscure and then show off how _cool_ they are because they listen to something so obscure that no one else knows about it.
