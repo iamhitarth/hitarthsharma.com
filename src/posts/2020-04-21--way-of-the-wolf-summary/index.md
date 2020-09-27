@@ -1,8 +1,14 @@
 ---
 title: Way of the Wolf
-published: true
-categories: [productivity]
-tags: [sales, tactics, motivation, jordan belfort, mindset]
+published: false
+categories:
+  - productivity
+tags:
+  - sales
+  - tactics
+  - motivation
+  - jordan belfort
+  - mindset
 ---
 
 These are my summarized notes from the book Way of the Wolf written by Jordan Belfort (JB) - the _real_ Wolf of Wall Street.
