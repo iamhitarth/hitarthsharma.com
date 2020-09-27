@@ -1,8 +1,14 @@
 ---
-title: Two Steps Forward, One Step Back
+title: 'Two Steps Forward, One Step Back'
 published: false
-categories: [inspiration]
-tags: [progress, purpose, direction, motivation, ups and downs]
+categories:
+  - inspiration
+tags:
+  - progress
+  - purpose
+  - direction
+  - motivation
+  - ups and downs
 ---
 
 ![Skyline](./skyline.jpg 'Photo by Bambi Corro on Unsplash')
