@@ -1,6 +1,6 @@
 ---
 title: Way of the Wolf
-isDraft: false
+published: true
 categories: [productivity]
 tags: [sales, tactics, motivation, jordan belfort, mindset]
 ---
