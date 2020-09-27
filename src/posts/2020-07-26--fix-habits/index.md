@@ -1,6 +1,6 @@
 ---
 title: How to Fix Bad Habits?
-isDraft: false
+published: false
 categories: [coaching]
 tags:
   [
