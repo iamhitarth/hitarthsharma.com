@@ -1,10 +1,11 @@
 ---
 title: Two Steps Forward, One Step Back
+published: false
 categories: [inspiration]
 tags: [progress, purpose, direction, motivation, ups and downs]
 ---
 
-<img src='skyline.jpg' alt="Skyline" title="Photo by Bambi Corro on Unsplash" />
+![Skyline](./skyline.jpg 'Photo by Bambi Corro on Unsplash')
 
 There is a popular saying that comes from the 19th century practice of American bars offering a "free lunch" - in order to get drinking (and paying) customers.
 
