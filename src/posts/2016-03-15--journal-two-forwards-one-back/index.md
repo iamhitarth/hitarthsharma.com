@@ -1,9 +1,10 @@
 ---
 title: 'Two Steps Forward, One Step Back'
-published: false
+published: true
 categories:
   - inspiration
 tags:
+  - journal
   - progress
   - purpose
   - direction
