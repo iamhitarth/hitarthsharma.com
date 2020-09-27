@@ -50,7 +50,8 @@
     "test:watch": "jest --watch",
     "postmerge": "yarnhook",
     "postcheckout": "yarnhook",
-    "postrewrite": "yarnhook"
+    "postrewrite": "yarnhook",
+    "reset": "rm -rf node_modules && yarn && yarn develop"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
