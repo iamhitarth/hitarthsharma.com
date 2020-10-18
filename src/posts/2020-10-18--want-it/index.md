@@ -1,6 +1,6 @@
 ---
 title: Do you really want it?
-published: false
+published: true
 categories:
   - coaching
   - psychology
