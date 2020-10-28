@@ -4,6 +4,7 @@ published: false
 categories:
   - inspiration
 tags:
+  - trance
   - creativity
   - inspiration
   - emotions
