@@ -16,7 +16,9 @@ tags:
 
 Listening to music can make you feel a certain way.
 
-Inspired. Overwhelmed with emotion. Swooning with nostalgia. Hit hard by memories. Memories felt deep. Deep inside.
+Inspired. Overwhelmed with emotion. Swooning with nostalgia. 
+
+Hit hard by memories. Memories felt deep. Deep inside.
 
 It's a crazy thing if you think about it.
 
