@@ -1,6 +1,16 @@
 ---
-title: Musical feels
+title: Musical inspiration
 published: false
+categories:
+  - inspiration
+tags:
+  - creativity
+  - inspiration
+  - emotions
+  - feelings
+  - brain
+  - physiology
+  - music
 ---
 ![Floating camera](./camera.jpg 'Photo by Jakob Owens on Unsplash')
 
