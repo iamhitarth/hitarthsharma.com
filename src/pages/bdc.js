@@ -194,8 +194,8 @@ const bdcScoringCriteria = [
 
 const handleOnSubmit = async (values, setResult) => {
   const scores = Object.values(values)
-  if (scores.length > bdcNumQuestions) {
-    alert(`Yo please make sure you've answered everything before submitting 🙏🏼`)
+  if (scores.length < bdcNumQuestions) {
+    alert(`Please make sure you've answered all items 🙏🏼`)
   } else {
     const totalScore = scores.reduce((total, val) => {
       return total + parseInt(val)
@@ -241,11 +241,17 @@ const renderQuestions = (sectionId, questions) => {
 const renderSections = () => {
   return (
     <>
-      <div>
+      <p>
+        This checklist will help you figure out and "measure" how you're
+        feeling. And because what gets measured, gets managed this is a great
+        first step to take before diving into any sort of self help or even
+        professional treatment.
+      </p>
+      <p>
         Choose the answer that best describes how much you've experienced each
-        symptom during the past week, including today. Please answer all 25
+        symptom during the past week, including today and please answer all 25
         items.
-      </div>
+      </p>
       {bdcSectionsData.map((section) => (
         <Section key={`${section.id}`}>
           <h4>{section.title}</h4>
@@ -272,7 +278,7 @@ const renderResult = (result) => {
 const renderSubmit = (result, setResult) => {
   return (
     <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-      {!result && <StyledButton type="submit">Submit</StyledButton>}
+      {!result && <StyledButton type="submit">See results</StyledButton>}
       {result && (
         <StyledButton type="button" onClick={(event) => setResult(null)}>
           Reset
