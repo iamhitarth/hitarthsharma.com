@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Formik, Field, Form } from 'formik'
 import Layout from '../components/layout'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import styled from 'styled-components'
@@ -47,6 +48,32 @@ const Answer = styled.label`
   input {
     margin-bottom: 5px;
   }
+`
+
+const StyledButton = styled.button`
+  color: hsla(0, 0%, 0%, 0.8);
+  border-color: transparent;
+  border-radius: 0.25rem;
+  padding: 14px 20px;
+  margin-right: 20px;
+  font-weight: bold;
+  background: #ff9800;
+  text-decoration: none;
+  text-shadow: none;
+
+  &:hover {
+    color: #ff9800;
+    background: black;
+  }
+
+  @media (max-width: 900px) {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+`
+
+const FooterContainer = styled.p`
+  text-align: center;
 `
 
 const bdcSectionsData = [
@@ -101,6 +128,10 @@ const bdcSectionsData = [
   },
 ]
 
+const bdcNumQuestions = bdcSectionsData.reduce((numQs, section) => {
+  return numQs + section.questions.length
+}, 0)
+
 const bdcScoringData = [
   { label: 'Not at all', score: 0 },
   { label: 'Somewhat', score: 1 },
@@ -110,30 +141,95 @@ const bdcScoringData = [
 ]
 
 const bdcScoringCriteria = [
-  { label: 'No depression', min: 0, max: 5 },
-  { label: 'Normal but unhappy', min: 6, max: 10 },
-  { label: 'Mild depression', min: 11, max: 25 },
-  { label: 'Moderate depression', min: 26, max: 50 },
-  { label: 'Severe depression', min: 51, max: 75 },
-  { label: 'Extreme depression', min: 76, max: 100 },
+  {
+    label: 'No depression',
+    description: `Awesome! You are obviously in the normal range and feeling great! 
+    Ideally this is where you'll be most of the time - so keep on doing whatever you're 
+    doing because it's working 😁`,
+    min: 0,
+    max: 5,
+  },
+  {
+    label: 'Normal but unhappy',
+    description: `Ah.. things are a little bit uneven right now but hang in there. This is pretty 
+    normal and nothing to be concerned about. There is room for improvement but chances 
+    are that things will most likely get better - especially with a change in perspective 😀`,
+    min: 6,
+    max: 10,
+  },
+  {
+    label: 'Mild depression',
+    description: `Hmm while this is nothing to be super 
+    concerned about, it will be useful to try and improve things. You can likely make a 
+    lot of progress on your own by learning about negative thinking patterns, how to identify 
+    them and then how to fix them 💡 However, if you stay at this level for a weeks in a row, 
+    please consider professional treatment.`,
+    min: 11,
+    max: 25,
+  },
+  {
+    label: 'Moderate depression',
+    description: `This is serious 😐 You're likely feeling pretty crappy. Most of us can experience 
+  this level of depression for brief periods but then eventually snap out of it. However, if 
+  you stay in this range for more than 2 weeks in a row, please seek professional treatment.`,
+    min: 26,
+    max: 50,
+  },
+  {
+    label: 'Severe depression',
+    description: `This is the danger zone. Feeling super crappy for long periods combined 
+    with feelings of hopelessness and despair is a dangerous recipe. Please seek 
+    professional help immediately.`,
+    min: 51,
+    max: 75,
+  },
+  {
+    label: 'Extreme depression',
+    description: `Very dangerous to be and stay in this range. Please seek professional help 
+    immediately especially if you chose anything other than "Not at all" on the last 3 items.`,
+    min: 76,
+    max: 100,
+  },
 ]
 
+const handleOnSubmit = async (values, setResult) => {
+  const scores = Object.values(values)
+  if (scores.length > bdcNumQuestions) {
+    alert(`Yo please make sure you've answered everything before submitting 🙏🏼`)
+  } else {
+    const totalScore = scores.reduce((total, val) => {
+      return total + parseInt(val)
+    }, 0)
+    for (let i = 0; i < bdcScoringCriteria.length; i++) {
+      const criteria = bdcScoringCriteria[i]
+      if (totalScore >= criteria.min && totalScore <= criteria.max) {
+        console.log('Your depression level is: ', criteria.label, totalScore)
+        setResult(criteria)
+        break
+      }
+    }
+  }
+}
+
 const renderQuestions = (sectionId, questions) => {
-  return questions.map((question, index) => (
+  return questions.map((question, questionIndex) => (
     <QuestionContainer
+      key={`${sectionId}${questionIndex}`}
       style={{
-        background: index % 2 === 0 ? 'rgba(130, 190, 237, 0.3)' : 'none',
+        background:
+          questionIndex % 2 === 0 ? 'rgba(130, 190, 237, 0.3)' : 'none',
       }}
     >
       <Question>{question}</Question>
       <AnswerContainer>
-        {bdcScoringData.map((option) => (
-          <Answer>
-            <input
-              type="radio"
-              value={option.score}
-              name={`${sectionId}${index}`}
-            />
+        {bdcScoringData.map((option, optionIndex) => (
+          <Answer key={`${sectionId}${questionIndex}${optionIndex}`}>
+            <Field name={`${sectionId}${questionIndex}`}>
+              {(props) => {
+                const { field } = props
+                return <input {...field} type="radio" value={option.score} />
+              }}
+            </Field>
             {option.label}
           </Answer>
         ))}
@@ -143,25 +239,51 @@ const renderQuestions = (sectionId, questions) => {
 }
 
 const renderSections = () => {
-  return bdcSectionsData.map((section) => (
-    <Section>
-      <h4>{section.title}</h4>
-      <div>{renderQuestions(section.id, section.questions)}</div>
-    </Section>
-  ))
+  return (
+    <>
+      <div>
+        Choose the answer that best describes how much you've experienced each
+        symptom during the past week, including today. Please answer all 25
+        items.
+      </div>
+      {bdcSectionsData.map((section) => (
+        <Section key={`${section.id}`}>
+          <h4>{section.title}</h4>
+          <div>{renderQuestions(section.id, section.questions)}</div>
+        </Section>
+      ))}
+    </>
+  )
 }
 
-const renderSubmit = () => {
+const renderResult = (result) => {
+  if (result) {
+    return (
+      <div style={{ textAlign: 'center' }}>
+        <h3>{`Your depression level is: ${result.label}`}</h3>
+        <p>{result.description}</p>
+      </div>
+    )
+  } else {
+    return
+  }
+}
+
+const renderSubmit = (result, setResult) => {
   return (
-    <div>
-      <button>Submit</button>
-      <button>Reset</button>
+    <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+      {!result && <StyledButton type="submit">Submit</StyledButton>}
+      {result && (
+        <StyledButton type="button" onClick={(event) => setResult(null)}>
+          Reset
+        </StyledButton>
+      )}
     </div>
   )
 }
 
 const renderFooter = () => (
-  <p>
+  <FooterContainer>
     <OutboundLink href="mailto:hitarth.sharma@outlook.com" target="_blank">
       Email
     </OutboundLink>{' '}
@@ -183,17 +305,26 @@ const renderFooter = () => (
     <OutboundLink href="https://twitter.com/iamhitarth" target="_blank">
       Twitter
     </OutboundLink>
-  </p>
+  </FooterContainer>
 )
 
 const BDCPage = ({ location }) => {
+  const [result, setResult] = useState(null)
+
   return (
     <Layout location={location}>
       <div>
         <CenteredContainer>
           <SubHeading>Burns Depression Checklist</SubHeading>
-          {renderSections()}
-          {renderSubmit()}
+          <Formik
+            initialValues={{}}
+            onSubmit={(values) => handleOnSubmit(values, setResult)}
+          >
+            <Form>
+              {!!result ? renderResult(result) : renderSections()}
+              {renderSubmit(result, setResult)}
+            </Form>
+          </Formik>
           {renderFooter()}
         </CenteredContainer>
       </div>
