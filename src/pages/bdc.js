@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Formik, Field, Form } from 'formik'
+import EmailForm from 'react-mailchimp-form'
 import Layout from '../components/layout'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import styled from 'styled-components'
@@ -11,6 +12,19 @@ const CenteredContainer = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  .email-subscribe-form {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+
+    input,
+    button {
+      width: 60%;
+      margin: 10px;
+    }
   }
 `
 
@@ -275,6 +289,40 @@ const renderResult = (result) => {
   }
 }
 
+const renderEmailForm = () => {
+  return (
+    <div style={{ textAlign: 'center' }}>
+      <p>For more tools and tips like these consider subscribing below:</p>
+      <EmailForm
+        action="https://hitarthsharma.us2.list-manage.com/subscribe/post?u=19e012b673b0effce4e606498&amp;id=8cd1d0fb63"
+        fields={[
+          {
+            name: 'FNAME',
+            placeholder: 'First name',
+            type: 'text',
+            required: true,
+          },
+          {
+            name: 'EMAIL',
+            placeholder: 'Email',
+            type: 'email',
+            required: true,
+          },
+        ]}
+        messages={{
+          sending: 'Sending...',
+          success: 'Thank you for subscribing!',
+          error: 'An unexpected internal error has occurred.',
+          empty: 'You must provide an e-mail.',
+          duplicate: `You're already subscribed.`,
+          button: 'Subscribe!',
+        }}
+        className="email-subscribe-form"
+      />
+    </div>
+  )
+}
+
 const renderSubmit = (result, setResult) => {
   return (
     <div style={{ textAlign: 'center', marginTop: '2rem' }}>
@@ -326,10 +374,13 @@ const BDCPage = ({ location }) => {
             initialValues={{}}
             onSubmit={(values) => handleOnSubmit(values, setResult)}
           >
-            <Form>
-              {!!result ? renderResult(result) : renderSections()}
-              {renderSubmit(result, setResult)}
-            </Form>
+            <>
+              <Form>
+                {!!result ? renderResult(result) : renderSections()}
+                {renderSubmit(result, setResult)}
+              </Form>
+              {!!result ? renderEmailForm() : null}
+            </>
           </Formik>
           {renderFooter()}
         </CenteredContainer>

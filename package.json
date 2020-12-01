@@ -25,6 +25,7 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
+    "react-mailchimp-form": "^1.0.2",
     "react-social-icons": "^4.1.0",
     "react-typography": "^0.16.13",
     "styled-components": "^5.0.1",
