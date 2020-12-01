@@ -40,16 +40,30 @@ const QuestionContainer = styled.div`
   width: 100%;
   margin-bottom: 10px;
   padding: 10px 0px 10px 10px;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `
 
 const Question = styled.div`
   width: 35%;
   padding-top: 10px;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `
 
 const AnswerContainer = styled.div`
   width: 65%;
   display: flex;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
 `
 
 const Answer = styled.label`
@@ -61,6 +75,18 @@ const Answer = styled.label`
   align-items: center;
   input {
     margin-bottom: 5px;
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5px;
+
+    input {
+      margin-top: 5px;
+      margin-right: 5px;
+    }
   }
 `
 
