@@ -3,7 +3,32 @@ import { Formik, Field, Form } from 'formik'
 import EmailForm from 'react-mailchimp-form'
 import Layout from '../components/layout'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+const StyledButtonBaseStyles = css`
+  color: hsla(0, 0%, 0%, 0.8);
+  border-color: transparent;
+  border-radius: 0.25rem;
+  padding: 14px 20px;
+  font-weight: bold;
+  background: #ff9800;
+  text-decoration: none;
+  text-shadow: none;
+
+  &:hover {
+    color: #ff9800;
+    background: black;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @media (max-width: 900px) {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+`
 
 const CenteredContainer = styled.div`
   position: relative;
@@ -20,10 +45,18 @@ const CenteredContainer = styled.div`
     align-items: center;
     flex-direction: column;
 
-    input,
-    button {
+    input {
       width: 60%;
       margin: 10px;
+      padding: 14px 20px;
+
+      @media (max-width: 900px) {
+        width: 100%;
+      }
+    }
+
+    button {
+      ${StyledButtonBaseStyles}
     }
   }
 `
@@ -90,25 +123,17 @@ const Answer = styled.label`
   }
 `
 
-const StyledButton = styled.button`
-  color: hsla(0, 0%, 0%, 0.8);
-  border-color: transparent;
-  border-radius: 0.25rem;
-  padding: 14px 20px;
-  margin-right: 20px;
-  font-weight: bold;
-  background: #ff9800;
-  text-decoration: none;
-  text-shadow: none;
+const StyledPrimaryButton = styled.button`
+  ${StyledButtonBaseStyles}
+`
+
+const StyledSecondaryButton = styled(StyledPrimaryButton)`
+  color: #ff9800;
+  background: black;
 
   &:hover {
-    color: #ff9800;
-    background: black;
-  }
-
-  @media (max-width: 900px) {
-    width: 100%;
-    margin-bottom: 1rem;
+    color: hsla(0, 0%, 0%, 0.8);
+    background: #ff9800;
   }
 `
 
@@ -234,7 +259,7 @@ const bdcScoringCriteria = [
 
 const handleOnSubmit = async (values, setResult) => {
   const scores = Object.values(values)
-  if (scores.length < bdcNumQuestions) {
+  if (scores.length > bdcNumQuestions) {
     alert(`Please make sure you've answered all items 🙏🏼`)
   } else {
     const totalScore = scores.reduce((total, val) => {
@@ -282,10 +307,9 @@ const renderSections = () => {
   return (
     <>
       <p>
-        This checklist will help you figure out and "measure" how you're
-        feeling. And because what gets measured, gets managed this is a great
-        first step to take before diving into any sort of self help or even
-        professional treatment.
+        This checklist will help you "measure" how you're feeling. And because
+        what gets measured, gets managed this is a great first step to take
+        before diving into any sort of self help or even professional treatment.
       </p>
       <p>
         Choose the answer that best describes how much you've experienced each
@@ -313,6 +337,24 @@ const renderResult = (result) => {
   } else {
     return
   }
+}
+
+const renderSubmit = (result, setResult) => {
+  return (
+    <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+      {!result && (
+        <StyledPrimaryButton type="submit">See results</StyledPrimaryButton>
+      )}
+      {result && (
+        <StyledSecondaryButton
+          type="button"
+          onClick={(event) => setResult(null)}
+        >
+          Reset
+        </StyledSecondaryButton>
+      )}
+    </div>
+  )
 }
 
 const renderEmailForm = () => {
@@ -345,19 +387,6 @@ const renderEmailForm = () => {
         }}
         className="email-subscribe-form"
       />
-    </div>
-  )
-}
-
-const renderSubmit = (result, setResult) => {
-  return (
-    <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-      {!result && <StyledButton type="submit">See results</StyledButton>}
-      {result && (
-        <StyledButton type="button" onClick={(event) => setResult(null)}>
-          Reset
-        </StyledButton>
-      )}
     </div>
   )
 }
