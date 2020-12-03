@@ -307,9 +307,13 @@ const renderSections = () => {
   return (
     <>
       <p>
-        This checklist will help you "measure" how you're feeling. And because
-        what gets measured, gets managed this is a great first step to take
-        before diving into any sort of self help or even professional treatment.
+        This checklist (from the book{' '}
+        <OutboundLink href="https://amzn.to/36FfjI9" target="_blank">
+          Feeling Good
+        </OutboundLink>
+        ) will help you "measure" how you're feeling. And because what gets
+        measured, gets managed this is a great first step to take before diving
+        into any sort of self help or even professional treatment.
       </p>
       <p>
         Choose the answer that best describes how much you've experienced each

@@ -7,7 +7,7 @@ import { PostTitle } from '../templates/blogPost'
 import me from '../assets/images/me.jpg'
 
 const AboutPage = ({ location }) => (
-  <Layout location={location}>
+  <Layout location={location} title="About" description="About Hitarth Sharma.">
     <div>
       <PostTitle>Hi.</PostTitle>
       <div style={{ textAlign: 'center' }}>
