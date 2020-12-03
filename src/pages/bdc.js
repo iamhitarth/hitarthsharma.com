@@ -422,7 +422,12 @@ const BDCPage = ({ location }) => {
   const [result, setResult] = useState(null)
 
   return (
-    <Layout location={location}>
+    <Layout
+      location={location}
+      title="Burns Depression Checklist"
+      description={`This checklist will help you "measure" how you're feeling - great first step to take before diving into any sort of self help or even professional treatment.`}
+      keywords="depression, tool, checklist, burns, form"
+    >
       <div>
         <CenteredContainer>
           <SubHeading>Burns Depression Checklist</SubHeading>

@@ -6,7 +6,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import Favicon from '../assets/images/favicon.ico'
 
-const Layout = ({ children, location }) => {
+const Layout = ({ children, location, title, description, keywords }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -18,15 +18,22 @@ const Layout = ({ children, location }) => {
           }
         }
       `}
-      render={data => (
+      render={(data) => (
         <div>
           <Helmet
-            title={data.site.siteMetadata.title}
+            title={
+              title
+                ? `${data.site.siteMetadata.title} - ${title}`
+                : data.site.siteMetadata.title
+            }
             meta={[
-              { name: 'description', content: "Hitarth Sharma's site" },
+              {
+                name: 'description',
+                content: description || "Hitarth Sharma's site",
+              },
               {
                 name: 'keywords',
-                content: 'hitarth, sharma, blog, software, engineer',
+                content: `hitarth, sharma, blog, software, engineer, ${keywords}`,
               },
             ]}
             link={[
