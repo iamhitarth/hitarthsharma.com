@@ -5,6 +5,7 @@
   "author": "Hitarth Sharma <hitarth.sharma@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.8.0",
+    "formik": "^2.2.5",
     "gatsby": "^2.20.3",
     "gatsby-plugin-google-analytics": "^2.0.7",
     "gatsby-plugin-react-helmet": "^3.0.0-beta.4",
@@ -24,6 +25,7 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
+    "react-mailchimp-form": "^1.0.2",
     "react-social-icons": "^4.1.0",
     "react-typography": "^0.16.13",
     "styled-components": "^5.0.1",
