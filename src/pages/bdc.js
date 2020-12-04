@@ -162,7 +162,7 @@ const bdcSectionsData = [
     id: 'aapr',
     title: 'Activities and personal relationships',
     questions: [
-      'Loss of interested in family, friends or colleagues',
+      'Loss of interest in family, friends or colleagues',
       'Loneliness',
       'Spending less time with family or friends',
       'Loss of motivation',
