@@ -3,6 +3,13 @@
     "displayName": "The 'Are you depressed?' quiz 🤒",
     "href": "/bdc",
     "isExternal": false,
+    "isShownOnHome": false,
+    "isShownOnSidebar": false
+  },
+  {
+    "displayName": "🎥 Make 2021 your BEST year yet",
+    "href": "https://www.youtube.com/watch?v=EaCyM-f65lE",
+    "isExternal": true,
     "isShownOnHome": true,
     "isShownOnSidebar": false
   },
@@ -24,7 +31,7 @@
     "displayName": "🎥 My latest video",
     "href": "https://www.youtube.com/channel/UCr1IJAY40tbG4nKR0pu5rNQ",
     "isExternal": true,
-    "isShownOnHome": true,
+    "isShownOnHome": false,
     "isShownOnSidebar": false
   },
   {
@@ -122,7 +129,7 @@
     "displayName": "🖖🏼 Book coaching session",
     "href": "https://calendly.com/hitarth-sharma/90min",
     "isExternal": true,
-    "isShownOnHome": true,
-    "isShownOnSidebar": true
+    "isShownOnHome": false,
+    "isShownOnSidebar": false
   }
 ]
