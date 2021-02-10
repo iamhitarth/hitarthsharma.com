@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../components/layout'
+import { Layout, SubHeading } from '../components'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import styled from 'styled-components'
 
@@ -10,11 +10,6 @@ import coachingPic from '../assets/images/coaching-pic.jpg'
 Add coaching pic on desktop
 Add FAQs
 */
-
-const SubHeading = styled.h2`
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-`
 
 const OutboundLinkButton = styled(OutboundLink)`
   color: hsla(0, 0%, 0%, 0.8);

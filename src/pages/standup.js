@@ -1,20 +1,10 @@
 import React from 'react'
-import Layout from '../components/layout'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import styled from 'styled-components'
 
+import { Layout, CenteredContainer, SubHeading } from '../components'
 import { PostTitle } from '../templates/blogPost'
 import coachingPic from '../assets/images/coaching-pic.jpg'
-
-const CenteredContainer = styled.div`
-  position: relative;
-  @media (max-width: 900px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-`
 
 const TextBox = styled.textarea`
   padding: 0.25rem;
@@ -25,11 +15,6 @@ const TextBox = styled.textarea`
   @media (max-width: 900px) {
     width: 100%;
   }
-`
-
-const SubHeading = styled.h2`
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
 `
 
 const ResetButton = styled.button`

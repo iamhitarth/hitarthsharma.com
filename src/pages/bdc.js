@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Formik, Field, Form } from 'formik'
 import EmailForm from 'react-mailchimp-form'
-import Layout from '../components/layout'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import styled, { css } from 'styled-components'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { Layout, CenteredContainer, SubHeading, Footer } from '../components'
 
 const StyledButtonBaseStyles = css`
   color: hsla(0, 0%, 0%, 0.8);
@@ -30,15 +30,7 @@ const StyledButtonBaseStyles = css`
   }
 `
 
-const CenteredContainer = styled.div`
-  position: relative;
-  @media (max-width: 900px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
+const BDCCenteredContainer = styled(CenteredContainer)`
   .email-subscribe-form {
     display: flex;
     width: 100%;
@@ -59,11 +51,6 @@ const CenteredContainer = styled.div`
       ${StyledButtonBaseStyles}
     }
   }
-`
-
-const SubHeading = styled.h2`
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
 `
 
 const Section = styled.div``
@@ -135,10 +122,6 @@ const StyledSecondaryButton = styled(StyledPrimaryButton)`
     color: hsla(0, 0%, 0%, 0.8);
     background: #ff9800;
   }
-`
-
-const FooterContainer = styled.p`
-  text-align: center;
 `
 
 const bdcSectionsData = [
@@ -396,32 +379,6 @@ const renderEmailForm = () => {
   )
 }
 
-const renderFooter = () => (
-  <FooterContainer>
-    <OutboundLink href="mailto:hitarth.sharma@outlook.com" target="_blank">
-      Email
-    </OutboundLink>{' '}
-    |{' '}
-    <OutboundLink
-      href="https://www.instagram.com/disruptive.kiwi/"
-      target="_blank"
-    >
-      Instagram
-    </OutboundLink>{' '}
-    |{' '}
-    <OutboundLink
-      href="https://www.linkedin.com/in/hitarthsharma/"
-      target="_blank"
-    >
-      LinkedIn
-    </OutboundLink>{' '}
-    |{' '}
-    <OutboundLink href="https://twitter.com/iamhitarth" target="_blank">
-      Twitter
-    </OutboundLink>
-  </FooterContainer>
-)
-
 const BDCPage = ({ location }) => {
   const [result, setResult] = useState(null)
 
@@ -433,7 +390,7 @@ const BDCPage = ({ location }) => {
       keywords="depression, tool, checklist, burns, form"
     >
       <div>
-        <CenteredContainer>
+        <BDCCenteredContainer>
           <SubHeading>Burns Depression Checklist</SubHeading>
           <Formik
             initialValues={{}}
@@ -447,8 +404,8 @@ const BDCPage = ({ location }) => {
               {!!result ? renderEmailForm() : null}
             </>
           </Formik>
-          {renderFooter()}
-        </CenteredContainer>
+          <Footer />
+        </BDCCenteredContainer>
       </div>
     </Layout>
   )
