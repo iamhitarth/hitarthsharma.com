@@ -15,7 +15,7 @@ const Procrastinating = ({ location }) => {
         <CenteredContainer>
           <SubHeading>How to Stop Procrastinating</SubHeading>
           <div>
-            <h4>Are you in bed?</h4>
+            <h4>Are you lying down?</h4>
             <div>
               <span style={{ marginRight: '15px' }}>
                 <input
@@ -47,7 +47,7 @@ const Procrastinating = ({ location }) => {
                 />
                 <label for="sleepy">Sleepy?</label>
               </span>
-              <span>
+              <span style={{ marginRight: '15px' }}>
                 <input
                   type="radio"
                   id="hungry"
@@ -55,6 +55,10 @@ const Procrastinating = ({ location }) => {
                   value="hungry"
                 />
                 <label for="hungry">Hungry?</label>
+              </span>
+              <span>
+                <input type="radio" id="okay" name="engineCheck" value="okay" />
+                <label for="okay">Okay?</label>
               </span>
             </div>
           </div>
