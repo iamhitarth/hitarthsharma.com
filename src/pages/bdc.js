@@ -190,24 +190,27 @@ const bdcScoringData = [
 
 const bdcScoringCriteria = [
   {
-    label: 'No depression 🎉',
-    description: `Awesome! You are obviously in the normal range and feeling great! 
-    Ideally this is where you'll be most of the time - so keep on doing whatever you're 
+    id: 'no-depression',
+    label: 'You are doing great 🎉',
+    description: `Awesome! You are in the normal range and feeling great! 
+    Ideally this is where you'll emotionally be most of the time - so keep on doing whatever you're 
     doing because it's working 😁`,
     min: 0,
     max: 5,
   },
   {
-    label: 'Normal but unhappy 😶',
-    description: `Ah.. things are a little bit uneven right now but you're hanging in there. This is pretty 
+    id: 'bit-of-depression',
+    label: 'Are you feeling a little unhappy? 😶',
+    description: `Things are a little bit uneven right now but you're hanging in there. This is pretty 
     normal and nothing to be concerned about. There is room for improvement but chances 
-    are that things will most likely get better - especially with a change in perspective 😀`,
+    are that things will most likely get better - especially with a change in your perspective 😀`,
     min: 6,
     max: 10,
   },
   {
-    label: 'Mild depression 😐',
-    description: `Hmm while this is nothing to be super 
+    id: 'mild-depression',
+    label: 'Are you unhappy? 😐',
+    description: `While this is nothing to be super 
     concerned about, it will be useful to try and improve things. You can likely make a 
     lot of progress on your own by learning about negative thinking patterns, how to identify 
     them and then how to fix them 💡 However, if you stay at this level for a weeks in a row, 
@@ -216,7 +219,8 @@ const bdcScoringCriteria = [
     max: 25,
   },
   {
-    label: 'Moderate depression 😬',
+    id: 'moderate-depression',
+    label: 'You are depressed 😬',
     description: `This is serious 😐 You're likely feeling pretty crappy. Most of us can experience 
   this level of depression for brief periods but then eventually snap out of it. However, if 
   you stay in this range for more than 2 weeks in a row, please seek professional treatment.`,
@@ -224,7 +228,8 @@ const bdcScoringCriteria = [
     max: 50,
   },
   {
-    label: 'Severe depression 😫',
+    id: 'severe-depression',
+    label: 'You are severly depressed 😫',
     description: `This is the danger zone. Feeling super crappy for long periods combined 
     with feelings of hopelessness and despair is a dangerous recipe. Please seek 
     professional help immediately.`,
@@ -232,9 +237,10 @@ const bdcScoringCriteria = [
     max: 75,
   },
   {
-    label: 'Extreme depression 😭',
+    id: 'extreme-depression',
+    label: 'You are extremely depressed 😨',
     description: `Very dangerous to be and stay in this range. Please seek professional help 
-    immediately especially if you chose anything other than "Not at all" on the last 3 items.`,
+    immediately especially if you chose anything other than "Not at all" on the last 3 items 🙏🏼`,
     min: 76,
     max: 100,
   },
@@ -317,7 +323,7 @@ const renderResult = (result) => {
   if (result) {
     return (
       <div style={{ textAlign: 'center' }}>
-        <h3>{`Your depression level is: ${result.label}`}</h3>
+        <h3>{`${result.label}`}</h3>
         <p>{result.description}</p>
       </div>
     )
