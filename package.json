@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Hitarth Sharma <hitarth.sharma@gmail.com>",
   "dependencies": {
+    "@notionhq/client": "^1.0.4",
     "babel-plugin-styled-components": "^1.8.0",
     "formik": "^2.2.5",
     "gatsby": "^2.20.3",
@@ -23,6 +24,7 @@
     "gatsby-transformer-remark": "^2.1.1-beta.6",
     "graphql-tools": "^4.0.7",
     "react": "^16.4.1",
+    "react-cool-inview": "^3.0.1",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
     "react-mailchimp-form": "^1.0.2",
@@ -63,6 +65,7 @@
     "@babel/preset-react": "^7.0.0",
     "@testing-library/jest-dom": "^5.1.1",
     "@testing-library/react": "^10.0.1",
+    "@types/vfile-message": "^2.0.0",
     "babel-core": "^7.0.0-0",
     "babel-jest": "^25.1.0",
     "husky": "^4.2.3",

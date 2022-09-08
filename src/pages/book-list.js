@@ -1,8 +1,17 @@
-import React from 'react'
-import Layout from '../components/layout'
+import { FilterToSchema } from 'graphql-tools'
+import React, { useState } from 'react'
+import { useInView } from 'react-cool-inview'
 import styled from 'styled-components'
 
-import { get } from '../utils/requestHelper'
+import Layout from '../components/layout'
+import {
+  useBooksFromNotion,
+  FILTER_ALL,
+  FILTER_READ,
+  FILTER_UNREAD,
+  FILTER_DIDNT_FINISH,
+  FILTER_FAVOURITES,
+} from '../hooks/useBooksFromNotion'
 import { PostTitle } from '../templates/blogPost'
 
 /* TODO:
@@ -11,10 +20,13 @@ Links to Amazon for each book in the list maybe
 Use something like OpenLibrary to pull through thumbnail and summary etc.
  */
 
-const STATUS_COMPLETED = 'x'
-const STATUS_INCOMPLETE = '0'
-
 const MyBooks = styled.div`
+  .book-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
   input[type='radio'] {
     position: absolute;
     top: auto;
@@ -29,9 +41,10 @@ const MyBooks = styled.div`
   label.radio-label {
     border: solid 1px #82beed;
     border-radius: 0.25rem;
-    padding: 0.25rem;
+    padding: 0.25rem 0.5rem;
     cursor: pointer;
     transition: all 0.2s ease-out;
+    margin: 0 0.25rem 0.25rem 0.25rem;
   }
 
   label.radio-active {
@@ -42,6 +55,10 @@ const MyBooks = styled.div`
   @media (max-width: 900px) {
     p {
       text-align: center;
+    }
+
+    .book-filters {
+      justify-content: center;
     }
   }
 `
@@ -55,139 +72,119 @@ const MyBooksList = styled.ul`
     list-style-type: none;
   }
 
+  .book-status {
+    background-color: hotpink;
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.25rem;
+    margin: 0 0.5rem;
+    font-size: 0.75rem;
+    vertical-align: text-bottom;
+  }
+
   .book-complete {
     text-decoration: line-through;
   }
 `
 
-class BookList extends React.Component {
-  state = {
-    books: [],
-    complete: 0,
-    incomplete: 0,
-    filterBy: 'all',
+const Loading = styled.p`
+  @media (max-width: 900px) {
+    text-align: center;
   }
+`
 
-  componentDidMount() {
-    const readingListUrl = 'https://runkit.io/iamhitarth/reading-list-api/5.1.0'
-    let booksComplete = 0
-    let booksIncomplete = 0
+const BookList = ({ location }) => {
+  const [startCursor, setStartCursor] = useState(undefined)
+  const [filterBy, setFilterBy] = useState(FILTER_ALL)
+  const { books, hasMore, loading, nextCursor } = useBooksFromNotion(
+    startCursor,
+    filterBy
+  )
 
-    get(readingListUrl, this)
-      .then(JSON.parse)
-      .then((items) => {
-        const books = items.rows
-        books.forEach((book) =>
-          book.completed === STATUS_COMPLETED
-            ? booksComplete++
-            : booksIncomplete++
-        )
+  const { observe, unobserve } = useInView(
+    {
+      rootMargin: '200px 0px',
+      onEnter: ({ observe, unobserve }) => {
+        if (hasMore && !loading) {
+          setStartCursor(nextCursor)
+        }
+      },
+    },
+    [hasMore, loading]
+  )
 
-        this.setState({
-          books: [...books],
-          complete: booksComplete,
-          incomplete: booksIncomplete,
-        })
-      })
-  }
-
-  componentWillUnmount() {
-    if (this.cancelRequest) {
-      this.cancelRequest('Cancelled request on unmount')
+  const handleFilterChange = (e) => {
+    if (filterBy != e.target.value) {
+      setFilterBy(e.target.value)
+      setStartCursor(undefined)
     }
   }
 
-  handleFilterChange = (event) => {
-    this.setState({
-      filterBy: event.target.value,
-    })
-  }
-
-  renderFilter() {
-    const { complete, incomplete, filterBy } = this.state
+  const renderFilter = () => {
+    const filters = [
+      { label: `📚 all`, value: FILTER_ALL },
+      { label: `✅ read`, value: FILTER_READ },
+      { label: `🤓 unread`, value: FILTER_UNREAD },
+      { label: `❤️ favourites`, value: FILTER_FAVOURITES },
+      { label: `💀 didn't finish`, value: FILTER_DIDNT_FINISH },
+    ]
 
     return (
-      <p>
-        Show{' '}
-        <label
-          className={`radio-label${filterBy === 'all' ? ' radio-active' : ''}`}
-        >
-          <input
-            type="radio"
-            value="all"
-            checked={filterBy === 'all'}
-            onChange={this.handleFilterChange}
-          />
-          {`All (${complete + incomplete})`}
-        </label>{' '}
-        <label
-          className={`radio-label${
-            filterBy === STATUS_COMPLETED ? ' radio-active' : ''
-          }`}
-        >
-          <input
-            type="radio"
-            value={STATUS_COMPLETED}
-            checked={filterBy === STATUS_COMPLETED}
-            onChange={this.handleFilterChange}
-          />
-          {`Read (${complete})`}
-        </label>{' '}
-        <label
-          className={`radio-label${
-            filterBy === STATUS_INCOMPLETE ? ' radio-active' : ''
-          }`}
-        >
-          <input
-            type="radio"
-            value={STATUS_INCOMPLETE}
-            checked={filterBy === STATUS_INCOMPLETE}
-            onChange={this.handleFilterChange}
-          />
-          {`Unread (${incomplete})`}
-        </label>
+      <p className="book-filters">
+        <span>Show&nbsp;</span>
+        {filters.map((f) => (
+          <label
+            key={f.value}
+            className={`radio-label${
+              filterBy === f.value ? ' radio-active' : ''
+            }`}
+          >
+            <input
+              type="radio"
+              value={f.value}
+              checked={filterBy === f.value}
+              onChange={handleFilterChange}
+            />
+            {f.label}
+          </label>
+        ))}
       </p>
     )
   }
 
-  renderBooks() {
-    const { filterBy } = this.state
-    return this.state.books
-      .filter((book) => filterBy === 'all' || filterBy === book.completed)
-      .map((book) => (
-        <li
-          key={book.name}
-          className={`book book-${
-            book.completed === STATUS_COMPLETED && filterBy !== STATUS_COMPLETED
-              ? 'complete'
-              : 'incomplete'
-          }`}
-        >
-          {book.name}
-        </li>
-      ))
+  const renderStatusEmoji = (status) => {
+    let emojiText = ''
+    if (status === 'Reading') emojiText = '👀\u00A0\u00A0'
+    if (status === 'Finished') emojiText = `✅\u00A0\u00A0`
+    if (status === `Didn't finish`) emojiText = `💀\u00A0\u00A0`
+    return <span title={status}>{emojiText}</span>
   }
 
-  render() {
-    const { location } = this.props
-    const areBooksLoaded = this.state.books.length > 0
-
-    return (
-      <Layout location={location}>
-        <div>
-          <PostTitle>My Book List</PostTitle>
-          <p>What I have read, am reading and would like to read.</p>
-          {areBooksLoaded ? (
-            <MyBooks>
-              {this.renderFilter()}
-              <MyBooksList>{this.renderBooks()}</MyBooksList>
-            </MyBooks>
-          ) : (
-            <p>Loading books...</p>
-          )}
-        </div>
-      </Layout>
-    )
+  const renderBooks = () => {
+    return books.map((book) => (
+      <li key={book.name} className={`book`}>
+        {renderStatusEmoji(book.status)}
+        {book.name}
+        {book.author ? ` - ${book.author}` : ''}
+      </li>
+    ))
   }
+
+  return (
+    <Layout location={location}>
+      <div>
+        <PostTitle>My Book List</PostTitle>
+        <p>What I have read, am reading and would like to read.</p>
+        <MyBooks>
+          {renderFilter()}
+          <MyBooksList>{renderBooks()}</MyBooksList>
+        </MyBooks>
+        {loading ? <Loading>Loading...</Loading> : null}
+      </div>
+      <div ref={observe} style={{ opacity: 0 }}>
+        ---Bottom Bar----
+      </div>
+    </Layout>
+  )
 }
+
 export default BookList
