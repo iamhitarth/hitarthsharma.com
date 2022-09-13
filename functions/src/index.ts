@@ -7,7 +7,10 @@ import {QueryDatabaseParameters} from '@notionhq/client/build/src/api-endpoints'
 // Start writing Firebase Functions
 // https://firebase.google.com/docs/functions/typescript
 
-const corsMiddleware = cors({origin: '*'});
+const corsMiddleware =
+  process.env.FUNCTIONS_EMULATOR?.toString() === 'true' ?
+    cors({origin: '*'}) :
+    cors({origin: 'https://hitarthsharma.com'});
 type SORT_DIRECTION = 'ascending' | 'descending'
 
 export const helloWorld = functions
