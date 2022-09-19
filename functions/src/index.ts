@@ -11,7 +11,7 @@ const corsMiddleware =
   process.env.FUNCTIONS_EMULATOR?.toString() === 'true' ?
     cors({origin: '*'}) :
     cors({origin: 'https://hitarthsharma.com'});
-type SORT_DIRECTION = 'ascending' | 'descending'
+type SORT_DIRECTION = 'ascending' | 'descending';
 
 export const helloWorld = functions
     .runWith({secrets: ['NOTION_CLIENT_SECRET']})
