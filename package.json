@@ -21,7 +21,7 @@
     "gatsby-source-filesystem": "^2.0.1-beta.10",
     "gatsby-tinacms-git": "^0.29.0",
     "gatsby-tinacms-remark": "^0.30.0",
-    "gatsby-transformer-remark": "^2.1.1-beta.6",
+    "gatsby-transformer-remark": "^5.25.1",
     "graphql-tools": "^4.0.7",
     "react": "^16.4.1",
     "react-cool-inview": "^3.0.1",
